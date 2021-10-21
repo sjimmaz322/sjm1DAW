@@ -18,7 +18,7 @@ public class Ej2 {
         //Inicializamos n con el valor introducido
         n = teclado.nextInt();
         //Inicializamos la variable x
-        x = 1;
+        x = 2;
         //Utilizamos el bucle while para que se vaya sumando 1 a x hasta que los valores de x y n sean iguales
         while (x <= n) {
             System.out.print(x);
