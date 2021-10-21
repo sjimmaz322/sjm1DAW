@@ -14,7 +14,7 @@ public class Ej2 {
         //Declaramos las variables int necesarias
         int n, x;
         //Imprimimos por consola un mensaje que nos pide introducir el valor de n
-        System.out.print("Ingrese el valor final:");
+        System.out.println("Ingrese el valor final:");
         //Inicializamos n con el valor introducido
         n = teclado.nextInt();
         //Inicializamos la variable x
