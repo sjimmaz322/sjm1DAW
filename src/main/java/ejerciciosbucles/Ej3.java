@@ -15,6 +15,13 @@ public class Ej3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        double x = 15;
+
+        while (x <= 15*Math.pow(2, 24)) {
+            System.out.print(x);
+            System.out.print(" - ");
+            x = (x * 2);
+        }
     }
     
 }
