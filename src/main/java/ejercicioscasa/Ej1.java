@@ -1,4 +1,4 @@
-package ejerciciosbucles;
+package ejercicioscasa;
 
 public class Ej1 {
 
