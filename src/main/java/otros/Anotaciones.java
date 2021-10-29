@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package otros;
 
-/**
- *
- * @author Mapacherben
- */
+
 public class Anotaciones {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+     //Número aleatorio entre dos números
+     //Número mayor nMayor
+     //Número menor nMenor
+     //Rango entre nMayor y nMenor
+     // int n = numAleatorio.nextInt (nMayor -nMenor +1) +nMenor;
+     //Ojo con los signos
     }
     
 }
