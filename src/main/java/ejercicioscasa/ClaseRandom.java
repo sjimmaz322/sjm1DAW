@@ -8,8 +8,12 @@ public class ClaseRandom {
    
     public static void main(String[] args) {
     Random numAleatorio = new Random();
-    int n =numAleatorio.nextInt(50) +1;
-        System.out.println(n);
+    int n;
+    do {
+    n =numAleatorio.nextInt(20) +1;
+        System.out.print(n);
+        System.out.print(" - ");
+    }while (n!=12);
     }
     
 }
