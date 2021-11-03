@@ -10,9 +10,9 @@ public class EjercicioFactorialFor {
         Scanner entradaTeclado = new Scanner(System.in);
         
         System.out.println("Introduce el numero al cual quieras calcuar el factorial");
-        int n = entradaTeclado.nextInt();
+        double n = entradaTeclado.nextDouble();
         
-        int i, factorial=1;
+        double i, factorial=1;
         
         for (i =1; i<=n; i++ ){
             factorial=factorial*i;
