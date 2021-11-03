@@ -17,8 +17,8 @@ public class EjercicioClase01 {
         String numText;
         int num, i;
         int selection;
-        boolean aux;
-        
+        boolean esPrimo;
+
         do {
             String select = JOptionPane.showInputDialog(null, "Introduzca la opción que desee" + "\n" + "\n"
                     + "1 Para intoducir manualmente el número"
@@ -43,48 +43,49 @@ public class EjercicioClase01 {
                 if (num % 2 == 0) {
 
                     JOptionPane.showMessageDialog(null, "Sabemos que " + num + " no es primo al ser divisible por 2");
+                }
 
-                } else if (num % 2 != 0) {
+                if (num % 2 != 0) {
 
                     JOptionPane.showMessageDialog(null, "Sabemos que no es par, pero no sabemos si es primo");
 
-                    for (i = 3; i == (num / 2); i = i + 2) {
-
-                        
+                    for (i = 3; i <= (num / 2); i+=2) {
 
                         if (num % i == 0) {
 
                             JOptionPane.showMessageDialog(null, "Sabemos que " + num + " no es par y no es primo");
-                        } else if (num % i != 0) {
+                            
+                        } else {
 
-                            JOptionPane.showMessageDialog(null, "Podemos decir que " + num + " es primo");
+                                JOptionPane.showMessageDialog(null, "Podemos decir que " + num + " es primo");
+                                
+                            }
                         }
+
                     }
+                    break;
+    
 
-                }
-
-                break;
+               
 
             case 2:
 
                 int number = numAleatorio.nextInt(600_000_000 - 2 + 1) + 2;
-                JOptionPane.showMessageDialog(null,"El número generado ha sido: " + number);
+                JOptionPane.showMessageDialog(null, "El número generado ha sido: " + number);
                 if (number % 2 == 0) {
 
                     JOptionPane.showMessageDialog(null, "Sabemos que " + number + " no es primo al ser divisible por 2");
 
                 } else {
 
-                    for (i = 3; i == (number / 2); i = i + 2) {
-
-                        
+                    for (i = 3; i <= (number / 2); i+=2) {
 
                         JOptionPane.showMessageDialog(null, "Sabemos que no es par, pero no sabemos si es primo");
 
                         if (number % i == 0) {
 
                             JOptionPane.showMessageDialog(null, "Sabemos que " + number + " no es par y no es primo");
-                        } else if (number % i != 0) {
+                        } else {
 
                             JOptionPane.showMessageDialog(null, "Podemos decir que " + number + " es primo");
                         }
