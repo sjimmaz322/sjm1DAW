@@ -17,6 +17,18 @@ public class Anotaciones {
         int n = numAleatorio.nextInt(36 - 12 + 1) + 12;
         System.out.println(n);
 
+        
+        //Try-catch-throws
+        /*
+        try{
+            Código a comprobar
+        } catch (tipo de error variableParaguardarlo){
+            Código a ejecutar para el caso de error
+        }
+        
+        Para errores de introducción de datos cread bucle do-while
+        
+        */
     }
 
 }
