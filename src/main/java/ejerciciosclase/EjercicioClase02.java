@@ -61,7 +61,8 @@ public class EjercicioClase02 {
                     if (sumaNum == 7) {
 
                         //Resultado
-                        JOptionPane.showMessageDialog(null, "Ronda " + numRonda + "\n" + "Ronda no válida, no hay ganadores" + "\n"
+                        JOptionPane.showMessageDialog(null, "Ronda " + numRonda + "\n" +
+                                "Ronda no válida, no hay ganadores" + "\n"
                                 + "La suma ha sido: " + sumaNum + "\n"
                                 + "El jugador 1 sigue llevando " + victoriasJ1 + " rondas ganadas" + "\n"
                                 + "El jugador 2 sigue llevando " + victoriasJ2 + " rondas ganadas");
