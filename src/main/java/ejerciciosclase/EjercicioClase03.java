@@ -11,6 +11,9 @@ public class EjercicioClase03 {
         
         Scanner teclado = new Scanner(System.in);
         
+        boolean seguir = true;
+        
+        do {
         try{
             
         System.out.println("Introduce el primer número: ");
@@ -19,10 +22,16 @@ public class EjercicioClase03 {
         System.out.println("Introduce el segundo número: ");
         numero2 = teclado.nextInt();
         
-        } catch(InputMismatchException ime){
-            System.out.println("Números, no letras por favor");
-        }
+        seguir = false;
         
+        } catch(InputMismatchException ime){
+            
+            System.out.println("Números, no letras por favor. "+
+                    "Introduce solo números");
+            teclado.nextLine();
+             
+        } 
+        } while (seguir);
         
         int division = numero1/numero2; 
         
