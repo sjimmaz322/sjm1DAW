@@ -21,8 +21,11 @@ public class EjercicioClase04 {
         int selection = 0;
         int suma;
         boolean seguir = true;
+        int error;
         //Creamos el bucle que nos permitirá repetir el programa hasta que queramos
         do {
+            //Reseteo de variable de errores
+            error=0;
             //Bucle para hacer que se repita hasta que hagamos las cosas bien
             do {
                 //Preguntamos por qué se quiere apostar o si se quiere abandonar el programa
@@ -35,7 +38,7 @@ public class EjercicioClase04 {
                     //Acción ante el error
                 } catch (NumberFormatException nfe) {
                     JOptionPane.showMessageDialog(null, "Introduzca un 0 o un 1 o un 2, por favor, le damos otra oportunidad");
-
+                    error++;
                 }
                 //Condición para seguir en el bucle hasta que hagamos bien las cosas
             } while (seguir);
@@ -55,10 +58,12 @@ public class EjercicioClase04 {
                             //Mensaje de aviso de error    
                         } catch (NumberFormatException nfe) {
                             JOptionPane.showMessageDialog(null, "A ver, no es tan difícil, introduce un número");
+                            error++;
 
                         }//Condición de mensaje ante valor fuera de rango
                         if (numDedosA < 1 || numDedosA > 10) {
                             JOptionPane.showMessageDialog(null, "Solo tienes dos manos, puedes sacar entre 1 y 10 dedos");
+                            error++;
 
                         }
 
@@ -73,11 +78,13 @@ public class EjercicioClase04 {
                             //Actuar ante el error
                         } catch (NumberFormatException nfe) {
                             JOptionPane.showMessageDialog(null, "A ver, no es tan difícil, introduce un número");
+                            error++;
 
                         }
                         //Condición para mensaje de error por valores fuera de rango
                         if (numDedosB < 1 || numDedosB > 10) {
                             JOptionPane.showMessageDialog(null, "Solo tienes dos manos, puedes sacar entre 1 y 10 dedos");
+                            error++;
 
                         }
                         //Condición de repetición de bucle
@@ -90,11 +97,54 @@ public class EjercicioClase04 {
                         JOptionPane.showMessageDialog(null, "Apostaste por nones, ha salido pares, gana el jugador B"
                                 + "\n" + "El jugador A sacó " + numDedosA + " dedos, y el jugador B sacó " + numDedosB + " dedos" + "\n"
                                 + "La suma da " + suma + " que es par");
+                        JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
+                        if (error == 0) {
+                            JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
+                                    + "Has cometido : " + error + " errores.");
+                        } else if (error > 0 && error <= 3) {
+                            JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera" + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        } else if (error > 3 && error <= 5) {
+                            JOptionPane.showMessageDialog(null, "Bueno... no eres la herramienta más afilada de la caja..." + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        } else if (error > 5 && error <= 8) {
+                            JOptionPane.showMessageDialog(null, "Me tienes que estar vacilando porque esto no es normal" + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        } else if (error > 8 && error <= 10) {
+                            JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        } else if (error > 10) {
+                            JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
+                                    + " con bloques blandos de brillantes colores con formas simples" + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        }
+
                         //En caso de que sea impar
                     } else if (!(suma % 2 == 0)) {
                         JOptionPane.showMessageDialog(null, "Apostaste por nones, ha salido nones, gana el jugador A"
                                 + "\n" + "El jugador A sacó " + numDedosA + " dedos, y el jugador B sacó " + numDedosB + " dedos" + "\n"
                                 + "La suma da " + suma + " que es impar o sea nones");
+                    }
+                    JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
+                    if (error == 0) {
+                        JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
+                                + "Has cometido : " + error + " errores.");
+                    } else if (error > 0 && error <= 3) {
+                        JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 3 && error <= 5) {
+                        JOptionPane.showMessageDialog(null, "Bueno... no eres la herramienta más afilada de la caja..." + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 5 && error <= 8) {
+                        JOptionPane.showMessageDialog(null, "Me tienes que estar vacilando porque esto no es normal" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 8 && error <= 10) {
+                        JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 10) {
+                        JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
+                                + " con bloques blandos de brillantes colores con formas simples" + "\n"
+                                + "Has cometido: " + error + " errores.");
                     }
 
                     break;
@@ -110,17 +160,19 @@ public class EjercicioClase04 {
                             //Mensaje de aviso de error    
                         } catch (NumberFormatException nfe) {
                             JOptionPane.showMessageDialog(null, "A ver, no es tan difícil, introduce un número");
+                            error++;
 
                         }//Condición de mensaje ante valor fuera de rango
                         if (numDedosA < 1 || numDedosA > 10) {
                             JOptionPane.showMessageDialog(null, "Solo tienes dos manos, puedes sacar entre 1 y 10 dedos");
+                            error++;
 
                         }
 
                     } while ((numDedosA < 1 || numDedosA > 10));
 
                     //Mismo bucle empleado para el jugador A
-                   do {
+                    do {
                         String dedosBText = JOptionPane.showInputDialog("Jugador B" + "\n" + "¿Cuántos dedos quieres usar?");
                         //Detectar errores
                         try {
@@ -128,11 +180,13 @@ public class EjercicioClase04 {
                             //Actuar ante el error
                         } catch (NumberFormatException nfe) {
                             JOptionPane.showMessageDialog(null, "A ver, no es tan difícil, introduce un número");
+                            error++;
 
                         }
                         //Condición para mensaje de error por valores fuera de rango
                         if (numDedosB < 1 || numDedosB > 10) {
                             JOptionPane.showMessageDialog(null, "Solo tienes dos manos, puedes sacar entre 1 y 10 dedos");
+                            error++;
 
                         }
                         //Condición de repetición de bucle
@@ -147,6 +201,27 @@ public class EjercicioClase04 {
                         JOptionPane.showMessageDialog(null, "Apostaste por pares, ha salido pares, gana el jugador A"
                                 + "\n" + "El jugador A sacó " + numDedosA + " dedos, y el jugador B sacó " + numDedosB + " dedos" + "\n"
                                 + "La suma da " + suma + " que es par");
+                        JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
+                        if (error == 0) {
+                            JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
+                                    + "Has cometido : " + error + " errores.");
+                        } else if (error > 0 && error <= 3) {
+                            JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera" + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        } else if (error > 3 && error <= 5) {
+                            JOptionPane.showMessageDialog(null, "Bueno... no eres la herramienta más afilada de la caja..." + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        } else if (error > 5 && error <= 8) {
+                            JOptionPane.showMessageDialog(null, "Me tienes que estar vacilando porque esto no es normal" + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        } else if (error > 8 && error <= 10) {
+                            JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        } else if (error > 10) {
+                            JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
+                                    + " con bloques blandos de brillantes colores con formas simples" + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                        }
 
                         //En caso de que sea impar
                     } else if (!(suma % 2 == 0)) {
@@ -154,17 +229,61 @@ public class EjercicioClase04 {
                                 + "\n" + "El jugador A sacó " + numDedosA + " dedos, y el jugador B sacó " + numDedosB + " dedos" + "\n"
                                 + "La suma da " + suma + " que es impar o sea nones");
                     }
+                    JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
+                    if (error == 0) {
+                        JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
+                                + "Has cometido : " + error + " errores.");
+                    } else if (error > 0 && error <= 3) {
+                        JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 3 && error <= 5) {
+                        JOptionPane.showMessageDialog(null, "Bueno... no eres la herramienta más afilada de la caja..." + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 5 && error <= 8) {
+                        JOptionPane.showMessageDialog(null, "Me tienes que estar vacilando porque esto no es normal" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 8 && error <= 10) {
+                        JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 10) {
+                        JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
+                                + " con bloques blandos de brillantes colores con formas simples" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    }
                     break;
 
                 //Caso para la decisión de abandonar el programa
                 case 0:
-                    JOptionPane.showMessageDialog(null, "Entonces no jugamos" + "\n" + "Adios");
+                    JOptionPane.showMessageDialog(null, "Vale, ya dejamos de jugar" + "\n" + "Adios");
+                    JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
+
+                    if (error == 0) {
+                        JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
+                                + "Has cometido : " + error + " errores.");
+                    } else if (error > 0 && error <= 3) {
+                        JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 3 && error <= 5) {
+                        JOptionPane.showMessageDialog(null, "Bueno... no eres la herramienta más afilada de la caja..." + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 5 && error <= 8) {
+                        JOptionPane.showMessageDialog(null, "Me tienes que estar vacilando porque esto no es normal" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 8 && error <= 10) {
+                        JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    } else if (error > 10) {
+                        JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
+                                + " con bloques blandos de brillantes colores con formas simples" + "\n"
+                                + "Has cometido: " + error + " errores.");
+                    }
 
                     break;
 
                 //Caso para cualquier valor no permitido
                 default:
                     JOptionPane.showMessageDialog(null, "Los valores aceptables son 1, 2 o 0");
+                    error++;
 
                     break;
 
