@@ -7,7 +7,7 @@ public class EjercicioClase03 {
 
     public static void main(String[] args) {
 
-        int numero1 = 1, numero2 = 1, division = 0;
+        int numero1 = 0, numero2 = 0, division = 0;
 
         Scanner teclado = new Scanner(System.in);
 
