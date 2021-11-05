@@ -134,7 +134,8 @@ public class EjercicioClase04 {
                     }
                     JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
                     if (error == 0) {
-                        JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
+                        JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples"
+                                + " sin equivocarte" + "\n"
                                 + "Has cometido : " + error + " errores.");
                     } else if (error > 0 && error <= 3) {
                         JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera" + "\n"
@@ -213,7 +214,8 @@ public class EjercicioClase04 {
 
                         JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
                         if (error == 0) {
-                            JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
+                            JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin"
+                                    + " equivocarte" + "\n"
                                     + "Has cometido : " + error + " errores.");
                         } else if (error > 0 && error <= 3) {
                             JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera" + "\n"
