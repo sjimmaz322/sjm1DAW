@@ -16,16 +16,18 @@ public class EjercicioClase04 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int numDedosA = 0;
-        int numDedosB = 0;
+        int numDedosA;
+        int numDedosB;
         int selection = 0;
         int suma;
         boolean seguir = true;
         int error;
         //Creamos el bucle que nos permitirá repetir el programa hasta que queramos
         do {
-            //Reseteo de variable de errores
-            error=0;
+            //Reseteo de variables
+            numDedosA = 0;
+            error = 0;
+            numDedosB = 0;
             //Bucle para hacer que se repita hasta que hagamos las cosas bien
             do {
                 //Preguntamos por qué se quiere apostar o si se quiere abandonar el programa
@@ -99,24 +101,29 @@ public class EjercicioClase04 {
                                 + "La suma da " + suma + " que es par");
                         JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
                         if (error == 0) {
-                            JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
+                            JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples"
+                                    + " sin equivocarte." + "\n"
                                     + "Has cometido : " + error + " errores.");
                         } else if (error > 0 && error <= 3) {
-                            JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera" + "\n"
+                            JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera." + "\n"
                                     + "Has cometido: " + error + " errores.");
                         } else if (error > 3 && error <= 5) {
                             JOptionPane.showMessageDialog(null, "Bueno... no eres la herramienta más afilada de la caja..." + "\n"
                                     + "Has cometido: " + error + " errores.");
                         } else if (error > 5 && error <= 8) {
-                            JOptionPane.showMessageDialog(null, "Me tienes que estar vacilando porque esto no es normal" + "\n"
+                            JOptionPane.showMessageDialog(null, "Me tienes que estar vacilando porque esto no es normal." + "\n"
                                     + "Has cometido: " + error + " errores.");
                         } else if (error > 8 && error <= 10) {
-                            JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
+                            JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!." + "\n"
                                     + "Has cometido: " + error + " errores.");
-                        } else if (error > 10) {
+                        } else if (error > 10 && error <= 20) {
                             JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
                                     + " con bloques blandos de brillantes colores con formas simples" + "\n"
                                     + "Has cometido: " + error + " errores.");
+                        } else if (error > 20) {
+                            JOptionPane.showMessageDialog(null, "Dime que el código no los has hecho tú por favor..." + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                            break;
                         }
 
                         //En caso de que sea impar
@@ -141,13 +148,15 @@ public class EjercicioClase04 {
                     } else if (error > 8 && error <= 10) {
                         JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
                                 + "Has cometido: " + error + " errores.");
-                    } else if (error > 10) {
+                    } else if (error > 10 && error <= 20) {
                         JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
                                 + " con bloques blandos de brillantes colores con formas simples" + "\n"
                                 + "Has cometido: " + error + " errores.");
+                    } else if (error > 20) {
+                        JOptionPane.showMessageDialog(null, "Dime que el código no los has hecho tú por favor..." + "\n"
+                                + "Has cometido: " + error + " errores.");
+                        break;
                     }
-
-                    break;
 
                 //Caso de apostar por pares
                 case 2:
@@ -201,6 +210,7 @@ public class EjercicioClase04 {
                         JOptionPane.showMessageDialog(null, "Apostaste por pares, ha salido pares, gana el jugador A"
                                 + "\n" + "El jugador A sacó " + numDedosA + " dedos, y el jugador B sacó " + numDedosB + " dedos" + "\n"
                                 + "La suma da " + suma + " que es par");
+
                         JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
                         if (error == 0) {
                             JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
@@ -217,10 +227,14 @@ public class EjercicioClase04 {
                         } else if (error > 8 && error <= 10) {
                             JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
                                     + "Has cometido: " + error + " errores.");
-                        } else if (error > 10) {
+                        } else if (error > 10 && error <= 20) {
                             JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
                                     + " con bloques blandos de brillantes colores con formas simples" + "\n"
                                     + "Has cometido: " + error + " errores.");
+                        } else if (error > 20) {
+                            JOptionPane.showMessageDialog(null, "Dime que el código no los has hecho tú por favor..." + "\n"
+                                    + "Has cometido: " + error + " errores.");
+                            break;
                         }
 
                         //En caso de que sea impar
@@ -245,38 +259,19 @@ public class EjercicioClase04 {
                     } else if (error > 8 && error <= 10) {
                         JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
                                 + "Has cometido: " + error + " errores.");
-                    } else if (error > 10) {
+                    } else if (error > 10 && error <= 20) {
                         JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
                                 + " con bloques blandos de brillantes colores con formas simples" + "\n"
                                 + "Has cometido: " + error + " errores.");
+                    } else if (error > 20) {
+                        JOptionPane.showMessageDialog(null, "Dime que el código no los has hecho tú por favor..." + "\n"
+                                + "Has cometido: " + error + " errores.");
+                        break;
                     }
-                    break;
 
                 //Caso para la decisión de abandonar el programa
                 case 0:
                     JOptionPane.showMessageDialog(null, "Vale, ya dejamos de jugar" + "\n" + "Adios");
-                    JOptionPane.showMessageDialog(null, "Por cierto, una última cosa...");
-
-                    if (error == 0) {
-                        JOptionPane.showMessageDialog(null, "Enhorabuena, has conseguido entender instrucciones simples sin equivocarte" + "\n"
-                                + "Has cometido : " + error + " errores.");
-                    } else if (error > 0 && error <= 3) {
-                        JOptionPane.showMessageDialog(null, "Bueno, un mal día lo tiene cualquiera" + "\n"
-                                + "Has cometido: " + error + " errores.");
-                    } else if (error > 3 && error <= 5) {
-                        JOptionPane.showMessageDialog(null, "Bueno... no eres la herramienta más afilada de la caja..." + "\n"
-                                + "Has cometido: " + error + " errores.");
-                    } else if (error > 5 && error <= 8) {
-                        JOptionPane.showMessageDialog(null, "Me tienes que estar vacilando porque esto no es normal" + "\n"
-                                + "Has cometido: " + error + " errores.");
-                    } else if (error > 8 && error <= 10) {
-                        JOptionPane.showMessageDialog(null, "Por el amor de todos los dioses, céntrate, ¡CÉNTRATE!" + "\n"
-                                + "Has cometido: " + error + " errores.");
-                    } else if (error > 10) {
-                        JOptionPane.showMessageDialog(null, "Me rindo, de verdad que me rindo, vete a jugar"
-                                + " con bloques blandos de brillantes colores con formas simples" + "\n"
-                                + "Has cometido: " + error + " errores.");
-                    }
 
                     break;
 
