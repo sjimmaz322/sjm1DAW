@@ -39,7 +39,7 @@ public class Calculadora {
                     sc.next();
                 }
             } while (solicitarDatos);
-        } while ((operando1 > -100 || operando1 < 100) && (operando2 > -100 || operando2 < 100));
+        } while (!((operando1 > -100 && operando1 < 100) && (operando2 > -100 && operando2 < 100)));
 
     }
 
