@@ -40,33 +40,33 @@ public class EjercicioClase01 {
                     }
                 } while (num < 2 || num > 600000000);
 
-                if (num % 2 == 0) {
+                if ((num % 2) == 0) {
 
                     JOptionPane.showMessageDialog(null, "Sabemos que " + num + " no es primo al ser divisible por 2");
                 }
 
                 if (num % 2 != 0) {
 
-                    JOptionPane.showMessageDialog(null, "Sabemos que no es par, pero no sabemos si es primo");
 
-                    for (i = 3; i <= (num / 2); i+=2) {
+                } else if (!((num % 2) == 0)) { {
 
-                        if (num % i == 0) {
+                    for (i = 3; i == (num / 2); i++) {
+
+                        i += 2;
+
+                        JOptionPane.showMessageDialog(null, "Sabemos que no es par, pero no sabemos si es primo");
+
+                        if ((num % i) == 0) {
 
                             JOptionPane.showMessageDialog(null, "Sabemos que " + num + " no es par y no es primo");
-                            
                         } else {
 
-                                JOptionPane.showMessageDialog(null, "Podemos decir que " + num + " es primo");
-                                
-                            }
+                            JOptionPane.showMessageDialog(null, "Podemos decir que " + num + " es primo");
                         }
-
                     }
-                    break;
-    
-
-               
+                }
+                }
+                break;
 
             case 2:
 
@@ -78,7 +78,9 @@ public class EjercicioClase01 {
 
                 } else {
 
-                    for (i = 3; i <= (number / 2); i+=2) {
+                    for (i = 3; i <= (number / 2); i ++) {
+
+                        i += 2;
 
                         JOptionPane.showMessageDialog(null, "Sabemos que no es par, pero no sabemos si es primo");
 
