@@ -20,7 +20,7 @@ public class Calculadora {
         System.out.println("Introduce dos operandos entre -100 y 100");
 
         do {
-            System.out.println("Introduce dos perandos entre -100 y 100");
+            System.out.println("Introduce dos operandos entre -100 y 100");
             do {
                 try {
                     // Bloque candidato a lanzar excepción    
@@ -36,7 +36,7 @@ public class Calculadora {
                     // Código para tratar el error    
                     System.out.println("Se ha introducido texto en lugar de números. "
                             + "Vuelva a introducir los datos.");
-                    sc.next();
+                    sc.nextLine();
                 }
             } while (solicitarDatos);
         } while (!((operando1 > -100 && operando1 < 100) && (operando2 > -100 && operando2 < 100)));
