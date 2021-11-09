@@ -11,7 +11,7 @@ public class Calculadora {
         // Filtramos entrada de usuario
         // Controlar las excepciones ante error de usuario
         // Cuatro opciones: Sumar, restar, multiplicar y dividir.
-        // VICO virtual intelligence, calculator and operator
+        
         Scanner sc = new Scanner(System.in);
         int operando1 = 0, operando2 = 0, select = 0;
         boolean solicitarDatos = true, solicitarDatosMenu = true;
@@ -42,6 +42,7 @@ public class Calculadora {
                 }
             } while (solicitarDatos);
         } while (!((operando1 > -100 && operando1 < 100) && (operando2 > -100 && operando2 < 100)));
+        do{
         do {
             do {
                 try {
@@ -80,7 +81,7 @@ public class Calculadora {
             case 4:
                 System.out.println("Ha decidido dividir ambos operandos");
                 try {
-                    division = operando1 / operando2;
+                    division = (double)operando1 / (double)operando2;
                     System.out.println("El resultado es: " + division);
                 } catch (ArithmeticException ae) {
                     System.out.println("No se puede dividir por cero");
@@ -90,6 +91,7 @@ public class Calculadora {
                 System.out.println("Ha decidido sabiamente, cerrando el programa...");
                 break;
         }
-    }
+    } while (select!=0);
+        }
 
 }
