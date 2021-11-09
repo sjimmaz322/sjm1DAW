@@ -18,7 +18,7 @@ public class EjercicioClase04 {
     public static void main(String[] args) {
         int numDedosA;
         int numDedosB;
-        int selection = 0;
+        int selection = 3;
         int suma;
         boolean seguir = true;
         int error;
@@ -61,7 +61,7 @@ public class EjercicioClase04 {
                         } catch (NumberFormatException nfe) {
                             JOptionPane.showMessageDialog(null, "A ver, no es tan difícil, introduce un número");
                             error++;
-
+                            
                         }//Condición de mensaje ante valor fuera de rango
                         if (numDedosA < 1 || numDedosA > 10) {
                             JOptionPane.showMessageDialog(null, "Solo tienes dos manos, puedes sacar entre 1 y 10 dedos");
