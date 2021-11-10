@@ -26,6 +26,7 @@ public class Calculadora {
             System.out.println("Introduce dos operandos enteros entre -100 y 100");
             do {
                 try {
+                    solicitarDatos = true;
                     // Bloque candidato a lanzar excepción    
                     System.out.println("Introduce operando 1:");
                     operando1 = sc.nextInt();
