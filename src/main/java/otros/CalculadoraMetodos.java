@@ -69,7 +69,7 @@ public class CalculadoraMetodos {
 
         Scanner sc = new Scanner(System.in); // Clase Scanner
         //Definición e inicialización de variables necesarias
-        int operando1 = 0, operando2 = 0;
+        int operando1 = 0, operando2 = 0, numero = 0;
         boolean solicitarDatos = true;
         double resultado = 0;
 
@@ -122,7 +122,7 @@ public class CalculadoraMetodos {
                     resultado = dividir((double) operando1, (double) operando2);
                     break;
                 case "5":
-                    //    System.out.println(num);
+                    resultado = pedirTeclado(numero);
                     break;
 
                 case "0":
