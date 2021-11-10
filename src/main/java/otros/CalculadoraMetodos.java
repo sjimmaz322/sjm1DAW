@@ -9,9 +9,7 @@ public class CalculadoraMetodos {
         int suma = a + b;
         return suma;
     }
-    //Método resta. Solo se utiliza en la clase calculadora.
-    //Lo declaro método privado.
-    //Recibe dos parámetros y devuelve un entero con el resultado de la resta de ambos.
+
     private static int restar(int a, int b) {
         int resta = a - b;
         return resta;
@@ -23,7 +21,12 @@ public class CalculadoraMetodos {
     }
     
     private static int dividir (int a, int b){
-        int divition = a/b;
+        int divition = 0;
+        try{
+        divition = a/b;
+        } catch (ArithmeticException ae){
+            System.out.println("No se puede dividir por cero");
+        }
         return divition;
     }
     //Método mostrarMenu. Solo se utiliza en calculadora.
@@ -75,6 +78,30 @@ public class CalculadoraMetodos {
         do{
             mostrarMenu();
             option = sc.nextLine();
+            
+            switch (option){
+                
+                case "1":
+                    resultado = sumar(operando1, operando2);
+                    break;
+                    
+                case "2":
+                    resultado = restar(operando1, operando2);
+                    break;
+                    
+                case "3":
+                    resultado = multiplicar(operando1, operando2);
+                    break;
+                    
+                case "4":
+                    resultado = dividir(operando1, operando2);
+                    break;
+                    
+                case "0":
+                    System.out.println("Has elegido sabiamente, finalizando programa...");
+                    break;
+            }
+            System.out.println("El resultado es: " + resultado);
         } while (!option.equals("0"));
     }
 
