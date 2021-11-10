@@ -37,17 +37,19 @@ public class CalculadoraMetodos {
     }
 
     private static int pedirTeclado(int a) {
-
+        boolean seguir;
         int num = 0;
         Scanner entry = new Scanner(System.in);
-
+        do {
+        seguir = true;
         try {
             System.out.println("Introduce un entero");
             num = entry.nextInt();
-
+            seguir = false;
         } catch (InputMismatchException ime) {
             System.out.println("Un entero dije");
         }
+        }while (seguir = true);
         return num;
     }
 
