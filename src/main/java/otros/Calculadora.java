@@ -4,11 +4,31 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculadora {
-    
-    private static int sumar (int a, int b){
-        int suma = a+b;
+    //Método suma. Solo se utiliza en la clase calculadora.
+    //Lo declaro método privado.
+    //Recibe dos parámetros y devuelve un entero con el resultado de la suma de ambos.
+    private static int sumar(int a, int b) {
+        int suma = a + b;
         return suma;
     }
+    //Método resta. Solo se utiliza en la clase calculadora.
+    //Lo declaro método privado.
+    //Recibe dos parámetros y devuelve un entero con el resultado de la resta de ambos.
+    private static int restar(int a, int b) {
+        int resta = a - b;
+        return resta;
+    }
+    //Método mostrarMenu. Solo se utiliza en calculadora.
+    // Método privado, solo es usa en main.
+    private static void mostrarMenu (){
+            System.out.println("Elija la operación que desea calcular");
+            System.out.println("1 para sumar");
+            System.out.println("2 para restar");
+            System.out.println("3 para multiplicar");
+            System.out.println("4 para dividir");
+            System.out.println("0 para cancelar");  
+    }
+
     public static void main(String[] args) {
         // Scanner
         // Mostrar menú opciones
@@ -103,33 +123,24 @@ public class Calculadora {
         sc.nextLine();
         String option = "";
         do {
-            System.out.println("Elija la operación que desea calcular");
-            System.out.println("1 para sumar");
-            System.out.println("2 para restar");
-            System.out.println("3 para multiplicar");
-            System.out.println("4 para dividir");
-            System.out.println("0 para cancelar");
+            mostrarMenu();
             option = sc.nextLine();
 
             switch (option) {
                 case "1":
-                   resultado = sumar(operando1, operando2);
+                    resultado = sumar(operando1, operando2);
+                    break;
                 case "2":
-                    System.out.println("Ha elegido restar ambos operandos");
-                    resultado = operando1 - operando2;
+                    resultado = restar(operando1, operando2);
                     break;
                 default:
                     System.out.println("Opción no válida");
                     break;
-                
+
             }
             System.out.println("El resultado es: " + resultado);
-        } while (!option.equals("3"));
+        } while (!option.equals("0"));
     }
 
-    //Método suma. Solo se utiliza en la clase calculadora.
-    //Lo declaro método privado.
-    //Recibe dos parámetros y devuelve un entero con el resultado de la suma de ambos.
-    
     
 }
