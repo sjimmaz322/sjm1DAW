@@ -5,6 +5,13 @@ import java.util.Scanner;
 
 public class CalculadoraMetodos {
     
+    /*
+    Tareas:
+    1- Adaptar el programa para multiplicar y dividir.
+    2- Crear los métodos para multiplicar y dividir
+    3- Método que pida un entero por teclado y devuelva el dato si es correcto.
+    */
+    
     private static int sumar(int a, int b) {
         int suma = a + b;
         return suma;
@@ -20,8 +27,8 @@ public class CalculadoraMetodos {
         return multipli;
     }
     
-    private static int dividir (int a, int b){
-        int divition = 0;
+    private static double dividir (double a, double b){
+        double divition = 0;
         try{
         divition = a/b;
         } catch (ArithmeticException ae){
@@ -29,6 +36,19 @@ public class CalculadoraMetodos {
         }
         return divition;
     }
+    
+    private static int pedirTeclado (int a){
+            int num = 0;
+            Scanner entry = new Scanner(System.in);
+            try {
+            System.out.println("Introduce un entero");
+            num = entry.nextInt();
+            } catch (InputMismatchException ime) {
+                System.out.println("Un entero dije");
+            }
+            return num;
+    }
+            
     //Método mostrarMenu. Solo se utiliza en calculadora.
     // Método privado, solo es usa en main.
     private static void mostrarMenu (){
@@ -37,6 +57,7 @@ public class CalculadoraMetodos {
             System.out.println("2 para restar");
             System.out.println("3 para multiplicar");
             System.out.println("4 para dividir");
+            System.out.println("5 para ver un número");
             System.out.println("0 para cancelar");  
     }
     public static void main(String[] args) {
@@ -45,7 +66,7 @@ public class CalculadoraMetodos {
         //Definición e inicialización de variables necesarias
         int operando1 = 0, operando2 = 0;
         boolean solicitarDatos = true;
-        int resultado = 0;
+        double resultado = 0;
         
 
         System.out.println("Bienvenido a la Calculadora");
@@ -94,7 +115,10 @@ public class CalculadoraMetodos {
                     break;
                     
                 case "4":
-                    resultado = dividir(operando1, operando2);
+                    resultado = dividir((double)operando1,  (double)operando2);
+                    break;
+                case "5":
+                    
                     break;
                     
                 case "0":
