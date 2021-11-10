@@ -4,7 +4,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculadora {
-
+    
+    private static int sumar (int a, int b){
+        int suma = a+b;
+        return suma;
+    }
     public static void main(String[] args) {
         // Scanner
         // Mostrar menú opciones
@@ -16,7 +20,7 @@ public class Calculadora {
         //Definición e inicialización de variables necesarias
         int operando1 = 0, operando2 = 0, select = 0;
         boolean solicitarDatos = true, solicitarDatosMenu = true;
-        int suma, resta, multiplication;
+        int resultado = 0;
         double division = 0;
 
         System.out.println("Bienvenido a la Calculadora");
@@ -106,18 +110,26 @@ public class Calculadora {
             System.out.println("4 para dividir");
             System.out.println("0 para cancelar");
             option = sc.nextLine();
-            
-            switch(option){
+
+            switch (option) {
                 case "1":
-                    break;
+                   resultado = sumar(operando1, operando2);
                 case "2":
+                    System.out.println("Ha elegido restar ambos operandos");
+                    resultado = operando1 - operando2;
                     break;
                 default:
                     System.out.println("Opción no válida");
                     break;
-                    
+                
             }
+            System.out.println("El resultado es: " + resultado);
         } while (!option.equals("3"));
     }
 
+    //Método suma. Solo se utiliza en la clase calculadora.
+    //Lo declaro método privado.
+    //Recibe dos parámetros y devuelve un entero con el resultado de la suma de ambos.
+    
+    
 }
