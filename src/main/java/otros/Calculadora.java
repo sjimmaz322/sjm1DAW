@@ -141,6 +141,11 @@ public class Calculadora {
             System.out.println("El resultado es: " + resultado);
         } while (!option.equals("0"));
     }
-
+/*
+    Tareas:
+    1- Adaptar el programa para multiplicar y dividir.
+    2- Crear los métodos para multiplicar y dividir
+    3- Método que pida un entero por teclado y devuelva el dato si es correcto.
+    */
     
 }
