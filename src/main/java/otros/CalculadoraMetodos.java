@@ -27,6 +27,7 @@ public class CalculadoraMetodos {
     }
 
     private static double dividir(double a, double b) {
+        
         double divition = 0;
         try {
             divition = a / b;
@@ -62,7 +63,7 @@ public class CalculadoraMetodos {
         System.out.println("2 para restar");
         System.out.println("3 para multiplicar");
         System.out.println("4 para dividir");
-        System.out.println("5 para ver un número");
+        System.out.println("5 para meter un número y luego verlo");
         System.out.println("0 para cancelar");
     }
 
