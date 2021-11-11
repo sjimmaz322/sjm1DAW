@@ -4,11 +4,10 @@ import javax.swing.JOptionPane;
 
 public class EjBancoMethods {
 
-    // private int age;
-    private static boolean filtrarEdad(boolean controlEdad) {
+    // private static int age;
+    private static boolean filtrarEdad(int age) {
 
         final int MIN_AGE = 18, MAX_AGE = 65;
-        int age = 0;
 
         if (age > MIN_AGE && age < MAX_AGE) {
             return true;
@@ -17,12 +16,10 @@ public class EjBancoMethods {
         }
     }
 
-    private static boolean filtrarPrestamo(boolean controlMonetario) {
+    private static boolean filtrarPrestamo(int salary, int moneyAsked, double creditLimit) {
 
-        int salary = 0, moneyAsked = 0;
         final int MONTHS_IN_YEAR = 12;
         final double MULTIPLY_FACTOR = 5.85;
-        double creditLimit = 0;
 
         if (moneyAsked <= creditLimit) {
             return true;
@@ -31,10 +28,8 @@ public class EjBancoMethods {
         }
     }
 
-    private static boolean filtrarDevolucion(boolean controlDevolucion) {
+    private static boolean filtrarDevolucion(int age, int deadlines) {
 
-        int deadlines = 0;
-        int age = 0;
         final int MIN_DEADLINES = 5, MAX_DEADLINES = 30, LIMIT_DEADLINES = 75;
 
         if ((deadlines < MAX_DEADLINES) && (deadlines > MIN_DEADLINES) && (age + deadlines < LIMIT_DEADLINES)) {
@@ -56,15 +51,16 @@ public class EjBancoMethods {
         Método que diga si los años de devolución son correctos o no.
         Método recibe años a devolver y devuelve resultado (Boolean). (Return)
          */
-        
+
         final int MIN_AGE = 18, MAX_AGE = 65;
         int age;
-        int deadlines = 0;
+        int deadlines;
         final int MIN_DEADLINES = 5, MAX_DEADLINES = 30, LIMIT_DEADLINES = 75;
-        int salary = 0, moneyAsked = 0;
+        int salary, moneyAsked;
         final int MONTHS_IN_YEAR = 12;
         final double MULTIPLY_FACTOR = 5.85;
-        double creditLimit = 0;
+        double creditLimit;
+        
         boolean seguir0 = false, seguir1 = false, seguir2 = false, seguir3 = false;
 
         String edadTexto = JOptionPane.showInputDialog("Introduzca su edad");
