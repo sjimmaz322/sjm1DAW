@@ -6,7 +6,7 @@ public class EjBancoMethods {
 
     // private int age;
     private static boolean filtrarEdad(boolean controlEdad) {
-        
+
         final int MIN_AGE = 18, MAX_AGE = 65;
         int age = 0;
 
@@ -56,6 +56,7 @@ public class EjBancoMethods {
         Método que diga si los años de devolución son correctos o no.
         Método recibe años a devolver y devuelve resultado (Boolean). (Return)
          */
+        
         final int MIN_AGE = 18, MAX_AGE = 65;
         int age;
         int deadlines = 0;
@@ -79,7 +80,6 @@ public class EjBancoMethods {
 
         String plazosTexto = JOptionPane.showInputDialog("Introduzca los años en los que desea devolver el préstamo");
         deadlines = Integer.parseInt(plazosTexto);
-        
 
         seguir1 = filtrarEdad(seguir0);
         seguir2 = filtrarPrestamo(seguir0);
