@@ -88,7 +88,7 @@ public class EjBancoMethods {
         if ((seguir1==true && seguir2==true && seguir3==true)){
             JOptionPane.showMessageDialog(null, "Solicitud Aprobada");
         }
-        if (!(seguir1==true && seguir2==true && seguir3==true)){
+        else {
             JOptionPane.showMessageDialog(null, "Solicitud Denegada");
         }
     }
