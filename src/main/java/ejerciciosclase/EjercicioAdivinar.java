@@ -49,7 +49,7 @@ public class EjercicioAdivinar {
 
             acertado = adivinar(numGenerado, numPosible);
 
-            if (numPosible != numGenerado) {
+            if (acertado == false) {
                 System.out.println("No has acertado, una vida menos, vuelve a intentarlo");
                 numIntentos--;
 
@@ -63,18 +63,19 @@ public class EjercicioAdivinar {
                     acertado = false;
                 }
 
-                
             }
 
         } while ((acertado == false) && (numIntentos != 0));
 
         if (numIntentos == 0) {
+            System.out.println("TE QUEDASTE SIN VIDAS");
             System.out.println("GAME OVER");
             System.out.println("HAS PERDIDO");
         }
         if (numGenerado == numPosible) {
             System.out.println("ACERTASTE EL NÚMERO");
             System.out.println("HAS GANADO");
+            System.out.println("TE HAN SOBRADO " + numIntentos);
         }
 
     }
@@ -91,7 +92,7 @@ public class EjercicioAdivinar {
 
     private static boolean adivinar(int numGenerado, int numPosible) {
 
-        if (numGenerado > numPosible) {
+        if (numGenerado == numPosible) {
             return true;
 
         } else {
