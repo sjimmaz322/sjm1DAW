@@ -57,11 +57,13 @@ public class EjercicioAdivinar {
 
                 if (mayorQue == true) {
                     System.out.println("El número que buscas es mayor que el que has elegido");
+                    acertado = false;
                 } else {
                     System.out.println("El número que buscas es menor que el que has elegido");
+                    acertado = false;
                 }
 
-                acertado = false;
+                
             }
 
         } while ((acertado == false) && (numIntentos != 0));
