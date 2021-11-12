@@ -76,11 +76,11 @@ public class EjBancoMethods {
 
         String plazosTexto = JOptionPane.showInputDialog("Introduzca los años en los que desea devolver el préstamo");
         deadlines = Integer.parseInt(plazosTexto);
-
+/*
         seguir1 = filtrarEdad(seguir0);
         seguir2 = filtrarPrestamo(seguir0);
         seguir3 = filtrarDevolucion(seguir0);
-
+*/
         if ((seguir1 == true && seguir2 == true && seguir3 == true)) {
             JOptionPane.showMessageDialog(null, "Solicitud Aprobada");
         } else {
