@@ -51,7 +51,6 @@ public class EjercicioAdivinar {
 
             if (acertado == false) {
                 System.out.println("No has acertado, una vida menos, vuelve a intentarlo");
-                numIntentos--;
 
                 mayorQue = mayor(numGenerado, numPosible);
 
@@ -63,7 +62,7 @@ public class EjercicioAdivinar {
                     acertado = false;
 
                 }
-
+                numIntentos--;
             }
 
         } while ((acertado == false) && (numIntentos != 0));
