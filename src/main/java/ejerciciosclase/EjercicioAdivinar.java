@@ -61,6 +61,7 @@ public class EjercicioAdivinar {
                 } else {
                     System.out.println("El número que buscas es menor que el que has elegido");
                     acertado = false;
+
                 }
 
             }
