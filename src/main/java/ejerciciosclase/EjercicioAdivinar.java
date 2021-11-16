@@ -72,11 +72,12 @@ public class EjercicioAdivinar {
             System.out.println("TE QUEDASTE SIN VIDAS");
             System.out.println("GAME OVER");
             System.out.println("HAS PERDIDO");
+            System.out.println("El número era :" + numGenerado);
         }
         if (numGenerado == numPosible) {
             System.out.println("ACERTASTE EL NÚMERO");
             System.out.println("HAS GANADO");
-            System.out.println("TE HAN SOBRADO " + numIntentos);
+            System.out.println("TE HAN SOBRADO " + numIntentos + " INTENTOS");
         }
 
     }
