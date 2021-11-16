@@ -31,18 +31,29 @@ public class EjercicioClase05 {
         La declaración y la definición.
 
         ¿Qué elementos componen la definición de una clase? Explica brevemente cada uno.
+        Atributos y métodos.
+        Los atributos son la información que almacena la clase. Los metodos son los diferentes comportamientos que tendrá
+        la clase.
 
         ¿Qué es un método constructor?
+        Un método especial para instanciar los objetos de la clase.
 
         ¿Qué son los métodos de consulta o getters?
+        Los métodos que nos permiten conocer uno o varios parámetros guardados dentro de una clase.
 
         ¿Qué son los métodos modificadores o setters?
+        Los métodos que nos permiten modificar uno o varios valores de una clase.
 
         ¿Para qué se utiliza el puntero ‘this’?
+        Para poder diferenciar los atrobutos del objeto y los identificadores, evitando confusiones
+        y mejorando la legilibilidad del código.
 
         ¿En qué consiste la instanciación de un objeto?
+        Consiste en introducir dentro del objeto los atributos que queremos que contenga.
 
         ¿Cuál es la función del método main()? ¿Cómo se declara el método main()?
+        Sirve como base sobre la cual trabajaremos en un programa, se declara de manera public static y void además de con la
+        linea de comandos String[] args por convenio.
 
          */
     }
