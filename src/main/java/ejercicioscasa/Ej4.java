@@ -12,8 +12,9 @@ Crear contraseñas aleatorias que cumplan las siguientes restricciones:
 - Añadirá una letra aleatoria entre F y X (Mayúsculas).
      */
     public static void main(String[] args) {
-        int num1, num2, num3, num4;
+        int num1, num2, num3, num4, numIntentos = 1;
         char letra;
+        boolean repetition;
         do {
             num1 = randomNumber();
             num2 = randomNumber();
@@ -31,14 +32,18 @@ Crear contraseñas aleatorias que cumplan las siguientes restricciones:
             System.out.println(letra);
             System.out.println(" ");
             
-            if (((num1 + num4) % 2 == 0) || ((num2 * num3) % 2 != 0)){
+            repetition = numRepetidos(num1, num2, num3, num4);
+            
+            if (((num1 + num4) % 2 == 0) || ((num2 * num3) % 2 != 0) || repetition==true){
                 System.out.println("Contraseña "+num1+num2+num3+num4+letra+" No Válida");
                 System.out.println("Intentando de nuevo");
                 System.out.println(" ");
+                numIntentos++;
             }
             
-        } while (((num1 + num4) % 2 == 0) || ((num2 * num3) % 2 != 0));
+        } while (((num1 + num4) % 2 == 0) || ((num2 * num3) % 2 != 0) || repetition==true);
         System.out.println("Contraseña "+num1+num2+num3+num4+letra+" Válida");
+        System.out.println("Se han generado en total: " + numIntentos + " contraseñas");
     }
 
     private static int randomNumber() {
@@ -55,10 +60,11 @@ Crear contraseñas aleatorias que cumplan las siguientes restricciones:
 
         return charR;
     }
-    private static boolean numRepe(int num1, int num2, int num3, int num4){
-      if ((num1!=num2)&&(num1!=num3)&&(num1!=num4));{
-        
-    }  
-    return true;
+    private static boolean numRepetidos(int num1, int num2, int num3, int num4){    
+    if ((num1==num2)||(num1==num3)||(num1==num4)||(num2==num3)||(num2==num4)||(num3==num4)){
+        return true;
+    } else {
+        return false;
+    }
     }
 }
