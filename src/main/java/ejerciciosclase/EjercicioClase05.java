@@ -39,7 +39,7 @@ public class EjercicioClase05 {
 
         ¿Qué es un método constructor?
         Un método especial para instanciar los objetos de la clase. (reservar memoria y darle valor a los atributos)
-
+(Aquí nos quedamos)
         ¿Qué son los métodos de consulta o getters?
         Los métodos que nos permiten conocer uno o varios parámetros guardados dentro de una clase.
 
