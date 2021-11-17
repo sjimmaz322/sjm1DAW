@@ -21,8 +21,10 @@ public class EjercicioClase05 {
         Una instancia de una clase, identificada por un nombre, tiene un estado y tiene métodos.
         
         ¿Cuáles son los pilares de la POO? Explica brevemente cada uno de ellos.
-        La abstracción, mediante la creación de clases.
+        La abstracción, buscar propiedades y comportamientos comunes y agruparlos en una clases.
         Encapsulamiento, permite ocultar la información de las clases ofreciendo al programador unas funciones.
+        Herencia, se hereda la información de los padres.
+        Polimorfismo, mandar mensajes iguales de objetos diferentes.
         
         ¿Qué ventajas aporta la POO?
         La modularidad, la reutilización de códigos y la ocultación de la información.
