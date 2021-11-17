@@ -15,23 +15,50 @@ Crear contraseñas aleatorias que cumplan las siguientes restricciones:
         int num1, num2, num3, num4;
         char letra;
         do {
-        num1 = randomNumber();
-        num2 = randomNumber();
-        num3 = randomNumber();
-        num4 = randomNumber();
+            num1 = randomNumber();
+            num2 = randomNumber();
+            num3 = randomNumber();
+            num4 = randomNumber();
 
-        System.out.println(num1);
-        System.out.println(num2);
-        System.out.println(num3);
-        System.out.println(num4);
-        System.out.println(" - ");
-        
-        } while ( ((num1+num4)%2==0)||((num2*num3)%2!=0));
+            System.out.println(num1);
+            System.out.println(num2);
+            System.out.println(num3);
+            System.out.println(num4);
+            
+
+            letra = randomChar();
+
+            System.out.println(letra);
+            System.out.println(" ");
+            
+            if (((num1 + num4) % 2 == 0) || ((num2 * num3) % 2 != 0)){
+                System.out.println("Contraseña "+num1+num2+num3+num4+letra+" No Válida");
+                System.out.println("Intentando de nuevo");
+                System.out.println(" ");
+            }
+            
+        } while (((num1 + num4) % 2 == 0) || ((num2 * num3) % 2 != 0));
+        System.out.println("Contraseña "+num1+num2+num3+num4+letra+" Válida");
     }
 
     private static int randomNumber() {
         Random numRandom = new Random();
         int numR = numRandom.nextInt(10);
         return (numR);
+    }
+
+    private static char randomChar() {
+        Random charRandom = new Random();
+
+        int numChar = charRandom.nextInt(88 - 70 + 1) + 70;
+        char charR = (char) numChar;
+
+        return charR;
+    }
+    private static boolean numRepe(int num1, int num2, int num3, int num4){
+      if ((num1!=num2)&&(num1!=num3)&&(num1!=num4));{
+        
+    }  
+    return true;
     }
 }
