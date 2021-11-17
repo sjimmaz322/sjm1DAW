@@ -18,7 +18,7 @@ public class EjercicioClase05 {
         Una representación abstracta de un conjunto de objetos que comparten los mismos atributos y comportamientos.
         
         ¿Qué es un objeto?
-        Una instancia de una clase.
+        Una instancia de una clase, identificada por un nombre, tiene un estado y tiene métodos.
         
         ¿Cuáles son los pilares de la POO? Explica brevemente cada uno de ellos.
         La abstracción, mediante la creación de clases.
