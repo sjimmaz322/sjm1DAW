@@ -26,7 +26,6 @@ Crear contraseñas aleatorias que cumplan las siguientes restricciones:
             System.out.println(num3);
             System.out.println(num4);
             
-
             letra = randomChar();
 
             System.out.println(letra);
@@ -51,7 +50,7 @@ Crear contraseñas aleatorias que cumplan las siguientes restricciones:
         int numR = numRandom.nextInt(10);
         return (numR);
     }
-
+    
     private static char randomChar() {
         Random charRandom = new Random();
 
@@ -60,6 +59,7 @@ Crear contraseñas aleatorias que cumplan las siguientes restricciones:
 
         return charR;
     }
+    
     private static boolean numRepetidos(int num1, int num2, int num3, int num4){    
     if ((num1==num2)||(num1==num3)||(num1==num4)||(num2==num3)||(num2==num4)||(num3==num4)){
         return true;
