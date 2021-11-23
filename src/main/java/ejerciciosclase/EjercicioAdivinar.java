@@ -20,16 +20,15 @@ public class EjercicioAdivinar {
      */
     public static void main(String[] args) {
 
-        int num1, num2, numGenerado, numIntentos, numPosible = 0;
+        int num1, num2, numGenerado, numIntentos = 0, numPosible = 0;
         boolean acertado = true, mayorQue = true;
 
         Scanner sc = new Scanner(System.in);
         do {
-            System.out.println("Introduce el número máximo para el rango");
-            num1 = sc.nextInt();
-
             System.out.println("Introduce el número mínimo para el rango");
             num2 = sc.nextInt();
+            System.out.println("Introduce el número máximo para el rango");
+            num1 = sc.nextInt();
 
             if ((num1 <= num2)) {
                 System.out.println("El número máximo debe ser mayor que el número mínimo");
@@ -40,6 +39,7 @@ public class EjercicioAdivinar {
         numGenerado = numeroGenerado(num1, num2);
 
         System.out.println("¿Cuántos intentos (vidas) crees que necesitarás?");
+
         numIntentos = sc.nextInt();
 
         do {
@@ -110,4 +110,5 @@ public class EjercicioAdivinar {
             return false;
         }
     }
+
 }
