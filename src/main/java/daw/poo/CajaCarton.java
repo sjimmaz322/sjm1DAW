@@ -39,4 +39,19 @@ public class CajaCarton {
         return this.peso;
     }
 
+    public static void abrir() {
+
+    }
+
+    public static void cerrar() {
+
+    }
+    
+    public CajaCarton (double ancho, double alto, double largo, double peso){
+        this.ancho = ancho;
+        this.alto = alto;
+        this.largo = largo;
+        this.peso = peso;
+    }
+
 }
