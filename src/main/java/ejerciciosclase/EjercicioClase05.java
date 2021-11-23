@@ -47,7 +47,7 @@ public class EjercicioClase05 {
         Los métodos que nos permiten modificar uno o varios valores de una clase.
 
         ¿Para qué se utiliza el puntero ‘this’?
-        Para poder diferenciar los atrobutos del objeto y los identificadores, evitando confusiones
+        Para poder diferenciar los atributos del objeto y los parámetros, o para hacer referencia al propio objeto, evitando confusiones
         y mejorando la legilibilidad del código.
 
         ¿En qué consiste la instanciación de un objeto?
