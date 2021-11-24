@@ -15,7 +15,7 @@ public class Utilidades {
         return numRandom;
     }
 
-    public static int leeEnteros() {
+    public static int leerEnteros() {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         return num;
