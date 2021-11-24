@@ -14,6 +14,10 @@ public class Apuntes {
         y leer enteros con Scanner. Luego probar en un main ambos métodos creando un objeto de la clase Utilidades
         */
     
+        for (int i = 1000; i >= 100 ; i-=5) {
+            System.out.println(i);
+            
+        }
     }
 
 }
