@@ -1,12 +1,16 @@
 package pootema4;
 
 public class Empleado {
-    private String nombre, apellidos, NIF, sueldoBase, pagoHoraExtra, horasExtrasRealizadas, IRPF, estadoCivil, numHijos;
+
+    private static String nombre, apellidos, NIF;
+    private static int sueldoBase, pagoHoraExtra, horasExtrasRealizadas, IRPF, numHijos;
+    private static boolean estadoCivil;
 
     public Empleado() {
     }
 
-    public Empleado(String nombre, String apellidos, String NIF, String sueldoBase, String pagoHoraExtra, String horasExtrasRealizadas, String IRPF, String estadoCivil, String numHijos) {
+    public Empleado(String nombre, String apellidos, String NIF, int sueldoBase, int pagoHoraExtra, int horasExtrasRealizadas,
+            int IRPF, boolean estadoCivil, int numHijos) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.NIF = NIF;
@@ -16,6 +20,7 @@ public class Empleado {
         this.IRPF = IRPF;
         this.estadoCivil = estadoCivil;
         this.numHijos = numHijos;
+       
     }
 
     public String getNombre() {
@@ -42,59 +47,66 @@ public class Empleado {
         this.NIF = NIF;
     }
 
-    public String getSueldoBase() {
+    public int getSueldoBase() {
         return sueldoBase;
     }
 
-    public void setSueldoBase(String sueldoBase) {
+    public void setSueldoBase(int sueldoBase) {
         this.sueldoBase = sueldoBase;
     }
 
-    public String getPagoHoraExtra() {
+    public int getPagoHoraExtra() {
         return pagoHoraExtra;
     }
 
-    public void setPagoHoraExtra(String pagoHoraExtra) {
+    public void setPagoHoraExtra(int pagoHoraExtra) {
         this.pagoHoraExtra = pagoHoraExtra;
     }
 
-    public String getHorasExtrasRealizadas() {
+    public int getHorasExtrasRealizadas() {
         return horasExtrasRealizadas;
     }
 
-    public void setHorasExtrasRealizadas(String horasExtrasRealizadas) {
+    public void setHorasExtrasRealizadas(int horasExtrasRealizadas) {
         this.horasExtrasRealizadas = horasExtrasRealizadas;
     }
 
-    public String getIRPF() {
+    public int getIRPF() {
         return IRPF;
     }
 
-    public void setIRPF(String IRPF) {
+    public void setIRPF(int IRPF) {
         this.IRPF = IRPF;
     }
 
-    public String getEstadoCivil() {
+    public boolean getEstadoCivil() {
         return estadoCivil;
     }
 
-    public void setEstadoCivil(String estadoCivil) {
+    public void setEstadoCivil(boolean estadoCivil) {
         this.estadoCivil = estadoCivil;
     }
 
-    public String getNumHijos() {
+    public int getNumHijos() {
         return numHijos;
     }
 
-    public void setNumHijos(String numHijos) {
+    public void setNumHijos(int numHijos) {
         this.numHijos = numHijos;
     }
 
     @Override
     public String toString() {
-        return "Empleado {" + "nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", sueldoBase=" +
-                sueldoBase + ", pagoHoraExtra=" + pagoHoraExtra + ", horasExtrasRealizadas=" + horasExtrasRealizadas +
-                ", IRPF=" + IRPF + ", estadoCivil=" + estadoCivil + ", numHijos=" + numHijos + '}';
+        return "Empleado {" + "nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", sueldoBase="
+                + sueldoBase + ", pagoHoraExtra=" + pagoHoraExtra + ", horasExtrasRealizadas=" + horasExtrasRealizadas
+                + ", IRPF=" + IRPF + ", estadoCivil=" + estadoCivil + ", numHijos=" + numHijos + '}';
+    }
+
+    public static int bonoHorasExtras(int pagoHoraExtras, int horasExtrasRealizadas) {
+        int pagoExtra;
+        pagoExtra = (pagoHoraExtra * horasExtrasRealizadas);
+    
+    return pagoExtra;
     }
     
 }
