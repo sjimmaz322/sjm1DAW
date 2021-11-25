@@ -5,6 +5,11 @@ public class Empleado {
     private static String nombre, apellidos, NIF;
     private static int sueldoBase, pagoHoraExtra, horasExtrasRealizadas, IRPF, numHijos;
     private static boolean estadoCivil;
+    
+    public static int CHE(int pagoHoraExtras, int horasExtrasRealizadas){
+        int pagoHE = (int)pagoHoraExtra*(int)horasExtrasRealizadas;
+        return pagoHE;
+    }
 
     public Empleado() {
     }
@@ -101,12 +106,5 @@ public class Empleado {
                 + sueldoBase + ", pagoHoraExtra=" + pagoHoraExtra + ", horasExtrasRealizadas=" + horasExtrasRealizadas
                 + ", IRPF=" + IRPF + ", estadoCivil=" + estadoCivil + ", numHijos=" + numHijos + '}';
     }
-
-    public static int bonoHorasExtras(int pagoHoraExtras, int horasExtrasRealizadas) {
-        int pagoExtra;
-        pagoExtra = (pagoHoraExtra * horasExtrasRealizadas);
-    
-    return pagoExtra;
-    }
-    
+        
 }
