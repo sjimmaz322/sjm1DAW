@@ -20,6 +20,5 @@ public class Utilidades {
         int num = sc.nextInt();
         return num;
     }
-    
-    
+   
 }
