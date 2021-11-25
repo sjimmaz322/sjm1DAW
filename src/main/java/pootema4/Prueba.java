@@ -32,8 +32,8 @@ public class Prueba {
         Empleado empleado2 = new Empleado("Humano","Humanez","12345678-Z","500","17","0","15","Casado","2");
         
         System.out.println("Los datos del empleado 1 son: Nombre - "+empleado1.getNombre()+" Apellidos - "+empleado1.getApellidos()+
-                " NIF - "+empleado1.getNIF()+" Sueldo base - "+empleado1.getSueldoBase()+" Pago por hora extra - "+
-                empleado1.getPagoHoraExtra()+" Horas extras realizadas - "+empleado1.getHorasExtrasRealizadas()+" Paga un IRPF de "+
+                " NIF - "+empleado1.getNIF()+"\n Sueldo base - "+empleado1.getSueldoBase()+" Pago por hora extra - "+
+                empleado1.getPagoHoraExtra()+" Horas extras realizadas - "+empleado1.getHorasExtrasRealizadas()+"\n Paga un IRPF de "+
                 empleado1.getIRPF()+" El empleado es - "+empleado1.getEstadoCivil()+" y su número de hijos es de "+empleado1.getNumHijos());
         System.out.println(" ");
         System.out.println(empleado2.toString());
