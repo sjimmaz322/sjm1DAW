@@ -1,11 +1,11 @@
 package pootema4;
 
+import static pootema4.Empleado.CHE;
+
 public class Prueba {
 
     public static void main(String[] args) {
-        
-        
-        
+     
         Cancion song1 = new Cancion();
         Cancion song2 = new Cancion("Este es el nombre", "Este la canta");
         
@@ -40,6 +40,7 @@ public class Prueba {
        // System.out.println("El empleado 1 cobrará por su horas extras un plud de :" + );
         System.out.println(" ");
         System.out.println(empleado2.toString());
+    
     }
 
 }
