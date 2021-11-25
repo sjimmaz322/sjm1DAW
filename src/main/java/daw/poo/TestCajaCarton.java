@@ -17,6 +17,8 @@ public class TestCajaCarton {
         System.out.println("Las características de la caja chica son:");
         System.out.println(cajaChica.getAncho() + " mm " + cajaChica.getAlto()
                 + " mm " + cajaChica.getlargo() + " mm " + cajaChica.getPeso() + " gr");
+        
+        System.out.println(cajaGrande.toString());
     }
 
 }
