@@ -2,10 +2,7 @@ package daw.poo;
 
 public class CajaCarton {
 
-    private double ancho;
-    private double alto;
-    private double largo;
-    private double peso;
+    private double ancho, alto, largo, peso;
 
     public double getAncho() {
         return ancho;
@@ -54,4 +51,12 @@ public class CajaCarton {
         this.peso = peso;
     }
 
+    public CajaCarton() {
+    }
+
+    @Override
+    public String toString() {
+        return "CajaCarton{" + "ancho=" + ancho + ", alto=" + alto + ", largo=" + largo + ", peso=" + peso + '}';
+    }
+    
 }
