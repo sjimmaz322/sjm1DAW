@@ -53,6 +53,7 @@ public class Prueba {
                 - (((empleado1.empleadoIRPF(empleado1.getIRPF(),
                 empleado1.getEstadoCivil(), empleado1.getNumHijos())) * (empleado1.sueldoBruto(empleado1.getSueldoBase(),
                 empleado1.bonoHoraExtra(empleado1.getPagoHoraExtra(), empleado1.getHorasExtrasRealizadas())))) / 100)) + "€");
+        
     }
 
 }
