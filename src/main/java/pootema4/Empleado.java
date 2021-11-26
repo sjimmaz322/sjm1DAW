@@ -89,6 +89,7 @@ public class Empleado {
     }
 
     public boolean getEstadoCivil() {
+        
         return estadoCivil;
     }
 
