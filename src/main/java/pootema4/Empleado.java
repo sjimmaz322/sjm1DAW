@@ -77,6 +77,10 @@ public class Empleado {
     }
 
     public int getIRPF() {
+        if (estadoCivil = true){
+            IRPF-=2;
+        }
+        IRPF = (IRPF-numHijos);
         return IRPF;
     }
 
