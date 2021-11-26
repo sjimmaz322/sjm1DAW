@@ -2,11 +2,11 @@ package pootema4;
 
 public class Empleado {
 
-    private static String nombre, apellidos, NIF;
-    private static int sueldoBase, pagoHoraExtra, horasExtrasRealizadas, IRPF, numHijos;
-    private static boolean estadoCivil;
+    private String nombre, apellidos, NIF;
+    private int sueldoBase, pagoHoraExtra, horasExtrasRealizadas, IRPF, numHijos;
+    private boolean estadoCivil;
     
-    public static int CHE(int pagoHoraExtras, int horasExtrasRealizadas){
+    public int CHE(int pagoHoraExtras, int horasExtrasRealizadas){
         int pagoHE = (int)pagoHoraExtra*(int)horasExtrasRealizadas;
         return pagoHE;
     }
@@ -107,4 +107,25 @@ public class Empleado {
                 + ", IRPF=" + IRPF + ", estadoCivil=" + estadoCivil + ", numHijos=" + numHijos + '}';
     }
         
+    public int bonoHoraExtra(int pagoHoraExtra, int horasExtrasRealizadas){
+        int bonoHE = this.pagoHoraExtra*this.horasExtrasRealizadas;
+        return bonoHE;
+    }
+    
+    public int sueldoBruto(int bonoHE, int sueldoBase){
+        int salarioBruto = bonoHE+sueldoBase;
+        return salarioBruto;
+    }
+    public int empleadoIRPF(int IRFP, boolean estadoCivil, int numHijos ){
+        int indiceIRPF = this.IRPF;
+        if (estadoCivil = true){
+            indiceIRPF-=2;
+        }
+        indiceIRPF = (indiceIRPF-numHijos);
+        return indiceIRPF;
+    }
+    public int sueldoNeto (int salarioBruto, int indiceIRPF){
+        int salarioNeto = (salarioBruto-((salarioBruto*indiceIRPF)/100));
+        return salarioNeto;
+    }
 }
