@@ -27,16 +27,19 @@ public class Prueba {
         empleado1.setIRPF(17);
         empleado1.setEstadoCivil(false);
         empleado1.setNumHijos(0);
-
+        
+        System.out.println(empleado1.getEstadoCivil());
+        
         Empleado empleado2 = new Empleado("Humano", "Humanez", "12345678-Z", 500, 17, 0, 15, false, 2);
-
+       
         System.out.println("Los datos del empleado 1 son: Nombre - " + empleado1.getNombre() + " Apellidos - " + empleado1.getApellidos()
                 + " NIF - " + empleado1.getNIF() + "\n Sueldo base - " + empleado1.getSueldoBase() + " Pago por hora extra - "
                 + empleado1.getPagoHoraExtra() + " Horas extras realizadas - " + empleado1.getHorasExtrasRealizadas() + "\n Paga un IRPF de "
-                + empleado1.getIRPF() + " ¿El estado civil del empleado es casado? - " + empleado1.getEstadoCivil()+ " y su número de hijos es de " + empleado1.getNumHijos());
+                + empleado1.getIRPF() + " ¿El estado civil del empleado es casado? - " + empleado1.getEstadoCivil() + " y su número de hijos es de " + empleado1.getNumHijos());
 
         System.out.println(" ");
         System.out.println(empleado2.toString());
+        System.out.println(" ");
 
         System.out.println("El bono de horas extras es: " + empleado1.bonoHoraExtra(empleado1.getPagoHoraExtra(),
                 empleado1.getHorasExtrasRealizadas()) + "€");
