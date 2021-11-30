@@ -5,13 +5,20 @@ public class Empleado {
     private String nombre, apellidos, NIF;
     private int sueldoBase, pagoHoraExtra, horasExtrasRealizadas, IRPF, numHijos;
     private boolean estadoCivil;
-    
-    public int CHE(int pagoHoraExtras, int horasExtrasRealizadas){
-        int pagoHE = (int)pagoHoraExtra*(int)horasExtrasRealizadas;
-        return pagoHE;
-    }
 
     public Empleado() {
+        this.nombre = "";
+        this.apellidos = "";
+        this.NIF = "";
+        this.sueldoBase = 0;
+        this.pagoHoraExtra = 0;
+         if (pagoHoraExtra < 10 || pagoHoraExtra > 25) {
+            throw new IllegalArgumentException("Pago por horas fuera de rango");
+        }
+        this.horasExtrasRealizadas = 0;
+        this.IRPF = 0;
+        this.estadoCivil = false;
+        this.numHijos = 0;
     }
 
     public Empleado(String nombre, String apellidos, String NIF, int sueldoBase, int pagoHoraExtra, int horasExtrasRealizadas,
@@ -21,11 +28,14 @@ public class Empleado {
         this.NIF = NIF;
         this.sueldoBase = sueldoBase;
         this.pagoHoraExtra = pagoHoraExtra;
+         if (pagoHoraExtra < 10 || pagoHoraExtra > 25) {
+            throw new IllegalArgumentException("Pago por horas fuera de rango");
+        }
         this.horasExtrasRealizadas = horasExtrasRealizadas;
         this.IRPF = IRPF;
         this.estadoCivil = estadoCivil;
         this.numHijos = numHijos;
-       
+
     }
 
     public String getNombre() {
@@ -61,10 +71,14 @@ public class Empleado {
     }
 
     public int getPagoHoraExtra() {
+       
         return pagoHoraExtra;
     }
 
     public void setPagoHoraExtra(int pagoHoraExtra) {
+        if (pagoHoraExtra < 10 || pagoHoraExtra > 25) {
+            throw new IllegalArgumentException("Pago por horas fuera de rango");
+        }
         this.pagoHoraExtra = pagoHoraExtra;
     }
 
@@ -77,10 +91,10 @@ public class Empleado {
     }
 
     public int getIRPF() {
-        if (estadoCivil = true){
-            IRPF-=2;
+        if (estadoCivil = true) {
+            IRPF -= 2;
         }
-        IRPF = (IRPF-numHijos);
+        IRPF = (IRPF - numHijos);
         return IRPF;
     }
 
@@ -89,7 +103,7 @@ public class Empleado {
     }
 
     public boolean getEstadoCivil() {
-        
+
         return estadoCivil;
     }
 
@@ -111,26 +125,47 @@ public class Empleado {
                 + sueldoBase + ", pagoHoraExtra=" + pagoHoraExtra + ", horasExtrasRealizadas=" + horasExtrasRealizadas
                 + ", IRPF=" + IRPF + ", estadoCivil=" + estadoCivil + ", numHijos=" + numHijos + '}';
     }
-        
-    public int bonoHoraExtra(int pagoHoraExtra, int horasExtrasRealizadas){
-        int bonoHE = this.pagoHoraExtra*this.horasExtrasRealizadas;
-        return bonoHE;
+
+    public int getbonoHoraExtra() {
+
+        return (this.pagoHoraExtra * this.horasExtrasRealizadas);
     }
-    
-    public int sueldoBruto(int bonoHE, int sueldoBase){
-        int salarioBruto = bonoHE+sueldoBase;
-        return salarioBruto;
+
+    public int getsueldoBruto() {
+        return (sueldoBase + (pagoHoraExtra * horasExtrasRealizadas));
     }
-    public int empleadoIRPF(int IRFP, boolean estadoCivil, int numHijos ){
-        int indiceIRPF = this.IRPF;
-        if (estadoCivil = true){
-            indiceIRPF-=2;
+
+    public int getempleadoIRPF(int IRFP, boolean estadoCivil, int numHijos) {
+        int IRPF = this.IRPF;
+        if (estadoCivil = true) {
+            IRPF -= 2;
         }
-        indiceIRPF = (indiceIRPF-numHijos);
-        return indiceIRPF;
+        IRPF = (IRPF - numHijos);
+        return IRPF;
     }
-    public int sueldoNeto (int salarioBruto, int indiceIRPF){
-        int salarioNeto = (salarioBruto-((salarioBruto*indiceIRPF)/100));
-        return salarioNeto;
+
+    public int getsueldoNeto() {
+        return ((sueldoBase + (pagoHoraExtra * horasExtrasRealizadas)) - (sueldoBase + (pagoHoraExtra * horasExtrasRealizadas)) * (IRPF/100));
+
+    }
+    public void BasicInfo(){
+        //nombre, apellidos, NIF, estado civil y número de hijos.
+
+        System.out.println("El nombre del empleado es: " + this.nombre + "\n"+
+                "sus apellidos son: " + this.apellidos + "\n"+
+                "su estado civil es: " + this.estadoCivil + "\n"+
+                "y tiene "+this.numHijos+"hijos");
+    }
+    public void AllInfo(){
+        System.out.println("El nombre del empleado es: " + this.nombre + "\n"+
+                "sus apellidos son: " + this.apellidos + "\n"+
+                "su estado civil es: " + this.estadoCivil + "\n"+
+                "tiene "+this.numHijos+"hijos"+"\n"+
+                "cobra un plus de horas extras de :"+(this.pagoHoraExtra * this.horasExtrasRealizadas)+"\n"+
+                "su sueldo bruto es: "+ (sueldoBase + (pagoHoraExtra * horasExtrasRealizadas))+"\n"+
+                "tiene una retención del IRPF de :"+(sueldoBase + (pagoHoraExtra * horasExtrasRealizadas)) * (IRPF/100)+"\n"+
+                "y su sueldo neto es: "+((sueldoBase + (pagoHoraExtra * horasExtrasRealizadas)) - (sueldoBase + (pagoHoraExtra * horasExtrasRealizadas)) * (IRPF/100)));
+        
+        
     }
 }
