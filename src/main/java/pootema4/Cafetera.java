@@ -67,6 +67,9 @@ public class Cafetera {
         this.cantidadActual=this.capacidadMaxima;
         return this.cantidadActual;
     }
+    public double vaciarCafetera(){
+        this.cantidadActual = ;
+    }return cantidadActual;
 //    public double servirTaza(){
 //        this.cantidadAServir = cantidadAServir;
 //        if (this.cantidadAServir < this.cantidadActual){
