@@ -3,7 +3,7 @@ package pootema4;
 public class Prueba {
 
     public static void main(String[] args) {
-
+        
         Cancion song1 = new Cancion();
         Cancion song2 = new Cancion("Este es el nombre", "Este la canta");
 
@@ -40,22 +40,10 @@ public class Prueba {
         System.out.println(" ");
         System.out.println(empleado2.toString());
         System.out.println(" ");
-
-        System.out.println("El bono de horas extras es: " + empleado1.bonoHoraExtra(empleado1.getPagoHoraExtra(),
-                empleado1.getHorasExtrasRealizadas()) + "€");
-
-        System.out.println("El salario bruto del empleado 1 es de: " + empleado1.sueldoBruto(empleado1.getSueldoBase(),
-                empleado1.bonoHoraExtra(empleado1.getPagoHoraExtra(), empleado1.getHorasExtrasRealizadas())) + "€");
-
-        System.out.println("El empleado 1 paga de IRPF: " + ((empleado1.empleadoIRPF(empleado1.getIRPF(),
-                empleado1.getEstadoCivil(), empleado1.getNumHijos())) * (empleado1.sueldoBruto(empleado1.getSueldoBase(),
-                empleado1.bonoHoraExtra(empleado1.getPagoHoraExtra(), empleado1.getHorasExtrasRealizadas())))) / 100 + "€");
-
-        System.out.println("El sueldo neto el empleado 1 es de: " + (empleado1.sueldoBruto(empleado1.getSueldoBase(),
-                empleado1.bonoHoraExtra(empleado1.getPagoHoraExtra(), empleado1.getHorasExtrasRealizadas()))
-                - (((empleado1.empleadoIRPF(empleado1.getIRPF(),
-                empleado1.getEstadoCivil(), empleado1.getNumHijos())) * (empleado1.sueldoBruto(empleado1.getSueldoBase(),
-                empleado1.bonoHoraExtra(empleado1.getPagoHoraExtra(), empleado1.getHorasExtrasRealizadas())))) / 100)) + "€");
+        
+     
+        
+        
         
     }
 
