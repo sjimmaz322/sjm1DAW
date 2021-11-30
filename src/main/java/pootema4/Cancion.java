@@ -1,9 +1,12 @@
 package pootema4;
 
 public class Cancion {
+
     private String titulo, autor;
 
     public Cancion() {
+        this.titulo = "";
+        this.autor = "";
     }
 
     public Cancion(String titulo, String autor) {
@@ -11,7 +14,6 @@ public class Cancion {
         this.autor = autor;
     }
 
-    
     public String getTitulo() {
         return titulo;
     }
@@ -32,6 +34,5 @@ public class Cancion {
     public String toString() {
         return "Cancion {" + "titulo = " + titulo + ", autor = " + autor + '}';
     }
-    
-    
+
 }
