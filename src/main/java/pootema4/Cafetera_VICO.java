@@ -19,6 +19,7 @@ public class Cafetera_VICO {
         this.capacidadMaxima = 1000;
         this.cantidadActual = 0;
     }
+    
     //Si la capacidad máxima es negativa pasa a positiva
     public Cafetera_VICO(double capacidadMaxima) {
         this.capacidadMaxima = capacidadMaxima;
