@@ -58,6 +58,9 @@ public class Cafetera_VICO {
         this.cantidadActual = 0;
     }
     
+    public void agregarCafe(){
+        
+    }
     //Implicación, utilidad public y private en los atributos y métodos de una clase --> Buscar que lo pide
     
     //Encapsulamiento

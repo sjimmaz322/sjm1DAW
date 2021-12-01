@@ -15,6 +15,12 @@ public class Prueba2 {
         c2.llenarCafetera();
         
         System.out.println(c2);
+        
+        c2.servirtaza(500);
+        System.out.println(c2);
+        
+        c2.servirtaza(505);
+        System.out.println(c2);
     }
 
 }
