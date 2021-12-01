@@ -42,7 +42,9 @@ public class Cafetera_VICO {
         this.cantidadActual=this.capacidadMaxima;
     }
     
-    
+    public void llenarCafetera(){
+        this.cantidadActual=this.capacidadMaxima;
+    }
     
     
     //Implicación, utilidad public y private en los atributos y métodos de una clase --> Buscar que lo pide
