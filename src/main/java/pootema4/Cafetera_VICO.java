@@ -28,16 +28,14 @@ public class Cafetera_VICO {
 
     public Cafetera_VICO(double capacidadMaxima, double cantidadActual) {
         this.capacidadMaxima = capacidadMaxima;
+        this.cantidadActual = Math.abs(cantidadActual);
         
-        if (capacidadMaxima < 10){     
-            this.capacidadMaxima = 10; //Para no poder crear una cafetara de capacidad 0
-            
-        if (cantidadActual > this.capacidadMaxima){
+        if (this.capacidadMaxima < 10){     
+            this.capacidadMaxima = 10; //Para no poder crear una cafetara de capacidad 0   
+        }
+        if (this.cantidadActual > this.capacidadMaxima){ //Para que no pueda desbordarse la cafetera
             this.cantidadActual = this.capacidadMaxima;
             }
-        }                              
-        
-        
         this.cantidadActual=this.capacidadMaxima;
     }
     
