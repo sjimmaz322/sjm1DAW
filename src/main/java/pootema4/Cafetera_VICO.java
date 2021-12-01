@@ -45,7 +45,16 @@ public class Cafetera_VICO {
     public void llenarCafetera(){
         this.cantidadActual=this.capacidadMaxima;
     }
-    
+    public void servirtaza(double cantidadAServir){
+        double cantidadPositiva = Math.abs(cantidadAServir);
+        this.cantidadActual -= cantidadPositiva;
+        if (cantidadPositiva > this.cantidadActual){
+            this.cantidadActual = 0;
+        } 
+    }
+    public void vaciarCafetera(){
+        this.cantidadActual = 0;
+    }
     
     //Implicación, utilidad public y private en los atributos y métodos de una clase --> Buscar que lo pide
     
