@@ -12,6 +12,8 @@ public class Cafetera_VICO {
     //Métodos
     //Especial mención contructores, getters y setters.
     //Constructor por defecto sin parámetros
+    //Contructores sobrecargados
+    //Igual nombre con distintos parámetros
 
     public Cafetera_VICO() {
         this.capacidadMaxima = 1000;
