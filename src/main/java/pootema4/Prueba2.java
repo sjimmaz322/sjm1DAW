@@ -12,6 +12,9 @@ public class Prueba2 {
         System.out.println(c2);
         System.out.println(c3);
         
+        c2.llenarCafetera();
+        
+        System.out.println(c2);
     }
 
 }
