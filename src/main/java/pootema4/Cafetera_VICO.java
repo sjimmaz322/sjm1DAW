@@ -45,6 +45,7 @@ public class Cafetera_VICO {
     public void llenarCafetera(){
         this.cantidadActual=this.capacidadMaxima;
     }
+    
     public void servirtaza(double cantidadAServir){
         double cantidadPositiva = Math.abs(cantidadAServir);
         this.cantidadActual -= cantidadPositiva;
@@ -52,6 +53,7 @@ public class Cafetera_VICO {
             this.cantidadActual = 0;
         } 
     }
+    
     public void vaciarCafetera(){
         this.cantidadActual = 0;
     }
