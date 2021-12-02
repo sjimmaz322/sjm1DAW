@@ -21,6 +21,9 @@ public class Prueba2 {
         
         c2.servirtaza(505);
         System.out.println(c2);
+        
+        c2.agregarCafe(525);
+        System.out.println(c2);
     }
 
 }
