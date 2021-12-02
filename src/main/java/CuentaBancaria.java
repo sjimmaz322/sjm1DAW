@@ -11,12 +11,6 @@ private double saldoActual, interesAnual;
         this.nomCliente = "";
         this.saldoActual = 0;
         this.interesAnual = 0.1;
-        if (this.interesAnual<0.1){
-            this.interesAnual = 0.1;
-        }
-        if (this.interesAnual>0.3){
-            this.interesAnual = 0.3;    
-        }
     }
 
     public CuentaBancaria(String NIF, String nomCliente, double saldoActual, double interesAnual) {
