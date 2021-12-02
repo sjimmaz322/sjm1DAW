@@ -58,8 +58,12 @@ public class Cafetera_VICO {
         this.cantidadActual = 0;
     }
     
-    public void agregarCafe(){
-        
+    public void agregarCafe(double cantidadAgregar){
+        double agregadoPos = Math.abs(cantidadAgregar);
+        this.cantidadActual += agregadoPos;
+        if ((agregadoPos+this.cantidadActual)>this.capacidaMaxima){
+         this.cantidadActual = this.capacidadMaxima;   
+        }
     }
     //Implicación, utilidad public y private en los atributos y métodos de una clase --> Buscar que lo pide
     
