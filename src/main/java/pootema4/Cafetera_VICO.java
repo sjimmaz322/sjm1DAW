@@ -61,7 +61,7 @@ public class Cafetera_VICO {
     public void agregarCafe(double cantidadAgregar){
         double agregadoPos = Math.abs(cantidadAgregar);
         this.cantidadActual += agregadoPos;
-        if ((agregadoPos+this.cantidadActual)>this.capacidaMaxima){
+        if ((agregadoPos+this.cantidadActual)>this.capacidadMaxima){
          this.cantidadActual = this.capacidadMaxima;   
         }
     }
