@@ -20,5 +20,8 @@ Comportamiento - Común para todos los objetos, son los métodos
     
     Visibilidad <<default>>
     Atributos accesibles por la propia clase y por las clases del mismo paquete
+    
+    Atributos private
+    Métodos public
 */
 }
