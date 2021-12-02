@@ -24,12 +24,11 @@ private double saldoActual, interesAnual;
         this.NIF = NIF;
         this.nomCliente = nomCliente;
         this.saldoActual = saldoActual;
-        this.interesAnual = interesAnual;
-        if (this.interesAnual<0.1){
+        if (interesAnual<0.1){
             this.interesAnual = 0.1;
         }
-        if (this.interesAnual>0.3){
-            this.interesAnual = 0.3;    
+        if (interesAnual>3){
+            this.interesAnual = 3;  
         }
     }
 
@@ -62,13 +61,37 @@ private double saldoActual, interesAnual;
     }
 
     public void setInteresAnual(double interesAnual) {
-        if (this.interesAnual<0.1){
+         if (interesAnual<0.1){
             this.interesAnual = 0.1;
         }
-        if (this.interesAnual>0.3){
-            this.interesAnual = 0.3;    
+        if (interesAnual>3){
+            this.interesAnual = 3;  
+        } 
+    }
+    
+    public void ingresarIntereses(){
+        this.saldoActual = (this.saldoActual+(((this.interesAnual)/100)*this.saldoActual));
+    }
+    
+    public double ingresarDinero(double cantidad){
+        cantidad = Math.abs(cantidad);
+        this.saldoActual += cantidad;
+        return this.saldoActual;
+    }
+    
+    public double retirarEfectivo (double cantidad){
+        cantidad = Math.abs(cantidad);
+        if ((this.saldoActual-cantidad)<0){
+            cantidad = 0;
         }
-        this.interesAnual = interesAnual;
+        this.saldoActual -= cantidad;
+        return this.saldoActual;
+    }
+
+    @Override
+    public String toString() {
+        return "La cuenta bancaria de: " + nomCliente + " con NIF: " + NIF +  " con número de cuenta: " + numCuenta +"\n"+
+                "Posee un saldo actual de " + saldoActual + " € a un interes anual de: " + interesAnual+" %";
     }
     
 }
