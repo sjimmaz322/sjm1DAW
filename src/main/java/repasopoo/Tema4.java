@@ -17,5 +17,8 @@ Comportamiento - Común para todos los objetos, son los métodos
     - Si requiere crear objeto
     - Ej: Scanner
     - Siempre con el nombre del objeto por delante
+    
+    Visibilidad <<default>>
+    Atributos accesibles por la propia clase y por las clases del mismo paquete
 */
 }
