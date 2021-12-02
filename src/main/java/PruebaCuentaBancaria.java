@@ -9,7 +9,7 @@ public class PruebaCuentaBancaria {
         
         System.out.println(RandomStringUtils.randomNumeric(15).toUpperCase());
         CuentaBancaria c1 = new CuentaBancaria();
-        CuentaBancaria c2 = new CuentaBancaria("31014322-H", "Samuel Jiménez", 1245.54, 0.2);
+        CuentaBancaria c2 = new CuentaBancaria("12345678-Z", "Samuel Jiménez", 1000, 1.2);
         
         System.out.println(c1);
         System.out.println(" ");
