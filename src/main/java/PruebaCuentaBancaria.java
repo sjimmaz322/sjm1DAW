@@ -20,7 +20,7 @@ public class PruebaCuentaBancaria {
         System.out.println(" ");
         c2.ingresarDinero(55);
         System.out.println(c2);
-        System.out.println(" ");
+        System.out.println(" ");    
         c2.retirarEfectivo(5000);
         System.out.println(c2);
         System.out.println(" ");
