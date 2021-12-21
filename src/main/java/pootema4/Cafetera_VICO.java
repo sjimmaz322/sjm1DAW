@@ -3,6 +3,9 @@ package pootema4;
 //Definición de la clase
 public class Cafetera_VICO {
     
+    //Atributo contador de objetos
+    private int contador;
+    
     //Atributos encapsulados, campos o propiedades.
     private double capacidadMaxima;
     private double cantidadActual;
@@ -16,12 +19,14 @@ public class Cafetera_VICO {
     //Igual nombre con distintos parámetros
 
     public Cafetera_VICO() {
+        contador++;
         this.capacidadMaxima = 1000;
         this.cantidadActual = 0;
     }
     
     //Si la capacidad máxima es negativa pasa a positiva
     public Cafetera_VICO(double capacidadMaxima) {
+        contador++;
         this.capacidadMaxima = capacidadMaxima;
         if (capacidadMaxima < 10){     
             this.capacidadMaxima = 10; //Para no poder crear una cafetara de capacidad 0
