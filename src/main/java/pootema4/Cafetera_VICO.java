@@ -35,6 +35,7 @@ public class Cafetera_VICO {
     }
 
     public Cafetera_VICO(double capacidadMaxima, double cantidadActual) {
+        contador++;
         this.capacidadMaxima = capacidadMaxima;
         this.cantidadActual = Math.abs(cantidadActual);
         
@@ -70,6 +71,15 @@ public class Cafetera_VICO {
          this.cantidadActual = this.capacidadMaxima;   
         }
     }
+
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+    
     //Implicación, utilidad public y private en los atributos y métodos de una clase --> Buscar que lo pide
     
     //Encapsulamiento

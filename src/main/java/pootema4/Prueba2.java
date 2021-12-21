@@ -24,6 +24,8 @@ public class Prueba2 {
         
         c2.agregarCafe(525);
         System.out.println(c2);
+        
+        System.out.println(c3.getContador());
     }
 
 }
