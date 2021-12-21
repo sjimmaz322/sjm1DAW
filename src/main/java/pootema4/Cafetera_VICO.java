@@ -5,6 +5,11 @@ public class Cafetera_VICO {
     
     //Atributo contador de objetos
     private static int contador;
+    public static final String FABRICANTE = "Nespresso";
+
+    public static String getFABRICANTE() {
+        return FABRICANTE;
+    }
     
     //Atributos encapsulados, campos o propiedades.
     private double capacidadMaxima;
