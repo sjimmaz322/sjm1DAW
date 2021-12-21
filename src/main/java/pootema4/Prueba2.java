@@ -26,6 +26,8 @@ public class Prueba2 {
         System.out.println(c2);
         
         System.out.println(Cafetera_VICO.getContador());
+        System.out.println(Cafetera_VICO.getFABRICANTE());
+        
     }
 
 }
