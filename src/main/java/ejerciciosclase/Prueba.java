@@ -14,6 +14,8 @@ public class Prueba {
         puntoB.setY(3);
         
         System.out.println(puntoB);
+        
+        
     }
     
 }
