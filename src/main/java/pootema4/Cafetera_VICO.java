@@ -4,7 +4,7 @@ package pootema4;
 public class Cafetera_VICO {
     
     //Atributo contador de objetos
-    private int contador;
+    private static int contador;
     
     //Atributos encapsulados, campos o propiedades.
     private double capacidadMaxima;
