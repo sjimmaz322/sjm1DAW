@@ -72,12 +72,8 @@ public class Cafetera_VICO {
         }
     }
 
-    public int getContador() {
+    public static int getContador() {
         return contador;
-    }
-
-    public void setContador(int contador) {
-        this.contador = contador;
     }
     
     //Implicación, utilidad public y private en los atributos y métodos de una clase --> Buscar que lo pide
