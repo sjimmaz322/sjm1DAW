@@ -14,7 +14,37 @@ public class Fechas {
         this.dia = dia;
         this.mes = mes;
         this.anyo = anyo;
+        
     } 
+
+    public boolean comprobarFecha(int dia, int mes, int anyo){
+        boolean validez = true;
+        return validez;
+    }
+        
+    public int getDia() {
+        return dia;
+    }
+
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public int getAnyo() {
+        return anyo;
+    }
+
+    public void setAnyo(int anyo) {
+        this.anyo = anyo;
+    }
     
     
 }
