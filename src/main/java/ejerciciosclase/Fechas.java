@@ -14,9 +14,7 @@ public class Fechas {
         this.dia = dia;
         this.mes = mes;
         this.anyo = anyo;
-    }
-    
-    
+    } 
     
     
 }
