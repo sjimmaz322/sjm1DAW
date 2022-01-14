@@ -36,6 +36,10 @@ public class Ventana {
     public void bajar (){
         this.estado = false;
     }
+    public String isTintadaString(){
+        String txt = tintado?"Tintada":"No tintada";
+        return txt;
+    }
 
     @Override
     public String toString() {
