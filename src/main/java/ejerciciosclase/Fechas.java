@@ -150,7 +150,9 @@ public class Fechas {
     }
 
     public void setDia(int dia) {
-        this.dia = dia;
+      if(comprobarFecha(this.dia, mes, this.anyo)){
+           this.dia = dia; 
+        }   
     }
 
     public int getMes() {
@@ -158,7 +160,9 @@ public class Fechas {
     }
 
     public void setMes(int mes) {
-        this.mes = mes;
+        if(comprobarFecha(this.dia, mes, this.anyo)){
+           this.mes = mes; 
+        }   
     }
 
     public int getAnyo() {
@@ -166,7 +170,8 @@ public class Fechas {
     }
 
     public void setAnyo(int anyo) {
-        this.anyo = anyo;
+     if(comprobarFecha(this.dia, mes, anyo)){
+           this.anyo = anyo; 
+        }   
     }
-
 }
