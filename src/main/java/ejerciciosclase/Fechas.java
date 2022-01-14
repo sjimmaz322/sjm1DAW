@@ -5,8 +5,8 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class Fechas {
-    
-     private int dia;
+
+    private int dia;
     private int mes;
     private int anio;
     private LocalDate fechaCompuesta;
