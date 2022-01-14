@@ -24,4 +24,6 @@ Comportamiento - Común para todos los objetos, son los métodos
     Atributos private
     Métodos public
 */
+    
+    
 }
