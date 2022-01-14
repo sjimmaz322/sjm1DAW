@@ -13,11 +13,11 @@ public class Fechas {
 
     //Métodos
     //Comprueba si existe la fecha(da true si existe)
-    private boolean comprobarFecha(int dia, int mes, int anio) {
+    private boolean comprobarFecha(int dia, int mes, int anyo) {
 
         boolean fecha = true;
         try {
-            LocalDate.of(anio, mes, dia);
+            LocalDate.of(anyo, mes, dia);
         } catch (IllegalArgumentException IAE) {
             System.out.println("La fecha introducida no existe, introduzca una válida");
             fecha = false;
