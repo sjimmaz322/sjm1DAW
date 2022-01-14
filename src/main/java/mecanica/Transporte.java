@@ -8,8 +8,8 @@ public class Transporte {
         Ventana v1 = new Ventana(true, true);
         Ventana v2 = new Ventana(true, true);
         
-        Puerta pp = new Puerta(false,v1);
-        Puerta pc = new Puerta(false, v2);
+        Puerta pp = new Puerta(false, new Ventana(true,true));
+        Puerta pc = new Puerta(false, new Ventana(true,true));
         
         Rueda rdi = new Rueda(50,true);
         Rueda rdd = new Rueda(50,true);
@@ -18,7 +18,15 @@ public class Transporte {
         
         Coche auto = new Coche(m,pp,pc,rdi,rdd,rti,rtd);
         
-        System.out.println(auto.toString());
+        Coche auto2 = new Coche(new Motor(2.0, false),new Puerta(false,v1),new Puerta(false,v2),new Rueda(50,true),new Rueda(50,true),new Rueda(50,true),new Rueda(50,true));
+        
+        System.out.println(auto);
+        
+        rtd.desinflar();
+        
+        System.out.println(auto2);
+        
+        auto2.getPuertaPiloto().getVentana().setTintado(false);
         
     }
 
