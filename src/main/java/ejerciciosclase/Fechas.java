@@ -1,11 +1,12 @@
 package ejerciciosclase;
 
+import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class Fechas {
-    
+
     private int dia;
     private int mes;
     private int anyo;
@@ -18,7 +19,7 @@ public class Fechas {
         boolean fecha = true;
         try {
             LocalDate.of(anyo, mes, dia);
-        } catch (IllegalArgumentException IAE) {
+        } catch (DateTimeException dte) {
             System.out.println("La fecha introducida no existe, introduzca una válida");
             fecha = false;
         }
@@ -27,46 +28,44 @@ public class Fechas {
 
     //Dice si el año es bisiesto o no
     public boolean bisiesto() {
-        boolean isbisiesto = false;
-        fechaCompuesta = LocalDate.of(anyo, mes, dia);
 
-        if (fechaCompuesta.isLeapYear()) {
-            isbisiesto = true;
-        }
-        return isbisiesto;
+        return LocalDate.of(this.dia, this.mes, this.anyo).isLeapYear();
     }
 
     //Dice el número de días que tiene el mes 
     public int diaMes() {
-        fechaCompuesta = LocalDate.of(anyo, mes, dia);
-
-        int diasMensuales = fechaCompuesta.lengthOfMonth();
-
-        return diasMensuales;
+        LocalDate fecha = LocalDate.of(anyo, mes, dia);
+        return fecha.lengthOfMonth();
     }
 
     //Muestra la fecha en formato corto(x-x-x)
-    public void mostrarFechaCorta() {
-        fechaCompuesta = LocalDate.of(anyo, mes, dia);
+    public String mostrarFechaCorta() {
+        LocalDate fecha = LocalDate.of(anyo, mes, dia);
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        String fechaFomateada = fechaCompuesta.format(formato);
-        System.out.println("La fecha corta es: " + fechaFomateada);
+        return fecha.format(formato);
+    }
+
+    public String mostrarFechaLarga() {
+        LocalDate fecha = LocalDate.of(anyo, mes, dia);
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("EEEE d 'de' MMMM 'del' YYYY");
+        return fecha.format(formato);
     }
 
     //Muestra el dia de la semana
-    public void diaSemana() {
-        fechaCompuesta = LocalDate.of(anyo, mes, dia);
-        System.out.println(fechaCompuesta.getDayOfWeek());
+    public int diaSemana() {
+        LocalDate fecha = LocalDate.of(anyo, mes, dia);
+
+        return fecha.getDayOfWeek().getValue();
     }
 
     //Devuelve del nº de día entre una fecha y otra
-    public static long diaEntreFechas(Fechas ini, Fechas fin) {
-        //Pasamos el oejto fecha a LocalDate
-        LocalDate inicio = LocalDate.of(ini.getAnyo(), ini.getMes(), ini.getDia());
-        LocalDate finalizar = LocalDate.of(fin.getAnyo(), fin.getMes(), fin.getDia());
+    public static long diaEntreFechas(Fechas inicio, Fechas finale) {
+        //Pasamos el objeto fecha a LocalDate
+        LocalDate principio = LocalDate.of(inicio.getAnyo(), inicio.getMes(), inicio.getDia());
+        LocalDate finalizar = LocalDate.of(finale.getAnyo(), finale.getMes(), finale.getDia());
 
         //Restamos
-        long resultado = ChronoUnit.DAYS.between(inicio, finalizar);
+        long resultado = ChronoUnit.DAYS.between(principio, finalizar);
 
         //Devólvemos el resultado
         return resultado;
@@ -74,20 +73,31 @@ public class Fechas {
 
     //Suma 1 día (va al día siguiente)
     public void siguiente() {
-        fechaCompuesta = LocalDate.of(anyo, mes, dia);
-        fechaCompuesta = fechaCompuesta.plusDays(1);
+        LocalDate fecha = LocalDate.of(anyo, mes, dia);
+        LocalDate fecha2 = fecha.plusDays(1);
+        this.dia = fecha2.getDayOfMonth();
+        this.mes = fecha2.getMonthValue();
+        this.anyo = fecha2.getYear();
     }
 
     //Resta un dia(va al día anterior)
     public void anterior() {
-        fechaCompuesta = LocalDate.of(anyo, mes, dia);
-        fechaCompuesta = fechaCompuesta.minusDays(1);
+        LocalDate fecha = LocalDate.of(anyo, mes, dia);
+        LocalDate fecha2 = fecha.minusDays(1);
+        this.dia = fecha2.getDayOfMonth();
+        this.mes = fecha2.getMonthValue();
+        this.anyo = fecha2.getYear();
     }
 
     //Copia la fecha en un objeto de tipo Fecha
     public Fechas copia() {
         Fechas resultado = new Fechas(dia, mes, anyo);
         return resultado;
+    }
+
+    public static Fechas copiada(Fechas aux) {
+        Fechas auxiliar = new Fechas(aux.dia, aux.mes, aux.anyo);
+        return auxiliar;
     }
 
     //Compara dos fechas
@@ -131,17 +141,16 @@ public class Fechas {
 
     //Constructor parametrizado
     public Fechas(int dia, int mes, int anio) {
+
         if (comprobarFecha(dia, mes, anio)) {
             this.dia = dia;
             this.mes = mes;
             this.anyo = anio;
         } else {
-            this.dia = 17;
-            this.mes = 1;
-            this.anyo = 2022;
+            System.out.println("Fecha no válida");
+            throw new IllegalArgumentException();
 
         }
-        fechaCompuesta = LocalDate.of(anio, mes, dia);
     }
 
     //getters y setters
@@ -150,9 +159,9 @@ public class Fechas {
     }
 
     public void setDia(int dia) {
-      if(comprobarFecha(this.dia, mes, this.anyo)){
-           this.dia = dia; 
-        }   
+        if (comprobarFecha(dia, this.mes, this.anyo)) {
+            this.dia = dia;
+        }
     }
 
     public int getMes() {
@@ -160,9 +169,9 @@ public class Fechas {
     }
 
     public void setMes(int mes) {
-        if(comprobarFecha(this.dia, mes, this.anyo)){
-           this.mes = mes; 
-        }   
+        if (comprobarFecha(this.dia, mes, this.anyo)) {
+            this.mes = mes;
+        }
     }
 
     public int getAnyo() {
@@ -170,8 +179,8 @@ public class Fechas {
     }
 
     public void setAnyo(int anyo) {
-     if(comprobarFecha(this.dia, mes, anyo)){
-           this.anyo = anyo; 
-        }   
+        if (comprobarFecha(this.dia, mes, anyo)) {
+            this.anyo = anyo;
+        }
     }
 }
