@@ -101,34 +101,25 @@ public class Fechas {
     }
 
     //Compara dos fechas
-    public void igual(Fechas fecha) {
-        fechaCompuesta = LocalDate.of(anyo, mes, dia);
+    public boolean igual(Fechas fecha) {
+        LocalDate fecha1 = LocalDate.of(anyo, mes, dia);
         LocalDate fechaParametrizado = LocalDate.of(fecha.getAnyo(), fecha.getMes(), fecha.getDia());
-        boolean resultado = fechaParametrizado.isEqual(fechaCompuesta);
-
-        if (resultado == true) {
-            System.out.println("Las fechas son iguales");
-        } else {
-            System.out.println("Las fechas no son iguales");
-        }
+        
+        return fechaParametrizado.equals(fecha1);
     }
 
-    public void menorFecha(Fechas fecha) {
-        fechaCompuesta = LocalDate.of(anyo, mes, dia);
+    public boolean menorFecha(Fechas fecha) {
+        LocalDate fecha1 = LocalDate.of(anyo, mes, dia);
         LocalDate fechaParametrizado = LocalDate.of(fecha.getAnyo(), fecha.getMes(), fecha.getDia());
-        boolean resultado = fechaParametrizado.isBefore(fechaCompuesta);
-        if (resultado == true) {
-            System.out.println("La fecha introducida es menor a la fecha del objeto");
-        }
+       
+        return fechaParametrizado.isBefore(fecha1);
     }
 
-    public void mayorFecha(Fechas fecha) {
-        fechaCompuesta = LocalDate.of(anyo, mes, dia);
+    public boolean mayorFecha(Fechas fecha) {
+        LocalDate fecha1 = LocalDate.of(anyo, mes, dia);
         LocalDate fechaParametrizado = LocalDate.of(fecha.getAnyo(), fecha.getMes(), fecha.getDia());
-        boolean resultado = fechaParametrizado.isAfter(fechaCompuesta);
-        if (resultado == true) {
-            System.out.println("La fecha introducida es mayor a la fecha del objeto");
-        }
+       
+        return fechaParametrizado.isAfter(fecha1);
     }
 
     //Constructor por defecto con valores predeterminados
