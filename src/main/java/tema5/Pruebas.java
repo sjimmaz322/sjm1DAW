@@ -8,23 +8,23 @@ public class Pruebas {
 
     public static void main(String[] args) {
 
-//      Puede ser int num [] o int [] num, pero la segunda forma es más normalizada.
-        int[] num = new int[10];
-//      Cambiamos el valor del index 1 que predeterminado vale 0.
-        num[0] = 1;
-//      Array de String
-        String[] diasSemana = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
-
-//      Ejercicio 1 UdT5
-        int[] number = {1, 2, 3, 4, 5, 6};
-        int sumatorio = 0;
-        for (int i = 0; i < number.length; i++) {
-            System.out.println("La posición "+i+" del Array es "+number[i]);
-            sumatorio = sumatorio + number[i];
-            
-        }
-        
-        System.out.println("La suma de los valores del Array es : " +sumatorio);
+////      Puede ser int num [] o int [] num, pero la segunda forma es más normalizada.
+//        int[] num = new int[10];
+////      Cambiamos el valor del index 1 que predeterminado vale 0.
+//        num[0] = 1;
+////      Array de String
+//        String[] diasSemana = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
+//
+////      Ejercicio 1 UdT5
+//        int[] number = {1, 2, 3, 4, 5, 6};
+//        int sumatorio = 0;
+//        for (int i = 0; i < number.length; i++) {
+//            System.out.println("La posición "+i+" del Array es "+number[i]);
+//            sumatorio = sumatorio + number[i];
+//            
+//        }
+//        
+//        System.out.println("La suma de los valores del Array es : " +sumatorio);
 
 //      Ejercicio 2 UdT5
         /*
@@ -58,13 +58,13 @@ public class Pruebas {
             }
         } while (!seguir);
 
-        int[] gente = new int[numPersonas];
+        int[] alturas = new int[numPersonas];
 
-        for (int i = 0; i < gente.length; i++) {
+        for (int i = 0; i < alturas.length; i++) {
             System.out.println("Introduce la altura en cms de la persona " + (i + 1));
 
             try {
-                gente[i] = sc.nextInt();
+                alturas[i] = sc.nextInt();
             } catch (InputMismatchException ime) {
                 System.out.println("Introduzca un número");
             }
@@ -72,11 +72,11 @@ public class Pruebas {
             if (i < 0) {
                 i = Math.abs(i);
             }
-            suma = suma + gente[i];
+            suma = suma + alturas[i];
 
         }
 
-        System.out.println("La media de las alturas es de " + (suma / gente.length) + " cms");
+        System.out.println("La media de las alturas es de " + (suma / alturas.length) + " cms");
 
     }
 
