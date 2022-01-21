@@ -1,5 +1,6 @@
 package tema5;
 
+import com.sun.source.doctree.SummaryTree;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -26,8 +27,8 @@ public class Pruebas {
         System.out.println("La posición 5 del Array es: " + number[5]);
         System.out.println(" - ");
         System.out.println("La suma de los valores del Array es : " + (number[0] + number[1] + number[2] + number[3] + number[4] + number[5]));
-
-        Ejercicio 2 UdT5
+        
+//      Ejercicio 2 UdT5
         /*
         Escribe un programa para leer la altura de un número determinado de personas y calcular la altura media.
         El número de personas se pide por teclado y debe ser entero un entero mayor que cero. 
