@@ -13,10 +13,9 @@ public class Pruebas {
 //      Cambiamos el valor del index 1 que predeterminado vale 0.
         num[0] = 1;
 //      Array de String
-        String[] diasSemana ={"Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"};
-        
-//      Ejercicio 1 UdT5
+        String[] diasSemana = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
 
+//      Ejercicio 1 UdT5
         int[] number = {1, 2, 3, 4, 5, 6};
 
         System.out.println("La posición 0 del Array es: " + number[0]);
@@ -27,7 +26,7 @@ public class Pruebas {
         System.out.println("La posición 5 del Array es: " + number[5]);
         System.out.println(" - ");
         System.out.println("La suma de los valores del Array es : " + (number[0] + number[1] + number[2] + number[3] + number[4] + number[5]));
-        
+
 //      Ejercicio 2 UdT5
         /*
         Escribe un programa para leer la altura de un número determinado de personas y calcular la altura media.
@@ -39,7 +38,6 @@ public class Pruebas {
         boolean seguir = true;
         int numPersonas = 0;
         int suma = 0;
-        int j = 0;
         int media = 0;
         int contadorGenteAlta = 0;
         int contadorGenteBaja = 0;
@@ -76,8 +74,6 @@ public class Pruebas {
                 i = Math.abs(i);
             }
             suma = suma + gente[i];
-            media = (suma/gente.length);
-           
 
         }
 
