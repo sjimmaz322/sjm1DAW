@@ -17,15 +17,14 @@ public class Pruebas {
 
 //      Ejercicio 1 UdT5
         int[] number = {1, 2, 3, 4, 5, 6};
-
-        System.out.println("La posición 0 del Array es: " + number[0]);
-        System.out.println("La posición 1 del Array es: " + number[1]);
-        System.out.println("La posición 2 del Array es: " + number[2]);
-        System.out.println("La posición 3 del Array es: " + number[3]);
-        System.out.println("La posición 4 del Array es: " + number[4]);
-        System.out.println("La posición 5 del Array es: " + number[5]);
-        System.out.println(" - ");
-        System.out.println("La suma de los valores del Array es : " + (number[0] + number[1] + number[2] + number[3] + number[4] + number[5]));
+        int sumatorio = 0;
+        for (int i = 0; i < number.length; i++) {
+            System.out.println("La posición "+i+" del Array es "+number[i]);
+            sumatorio = sumatorio + number[i];
+            
+        }
+        
+        System.out.println("La suma de los valores del Array es : " +sumatorio);
 
 //      Ejercicio 2 UdT5
         /*
