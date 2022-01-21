@@ -41,6 +41,7 @@ public class Pruebas {
         int contadorGenteAlta = 0;
         int contadorGenteBaja = 0;
         Scanner sc = new Scanner(System.in);
+        
         do {
             System.out.println("¿De cuantas personas vamos a tomar los datos?");
             try {
@@ -69,8 +70,8 @@ public class Pruebas {
                 System.out.println("Introduzca un número");
             }
 
-            if (i < 0) {
-                i = Math.abs(i);
+            if (alturas[i] < 0) {
+                alturas[i] = Math.abs(alturas[i]);
             }
             suma = suma + alturas[i];
 
