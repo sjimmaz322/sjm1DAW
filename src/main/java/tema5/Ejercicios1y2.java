@@ -4,7 +4,7 @@ import com.sun.source.doctree.SummaryTree;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Pruebas {
+public class Ejercicios1y2 {
 
     public static void main(String[] args) {
 
