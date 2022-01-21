@@ -73,7 +73,7 @@ public class Ejercicio5 {
         int suma = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] < 0) {
-                suma -= numbers[i];
+                suma += numbers[i];
             }
         }
         media = suma / numbers.length;
