@@ -7,25 +7,27 @@ public class Pruebas {
 
     public static void main(String[] args) {
 
-        // puede ser int num [] o int [] num, pero la segunda forma es más normalizada.
-//        int[] num = new int[10];
-        //Cambiamos el valor del index 1 que predeterminado vale 0.
-//        num[0] = 1;
-        //Array de String
-//        String[] diasSemana ={"Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"};
-        //Ejercicio 1 UdT5
-//        int[] number = {1, 2, 3, 4, 5, 6};
-//
-//        System.out.println("La posición 0 del Array es: " + number[0]);
-//        System.out.println("La posición 1 del Array es: " + number[1]);
-//        System.out.println("La posición 2 del Array es: " + number[2]);
-//        System.out.println("La posición 3 del Array es: " + number[3]);
-//        System.out.println("La posición 4 del Array es: " + number[4]);
-//        System.out.println("La posición 5 del Array es: " + number[5]);
-//        System.out.println(" - ");
-//        System.out.println("La suma de los valores del Array es : " + (number[0] + number[1] + number[2] + number[3] + number[4] + number[5]));
+//      Puede ser int num [] o int [] num, pero la segunda forma es más normalizada.
+        int[] num = new int[10];
+//      Cambiamos el valor del index 1 que predeterminado vale 0.
+        num[0] = 1;
+//      Array de String
+        String[] diasSemana ={"Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"};
+        
+//      Ejercicio 1 UdT5
 
-        //Ejercicio 2 UdT5
+        int[] number = {1, 2, 3, 4, 5, 6};
+
+        System.out.println("La posición 0 del Array es: " + number[0]);
+        System.out.println("La posición 1 del Array es: " + number[1]);
+        System.out.println("La posición 2 del Array es: " + number[2]);
+        System.out.println("La posición 3 del Array es: " + number[3]);
+        System.out.println("La posición 4 del Array es: " + number[4]);
+        System.out.println("La posición 5 del Array es: " + number[5]);
+        System.out.println(" - ");
+        System.out.println("La suma de los valores del Array es : " + (number[0] + number[1] + number[2] + number[3] + number[4] + number[5]));
+
+        Ejercicio 2 UdT5
         /*
         Escribe un programa para leer la altura de un número determinado de personas y calcular la altura media.
         El número de personas se pide por teclado y debe ser entero un entero mayor que cero. 
@@ -37,6 +39,9 @@ public class Pruebas {
         int numPersonas = 0;
         int suma = 0;
         int j = 0;
+        int media = 0;
+        int contadorGenteAlta = 0;
+        int contadorGenteBaja = 0;
         Scanner sc = new Scanner(System.in);
         do {
             System.out.println("¿De cuantas personas vamos a tomar los datos?");
@@ -59,11 +64,19 @@ public class Pruebas {
 
         for (int i = 0; i < gente.length; i++) {
             System.out.println("Introduce la altura en cms de la persona " + (i + 1));
-            gente[i] = sc.nextInt();
+
+            try {
+                gente[i] = sc.nextInt();
+            } catch (InputMismatchException ime) {
+                System.out.println("Introduzca un número");
+            }
+
             if (i < 0) {
-                i = i * (-1);
+                i = Math.abs(i);
             }
             suma = suma + gente[i];
+            media = (suma/gente.length);
+           
 
         }
 
