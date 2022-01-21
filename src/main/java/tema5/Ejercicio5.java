@@ -7,7 +7,8 @@ public class Ejercicio5 {
     public static void main(String[] args) {
 
         int[] numbers = new int[10];
-
+        
+        System.out.println("");
     }
 
     private void rellenarArray(int[] numbers) {
