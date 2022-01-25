@@ -32,7 +32,7 @@ public class Ejercicio5 {
         return contador;
     }
 
-    private int contadorNegativos(int[] numbers) {
+    private static int contadorNegativos(int[] numbers) {
         int contador = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] < 0) {
@@ -42,7 +42,7 @@ public class Ejercicio5 {
         return contador;
     }
 
-    private int contadorCeros(int[] numbers) {
+    private static int contadorCeros(int[] numbers) {
         int contador = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] == 0) {
@@ -52,14 +52,14 @@ public class Ejercicio5 {
         return contador;
     }
 
-    private void mostrarArray(int[] numbers) {
+    private static void mostrarArray(int[] numbers) {
 
         for (int i = 0; i < numbers.length; i++) {
             System.out.println("El valor de la posición " + i + " del Array es " + numbers[i]);
         }
     }
 
-    private int mediaPositivos(int[] numbers) {
+    private static int mediaPositivos(int[] numbers) {
         int media = 0;
         int suma = 0;
         for (int i = 0; i < numbers.length; i++) {
@@ -71,7 +71,7 @@ public class Ejercicio5 {
         return media;
     }
 
-    private int mediaNegativos(int[] numbers) {
+    private static int mediaNegativos(int[] numbers) {
         int media = 0;
         int suma = 0;
         for (int i = 0; i < numbers.length; i++) {
