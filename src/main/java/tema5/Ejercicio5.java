@@ -7,11 +7,13 @@ public class Ejercicio5 {
     public static void main(String[] args) {
 
         int[] numbers = new int[10];
-        
+
         System.out.println("");
+        
+        rellenarArray(numbers);
     }
 
-    private void rellenarArray(int[] numbers) {
+    private static void rellenarArray(int[] numbers) {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < numbers.length; i++) {
             System.out.println("Introduzca el entero que desea guardar en la posición " + i);
@@ -20,7 +22,7 @@ public class Ejercicio5 {
         }
     }
 
-    private int contadorPositivos(int[] numbers) {
+    private static int contadorPositivos(int[] numbers) {
         int contador = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] > 0) {
@@ -80,4 +82,5 @@ public class Ejercicio5 {
         media = suma / numbers.length;
         return media;
     }
+
 }
