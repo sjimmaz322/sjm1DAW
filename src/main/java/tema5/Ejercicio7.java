@@ -43,13 +43,12 @@ public class Ejercicio7 {
         int[] arr1 = new int[longitud];
         int[] arr2 = new int[longitud];
 
-        for (int i = 0; i < arr1.length; i++) {
-            arr1[i] = rand.nextInt(100) + 1;
-        }
+        
 
         for (int i = 0; i < arr2.length; i++) {
             arr2[i] = rand.nextInt(100) + 1;
         }
+        
         System.out.println("Mostramos el Array 1");
         mostrarArray(arr1);
         System.out.println(" ");
@@ -73,6 +72,12 @@ public class Ejercicio7 {
        for (int i = 0; i < aux.length; i++) {
            System.out.println("La posición "+i+" del Array es "+aux[i]);
        }
+   }
+   private static int[] rellenarArray(int[] aux){
+       int []
+       for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = rand.nextInt(100) + 1;
+        }
    }
 
 }
