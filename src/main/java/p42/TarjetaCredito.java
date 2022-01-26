@@ -53,11 +53,7 @@ public class TarjetaCredito {
     public YearMonth getCADUCIDAD() {
         return CADUCIDAD;
     }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
+    
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
