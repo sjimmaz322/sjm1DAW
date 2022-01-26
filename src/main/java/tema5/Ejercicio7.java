@@ -19,8 +19,7 @@ public class Ejercicio7 {
         int longitud = 0;
 
         Scanner sc = new Scanner(System.in);
-        Random rand = new Random();
-        
+
         do {
             System.out.println("Introduzca la longitud de los Arrays");
             try {
@@ -42,13 +41,10 @@ public class Ejercicio7 {
 
         int[] arr1 = new int[longitud];
         int[] arr2 = new int[longitud];
-
         
+        rellenarArray(arr1);
+        rellenarArray(arr2);
 
-        for (int i = 0; i < arr2.length; i++) {
-            arr2[i] = rand.nextInt(100) + 1;
-        }
-        
         System.out.println("Mostramos el Array 1");
         mostrarArray(arr1);
         System.out.println(" ");
@@ -57,7 +53,7 @@ public class Ejercicio7 {
         System.out.println(" ");
         System.out.println("La multiplicación de ambos Array sería");
         mostrarArray(multiplicar(arr1, arr2));
-        
+
     }
 
     private static int[] multiplicar(int[] arr1, int[] arr2) {
@@ -67,17 +63,19 @@ public class Ejercicio7 {
         }
         return arr3;
     }
-    
-   private static void mostrarArray(int[] aux){
-       for (int i = 0; i < aux.length; i++) {
-           System.out.println("La posición "+i+" del Array es "+aux[i]);
-       }
-   }
-   private static int[] rellenarArray(int[] aux){
-       int []
-       for (int i = 0; i < arr1.length; i++) {
-            arr1[i] = rand.nextInt(100) + 1;
+
+    private static void mostrarArray(int[] aux) {
+        for (int i = 0; i < aux.length; i++) {
+            System.out.println("La posición " + i + " del Array es " + aux[i]);
         }
-   }
+    }
+
+    private static int[] rellenarArray(int[] aux) {
+        Random rand = new Random();
+        for (int i = 0; i < aux.length; i++) {
+            aux[i] = rand.nextInt(100) + 1;
+        }
+        return aux;
+    }
 
 }
