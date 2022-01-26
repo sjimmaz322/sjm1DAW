@@ -54,10 +54,6 @@ public class TarjetaCredito {
         return CADUCIDAD;
     }
     
-    public void setEstado(boolean estado) {
-        this.estado = estado;
-    }
-    
     
 }
 
