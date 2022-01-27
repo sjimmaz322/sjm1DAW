@@ -73,13 +73,13 @@ public class Ejercicio7 {
         return arr3;
     }
 
-    private static void mostrarArray(int[] aux) {
+    public static void mostrarArray(int[] aux) {
         for (int i = 0; i < aux.length; i++) {
             System.out.println("La posición " + i + " del Array es " + aux[i]);
         }
     }
 
-    private static int[] rellenarArray(int[] aux) {
+    public static int[] rellenarArray(int[] aux) {
         Random rand = new Random();
         for (int i = 0; i < aux.length; i++) {
             aux[i] = rand.nextInt(100) + 1;
