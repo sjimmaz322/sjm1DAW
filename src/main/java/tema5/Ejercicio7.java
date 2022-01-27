@@ -1,5 +1,6 @@
 package tema5;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -53,6 +54,14 @@ public class Ejercicio7 {
         System.out.println(" ");
         System.out.println("La multiplicación de ambos Array sería");
         mostrarArray(multiplicar(arr1, arr2));
+        System.out.println(" ");
+        
+        //Ordenamos el array
+        Arrays.sort(arr1);
+        
+        //Mostramos el array ordenado
+        System.out.println("arr1 ordenado");
+        mostrarArray(arr1);
 
     }
 
