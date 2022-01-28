@@ -12,14 +12,14 @@ public class MetodosArrays {
         }
     }
 
-    public static int[] rellenarArrayRandom(int[] aux, int rango) {
+    public static int[] rellenarArrayRandom(int[] aux, int rango) {//rellena un array con el rango de 0 al número que pongas menos uno.
         Random rand = new Random();
         for (int i = 0; i < aux.length; i++) {
             aux[i] = rand.nextInt(rango);
         }return aux;
     }
 
-    public static String buscarNumero(int[] array, int buscado) {
+    public static String buscarNumero(int[] array, int buscado) {//Para que te diga si un número está dentro de un array
         int valor = -1;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == buscado) {
@@ -32,7 +32,7 @@ public class MetodosArrays {
         return "El número está en el Array en la posición " + valor;
     }
 
-    public static void ordenarArrayBubble(int[] a) {
+    public static void ordenarArrayBubble(int[] a) {//El código del bubble pero en método
         int tmp, j;
         for (int i = 0; i < a.length - 1; i++) {
             for (j = i + 1; j < a.length; j++) {
@@ -69,7 +69,7 @@ public class MetodosArrays {
         return false;
     }
 
-    public static int[] crearArrayFlexible() {//Sin testear
+    public static int[] crearArrayFlexible() {//Pregunta el tamaño del array y solo lo crea
         Scanner sc = new Scanner(System.in);
 
         boolean repetir = true; //Variable para repetición de bucle
@@ -100,7 +100,7 @@ public class MetodosArrays {
         return new int[tam];
     }
 
-    public static void rellenarArray(int[] a) {
+    public static void rellenarArray(int[] a) {//Para rellenar un array
         Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < a.length; i++) {
@@ -110,7 +110,7 @@ public class MetodosArrays {
         }
     }
     
-    public static int[] crearArrayFijo(int tam) {
+    public static int[] crearArrayFijo(int tam) {//Crear un array de un tamaño fijo
         
         boolean repetir = true; //Variable para repetición de bucle
 
