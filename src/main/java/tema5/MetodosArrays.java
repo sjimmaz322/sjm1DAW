@@ -25,10 +25,31 @@ public class MetodosArrays {
                 valor = i;
             }
         }
-        if (valor == -1) {
+        if (valor < 0) {
             return "El número no se encuentra en el array";
         }
         return "El número está en el Array en la posición " + valor;
+    }
+   
+    public static void ordenarArrayBubble(int[] a){
+        int tmp, j;
+        for (int i = 0; i < a.length-1; i++){
+		for (j = i+1; j < a.length; j++){
+			if (a[i] > a[j]){
+				tmp = a[i];
+				a[i] = a[j];
+				a[j] = tmp;
+			}
+		}
+	}
+        
+    }
+    public static int[] multiplicarArrays(int[] arr1, int[] arr2) {
+        int[] arr3 = new int[arr1.length];
+        for (int i = 0; i < arr3.length; i++) {
+            arr3[i] = arr1[i] * arr2[i];
+        }
+        return arr3;
     }
 
 }
