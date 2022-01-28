@@ -25,6 +25,7 @@ public class Ejercicio6 {
         System.out.println(compararArrays(array1, array2));
         System.out.println(compararArrays(array1, array3));
         System.out.println(compararArrays(array1, array4));
+        System.out.println(" ");
         Arrays.compare(array1, array2);
     }
 

@@ -48,10 +48,10 @@ public class Ejercicio9 {
         int[] array1 = new int[tam];
 
         //Rellenamos los arrays con el método para ello de la clase Ejercicio 4
-        Ejercicio7.rellenarArray(array1);
+        MetodosArrays.rellenarArray(array1);
         
         //Método para comprobar los números de Array y poder elegir el resultado
-        Ejercicio7.mostrarArray(array1);
+        MetodosArrays.mostrarArray(array1);
         
         System.out.println("Introduzca el número a buscar"); //Solicitamos el número a buscar
         int numBuscado = sc.nextInt();
@@ -60,20 +60,28 @@ public class Ejercicio9 {
         
         Arrays.binarySearch(array1, numBuscado);
         System.out.println("El número se encuentra en la posición "+  Arrays.binarySearch(array1, numBuscado));
+        System.out.println(" ");
         
         //A partir de aquí es el ejercicio 9
         
-        int tmp;
-        for (int i = 0; i < array1.length-1; i++){
-		for (j = i+1; j < array1.length; j++){
-			if (array1[i] > array1[j]){
-				tmp = array1[i];
-				array1[i] = array1[j];
-				array1[j] = tmp;
-			}
-		}
-	}
-        Ejercicio7.mostrarArray(array1);
+//        int tmp;
+//        for (int i = 0; i < array1.length-1; i++){
+//		for (j = i+1; j < array1.length; j++){
+//			if (array1[i] > array1[j]){
+//				tmp = array1[i];
+//				array1[i] = array1[j];
+//				array1[j] = tmp;
+//			}
+//		}
+//	}
+        
+        MetodosArrays.mostrarArray(array1);
+        System.out.println(" ");
+        MetodosArrays.ordenarArrayBubble(array1);
+        System.out.println(" ");
+        MetodosArrays.mostrarArray(array1);
+        
+        
     }
 
 }
