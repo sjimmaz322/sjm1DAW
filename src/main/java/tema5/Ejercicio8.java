@@ -17,9 +17,8 @@ Realizar un programa que lea de la entrada un número y utilice ese número para
  */
 public class Ejercicio8 {
 
-    
     public static void main(String[] args) {
-       //Creamos objetos para las clases Scanner y Random
+        //Creamos objetos para las clases Scanner y Random
         Random numRandom = new Random();
         Scanner sc = new Scanner(System.in);
 
@@ -53,14 +52,18 @@ public class Ejercicio8 {
 
         for (int i = 0; i < array1.length; i++) {
             System.out.println("Introduzca el número que desea que ocupe la posición " + i);
-            sc.nextInt();
+            array1[i] = sc.nextInt();
+
         }
 
         for (int i = 0; i < array1.length; i++) {
-
+            int valor = array1[i];
+            for (int j = valor - 1; j >= 0; j--) {
                 System.out.print("*");
-         
+            }
+            System.out.println("\n");
+
         }
     }
-    
+
 }

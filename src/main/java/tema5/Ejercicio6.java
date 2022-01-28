@@ -18,23 +18,15 @@ public class Ejercicio6 {
         int[] array3 = {1, 2, 2};
         int[] array4 = {1, 2, 3};
 
-        System.out.println(Arrays.compare(array1, array2));
-        System.out.println(Arrays.compare(array1, array3));
-        System.out.println(Arrays.compare(array1, array4));
+        System.out.println(Arrays.equals(array1, array2));
+        System.out.println(Arrays.equals(array1, array3));
+        System.out.println(Arrays.equals(array1, array4));
         System.out.println(" ");
-        System.out.println(compararArrays(array1, array2));
-        System.out.println(compararArrays(array1, array3));
-        System.out.println(compararArrays(array1, array4));
+        System.out.println(MetodosArrays.compararArrays(array1, array2));
+        System.out.println(MetodosArrays.compararArrays(array1, array3));
+        System.out.println(MetodosArrays.compararArrays(array1, array4));
         System.out.println(" ");
-        Arrays.compare(array1, array2);
+        
     }
 
-    public static boolean compararArrays(int[] a, int[] b) {
-        for (int i = 0; i < b.length; i++) {            
-            if (a[i] == b[i]) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
