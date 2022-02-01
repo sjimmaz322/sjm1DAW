@@ -104,8 +104,19 @@ public class MetodosArrays {
         Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < a.length; i++) {
+            boolean repetir = true;
+            do{
+                
             System.out.println("Introduzca el número que desea que ocupe la posición " + i);
+            try{
             a[i] = sc.nextInt();
+            repetir = false;
+            }catch (InputMismatchException ime){
+                System.out.println("Introduza un número, por favor");
+                repetir = true;
+                sc.nextLine();
+            }
+            }while (repetir);
 
         }
     }
