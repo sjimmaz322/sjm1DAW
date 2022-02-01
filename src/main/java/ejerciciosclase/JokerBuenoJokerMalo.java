@@ -9,6 +9,7 @@ public class JokerBuenoJokerMalo {
         int[] arrayJoker = MetodosArrays.crearArrayFijo(7);
         MetodosArrays.rellenarArrayRandom(arrayJoker, 10);
         int[] arrayJugador = MetodosArrays.crearArrayFijo(7);
+        MetodosArrays.mostrarArray(arrayJoker);
         MetodosArrays.rellenarArray(arrayJugador);
         System.out.println("-");
         MetodosArrays.compararArrays(arrayJoker, arrayJugador);
