@@ -144,4 +144,12 @@ public class MetodosArrays {
 
         return new int[tam];
     }
+    
+    public static String stringArrayRandom(String[] aux){
+        int i = 0;
+        Random posRandom = new Random(); 
+        i = posRandom.nextInt(aux.length);
+        
+       return  aux[i];
+    }
 }

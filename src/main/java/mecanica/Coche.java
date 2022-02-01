@@ -17,6 +17,11 @@ public class Coche {
     private Rueda delanteraDrcha;
     private Rueda traseraIzda;
     private Rueda traseraDrcha;
+    
+    String[] marcas = {"VolksWagen","Dacia","Seat","Opel","Mercedez","Nisan","Renault","KIA"};
+    String[] plazas = {"2","3","4","5","6","7"};
+    String[] colores = {"Negro","Blanco","Gris","Azul","Verde","Rojo","Amarillo","Rosa"};
+    String[] modelos = {"SUV","Familiar","Todoterreno","Deportivo","Berlina","Compacto"};
 
     public Coche(Motor motor, Puerta puertaPiloto, Puerta puertaCopiloto, Rueda delanteraIzda, Rueda delanteraDrcha, Rueda traseraIzda, Rueda traseraDrcha) {
         this.motor = motor;
@@ -94,5 +99,6 @@ public class Coche {
                 + puertaCopiloto + ", delanteraIzda=" + delanteraIzda + ", delanteraDrcha=" + delanteraDrcha + ", traseraIzda="
                 + traseraIzda + ", traseraDrcha=" + traseraDrcha + '}';
     }
+    
 
 }
