@@ -120,6 +120,26 @@ public class MetodosArrays {
 
         }
     }
+    public static void rellenarArrayString(String[] a) {//Para rellenar un array
+        Scanner sc = new Scanner(System.in);
+
+        for (int i = 0; i < a.length; i++) {
+            boolean repetir = true;
+            do{
+                
+            System.out.println("Introduzca el string que desea que ocupe la posición " + i);
+            try{
+            a[i] = sc.next();
+            repetir = false;
+            }catch (InputMismatchException ime){
+                System.out.println("Introduza un número, por favor");
+                repetir = true;
+                sc.nextLine();
+            }
+            }while (repetir);
+
+        }
+    }
     
     public static int[] crearArrayFijo(int tam) {//Crear un array de un tamaño fijo
         
