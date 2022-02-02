@@ -1,6 +1,10 @@
 package enumejemplos;
 
 //Clase privadas que contiene objetos constantes
+//Constructor privado
+//No hay setter
+//Recomendable final
+//Se definen los objetos al principio del enum
 
 public enum Pizza {
     

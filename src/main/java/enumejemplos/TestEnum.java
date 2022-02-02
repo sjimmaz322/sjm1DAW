@@ -14,5 +14,13 @@ public class TestEnum {
         
             Pizza bbq = Pizza.BARBACOA;
            
+            Pizza.values();//Devuelve array con todos los objetos.
+            
+            switch(bbq){
+                case BARBACOA:
+                    break;
+                case CARBONARA:
+                    break;
+            }
     }
 }
