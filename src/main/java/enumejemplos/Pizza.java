@@ -4,6 +4,11 @@ package enumejemplos;
 
 public enum Pizza {
     
+    //Es importante el orden en el que las pones, value devuelve un array con los nombres en orden
+    BARBACOA(22,"Barbacoa Cream", new String[]{"Carne","Bacon","Queso","Salsa BBQ"}, 13.0),
+    CARBONARA(22,"Carbonara", new String[]{"Nata","Bacon","Queso","Cebolla","Champiñones"}, 13.0),
+    JAMONYQUESO(22,"Carbonara", new String[]{"Jamon York","Queso","Tomate"}, 13.0);
+    
     private final int tamanio;
     private final String nombre;
     private final String[] ingredientes;
