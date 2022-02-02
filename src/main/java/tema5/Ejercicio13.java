@@ -15,17 +15,19 @@ public class Ejercicio13 {
          */
         Scanner sc = new Scanner(System.in);
         int num = 1;
-        int array[] = new int[20];
+        
+        String[] array = {"Adios","*","**","***","****","*****","******","*******","********","**********","***********","************","*************","**************","***************","****************","*****************","******************","******************","*******************","********************"};
         boolean repetir = true;
         do {//Bucle para que el programa se repita hasta que se pulse 0
+            
             do{//Bucle para que se repita cuando se introduzca mal un valor
                 //Limpieza de buffer
-            System.out.println("\nIntroduzca el número que desea\n 0 para finalizar\n");
             try {
+                System.out.println("\nIntroduzca el número que desea\n 0 para finalizar\n");
                 num = sc.nextInt();
                 if (num >= 1 && num<=20){
                     repetir = false;    
-                }else{
+                }else if (num<0 || num>20){
                     System.out.println("Introduza un numero entre 1 y 20");
                     repetir = true;
                 }
@@ -34,11 +36,10 @@ public class Ejercicio13 {
                 sc.nextLine();
             }
             }while (repetir);
-            for (int i = 0; i < num; i++) {
-                System.out.print("*");
-            }
+            System.out.print(array[num]);
 
         } while ((num != 0));
+        
 
     }
     

@@ -48,7 +48,7 @@ public class Ejercicio9 {
         int[] array1 = new int[tam];
 
         //Rellenamos los arrays con el método para ello de la clase Ejercicio 4
-        MetodosArrays.rellenarArray(array1);
+        MetodosArrays.rellenarArrayInt(array1);
         
         //Método para comprobar los números de Array y poder elegir el resultado
         MetodosArrays.mostrarArray(array1);

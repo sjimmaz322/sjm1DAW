@@ -100,7 +100,7 @@ public class MetodosArrays {
         return new int[tam];
     }
 
-    public static void rellenarArray(int[] a) {//Para rellenar un array
+    public static void rellenarArrayInt(int[] a) {//Para rellenar un array
         Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < a.length; i++) {

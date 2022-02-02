@@ -10,7 +10,7 @@ public class JokerBuenoJokerMalo {
         MetodosArrays.rellenarArrayRandom(arrayJoker, 10);
         int[] arrayJugador = MetodosArrays.crearArrayFijo(7);
         MetodosArrays.mostrarArray(arrayJoker);
-        MetodosArrays.rellenarArray(arrayJugador);
+        MetodosArrays.rellenarArrayInt(arrayJugador);
         System.out.println("-");
         MetodosArrays.compararArrays(arrayJoker, arrayJugador);
         if (MetodosArrays.compararArrays(arrayJoker, arrayJugador) == true) {
