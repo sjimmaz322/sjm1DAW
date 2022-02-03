@@ -17,16 +17,31 @@ public class LanzarMoneda {
     
     private static boolean[] moneda = new boolean[1000];
 
-    private static void lanzamiento() {
-        Random rd = new Random();
-
-        for (int numTirada = 0; numTirada < moneda.length; numTirada++) {
-            int result = rd.nextInt(2);
-            if (result == 0) {
-               moneda[numTirada] = false;
-            }
-            moneda[numTirada] = true;
+    public static void rellenarArray(boolean[] a){
+         Random rd = new Random();
+         for (int i = 0; i < moneda.length; i++) {
+            moneda[i] = rd.nextBoolean();
+            
         }
-
+    }
+    public static int caras(boolean[] a){
+        int contador = 0;
+        for (int i = 0; i < moneda.length; i++) {
+            if(moneda[i]){
+                contador++;
+            }
+            
+        }
+        return (contador);
+    }
+    public static int cruces(boolean[] a){
+        int contador = 0;
+        for (int i = 0; i < moneda.length; i++) {
+            if(!moneda[i]){
+                contador++;
+            }
+            
+        }
+        return (contador);
     }
 }
