@@ -37,12 +37,12 @@ public class Ejercicio22 {
         
         Random rd = new Random();
         
-        lista.add(6);
-        lista.add(7);
-        lista.add(1);
-        lista.add(4);
-        lista.add(3);
-        lista.add(5);
+//        lista.add(6);
+//        lista.add(7);
+//        lista.add(1);
+//        lista.add(4);
+//        lista.add(3);
+//        lista.add(5);
 
         for (int i = 0; i < 10; i++) {
             Integer aux = rd.nextInt(91) + 10;
@@ -106,6 +106,14 @@ public class Ejercicio22 {
         int indice = lista.indexOf(500);//Averiguar donde está el número buscado por primera vez
         
         System.out.println("\nEl 500 está en la posición "+indice);
+        
+        lista.isEmpty();
+        
+        if (lista.isEmpty()){
+            System.out.println("\nSi está vacía");
+        }else{
+            System.out.println("\nNo está vacía");
+        }
         
         
     }
