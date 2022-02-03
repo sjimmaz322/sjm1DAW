@@ -37,12 +37,12 @@ public class Ejercicio22 {
         
         Random rd = new Random();
         
-//        lista.add(6);
-//        lista.add(7);
-//        lista.add(1);
-//        lista.add(4);
-//        lista.add(3);
-//        lista.add(5);
+        lista.add(6);
+        lista.add(7);
+        lista.add(1);
+        lista.add(4);
+        lista.add(3);
+        lista.add(5);
 
         for (int i = 0; i < 10; i++) {
             Integer aux = rd.nextInt(91) + 10;
@@ -80,14 +80,34 @@ public class Ejercicio22 {
                 mayor = num;
             }
         }
+        int menor = Integer.MAX_VALUE;
+        //Buscar el menor
+        for (Integer num : lista) {
+            if(menor>num){
+                menor = num;
+            }
+        }
         
         System.out.println("\nEl mayor número es "+mayor);
+        System.out.println("\nEl menor número es "+menor);
         
         System.out.println("\nBorrado del elemento de la posición 3");
         
-        lista.remove(3);
+        lista.remove(3); //Elimina la posición 3
         
         lista.forEach(e->System.out.print(e+" - "));
+        
+        lista.set(0, 200); //Cambia el elemento de la posición 0 al valor dado
+        
+        lista.add(2, 500); //Entre la posición 1 y la 3 añade un 500
+        System.out.println(" ");
+        lista.forEach(e->System.out.print(e+" - "));
+        
+        int indice = lista.indexOf(500);//Averiguar donde está el número buscado por primera vez
+        
+        System.out.println("\nEl 500 está en la posición "+indice);
+        
+        
     }
 
 }
