@@ -1,7 +1,9 @@
 package tema5;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
+import javax.swing.SpringLayout;
 
 public class Ejercicio23 {
 
@@ -47,16 +49,17 @@ public class Ejercicio23 {
             Integer aux = rd.nextInt(100 - 50 + 1) + 50;
             lista2.add(aux);
         }
-
+        
+        System.out.println("Lista 1");
         for (Integer tmp : lista1) {
             System.out.print(tmp + " - ");
         }
-        System.out.println(" ");
+        System.out.println("\nLista 2");
 
         for (Integer pos : lista2) {
             System.out.print(pos + "-");
         }
-        System.out.println(" ");
+        System.out.println("\nLista 3");
 
         ArrayList lista3 = new ArrayList<>();
 
@@ -83,11 +86,13 @@ public class Ejercicio23 {
                 lista4.add(lista2.get(i));
             }
         }
-        System.out.println(" ");
-
+        System.out.println("\nLista 4");
+        
+        Collections.shuffle(lista4); //Para barajar los valores dentro de un ArrayList
+        
         lista4.forEach(e -> System.out.print(e + "-"));
         
-        System.out.println(" ");
+        System.out.println("\nLista 5");
         
         ArrayList<Integer> lista5 = rellenarArrayListRandom(10);
         
