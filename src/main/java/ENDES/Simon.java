@@ -69,7 +69,7 @@ public class Simon extends JApplet implements MouseListener, Runnable, ActionLis
 		about.addActionListener(this);
 		start.addActionListener(this);
 		this.setSize(new Dimension(405, 325));
-		jPanel1.setBackground(Color.white);
+		jPanel1.setBackground(Color.lightGray);
 		jPanel1.setBorder(BorderFactory.createLineBorder(Color.black));
 		jPanel1.setOpaque(true);
 		jPanel1.setLayout(null);
