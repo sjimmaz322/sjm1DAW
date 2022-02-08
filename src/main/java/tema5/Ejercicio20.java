@@ -19,16 +19,31 @@ y binarySearch().
 public class Ejercicio20 {
 
     public static void main(String[] args) {
-     
+
         ListaLibros catalogo = new ListaLibros();
         ListaLibros catalogo2 = new ListaLibros();
-        
+
         catalogo.insertarLibro(new Libros("1234", "La muerte a pellizcos", "Planeta", 10, 0.8));
-        catalogo2.insertarLibro(new Libros("1245", "La muerte a bocaos", "Planeta", 10, 0.8));
+        catalogo.insertarLibro(new Libros("1232", "La muerte a pellizcos", "Planeta", 10, 0.18));
+        catalogo.insertarLibro(new Libros("1235", "La muerte a pellizcos", "Planeta", 10, 0.9));
+        catalogo.insertarLibro(new Libros("1236", "La muerte a pellizcos", "Planeta", 10, 0.8));
+
+        //catalogo2.insertarLibro(new Libros("1245", "La muerte a bocaos", "Planeta", 10, 0.8));
+        catalogo.imprimirConsola();
+
+        System.out.println("Tamaño del catálogo: " + catalogo.getNumLibros());
+
+        Libros libro = catalogo.buscarISBN("1234");
+        System.out.println("El libro buscado es: " + libro);
+
+        libro = catalogo.buscarISBNVieja("1232");
+        System.out.println("El libro buscado es: " + libro);
+        
+        catalogo.eliminarLibro(new Libros("1235", "", "", 0, 0));
         
         catalogo.imprimirConsola();
-        
-        System.out.println("Tamaño del catálogo: " +catalogo.getNumLibros());
+        System.out.println("Libros de precio 0.8€");
+        catalogo.buscarPrecio(0.8).forEach(System.out::println);
     }
-    
+
 }

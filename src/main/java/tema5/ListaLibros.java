@@ -40,4 +40,36 @@ public class ListaLibros {
 
         return lista.remove(libro);
     }
+    
+    public Libros buscarISBNVieja(String isbn){//Podemos buscar libros por isbn, nombre, editorial...
+        Libros aux = null;
+        for (int i = 0; i < lista.size(); i++) {
+            aux = lista.get(i);
+            if (aux.getIbsn().equals(isbn)){
+                return aux;
+            }
+        }
+        return aux;
+    }
+    
+    public Libros buscarISBN(String isbn){
+        Libros aux = new Libros(isbn, "", "", 0, 0);
+        int indice = lista.indexOf(aux);
+        if(indice>=0){
+            return lista.get(indice);
+        }
+        return null;
+    }
+    public ArrayList<Libros> buscarPrecio(double precio){
+        ArrayList<Libros> aux = new ArrayList<>();
+        
+        for (Libros libros : this.lista) {
+            if (libros.getPrecio() == precio){
+                aux.add(libros);
+            }
+        }
+        return aux;
+            
+        
+    }
 }
