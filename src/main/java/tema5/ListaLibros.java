@@ -18,6 +18,7 @@ public class ListaLibros {
 
     //Guarda el libro en el primer espacio de memoria disponible dentro de la lista si no es null
     public void insertarLibro(Libros libro) {
+        
         if (libro != null) {
             lista.add(libro);
         }
@@ -27,11 +28,19 @@ public class ListaLibros {
         
         System.out.println("Imprimiendo lista...");
         lista.forEach(System.out::println);
-        
     }
     
     public int getNumLibros(){
         
+        return lista.size();
     }
     
+    //Eliminar un libro
+    public boolean eliminarLibro(Libros libro){
+        if (lista.contains(libro)){
+            lista.remove(libro);
+            return true;
+        }
+        return false;
+    }
 }
