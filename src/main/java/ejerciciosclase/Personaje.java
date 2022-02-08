@@ -4,15 +4,17 @@ import java.util.Objects;
 
 public class Personaje {
     
-    private String nombre, raza, arquetipo;
-    private int nivel;
+    private String nombre, raza, arquetipo, alineacion;
+    private int nivel,edad;
     private double healthPoints,manaPoints;
 
-    public Personaje(String nombre, String raza, String arquetipo, int nivel, double healthPoints, double manaPoints) {
+    public Personaje(String nombre, String raza, String arquetipo, String alineacion, int nivel,int edad, double healthPoints, double manaPoints) {
         this.nombre = nombre;
         this.raza = raza;
         this.arquetipo = arquetipo;
+        this.alineacion = alineacion;
         this.nivel = nivel;
+        this.edad = edad;
         this.healthPoints = healthPoints;
         this.manaPoints = manaPoints;
     }
@@ -65,6 +67,28 @@ public class Personaje {
         this.manaPoints = manaPoints;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getAlineacion() {
+        return alineacion;
+    }
+
+    public void setAlineacion(String alineacion) {
+        this.alineacion = alineacion;
+    }
+
+    @Override
+    public String toString() {
+        return "Personaje{" + "nombre=" + nombre + ", raza=" + raza + ", arquetipo=" + arquetipo + ", alineacion=" + alineacion + ", nivel=" + nivel + ", edad=" + edad + ", healthPoints=" + healthPoints + ", manaPoints=" + manaPoints + '}';
+    }
+        
+    
     @Override
     public int hashCode() {
         int hash = 5;
