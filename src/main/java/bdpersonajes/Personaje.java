@@ -1,14 +1,20 @@
-package ejerciciosclase;
+package bdpersonajes;
 
 import java.util.Objects;
 
 public class Personaje {
-    
-    private String nombre, raza, arquetipo, alineacion;
-    private int nivel,edad;
-    private double healthPoints,manaPoints;
 
-    public Personaje(String nombre, String raza, String arquetipo, String alineacion, int nivel,int edad, double healthPoints, double manaPoints) {
+    private String nombre, raza, arquetipo, alineacion, trasfondo;
+    private int nivel, edad, healthPoints, manaPoints;
+    private double puntosExp;
+    /*
+    Razas:  Dracónidos, Elfos, Enanos, Gnomos, Humanos, Medianos, Semi-elfos, Semi-orcos, Tiflin, 
+    Arquetipos: Bárbaro, Bardo, Brujo, Clérigo, Druida, Explorador, Guerrero, Hechicero, Mago, Monje, Paladín, Pícaro.
+    Alineaciones: Lawful Good, Neutral Good, Chaotic Good, Lawful Neutral, True Neutral, Chaotic Neutral, Lawful Evil, Neutral Evil, Chaotic Evil.
+    Trasfondo: La historia del personaje, no le haremos mucho caso en esta ocasión.
+    */
+
+    public Personaje(String nombre, String raza, String arquetipo, String alineacion, int nivel, int edad, int healthPoints, int manaPoints, double puntosExp, String trasfondo) {
         this.nombre = nombre;
         this.raza = raza;
         this.arquetipo = arquetipo;
@@ -17,8 +23,11 @@ public class Personaje {
         this.edad = edad;
         this.healthPoints = healthPoints;
         this.manaPoints = manaPoints;
+        this.trasfondo = trasfondo;
+        this.puntosExp = puntosExp;
     }
 
+    //Getters y setter de todo lo necesario
     public String getNombre() {
         return nombre;
     }
@@ -51,11 +60,11 @@ public class Personaje {
         this.nivel = nivel;
     }
 
-    public double getHealthPoints() {
+    public int getHealthPoints() {
         return healthPoints;
     }
 
-    public void setHealthPoints(double healthPoints) {
+    public void setHealthPoints(int healthPoints) {
         this.healthPoints = healthPoints;
     }
 
@@ -63,7 +72,7 @@ public class Personaje {
         return manaPoints;
     }
 
-    public void setManaPoints(double manaPoints) {
+    public void setManaPoints(int manaPoints) {
         this.manaPoints = manaPoints;
     }
 
@@ -83,24 +92,60 @@ public class Personaje {
         this.alineacion = alineacion;
     }
 
+    public String getTrasfondo() {
+        return trasfondo;
+    }
+
+    public void setTrasfondo(String trasfondo) {
+        this.trasfondo = trasfondo;
+    }
+
+    public double getPuntosExp() {
+        return puntosExp;
+    }
+
+    public void setPuntosExp(double puntosExp) {
+        this.puntosExp = puntosExp;
+    }
+    
+    //toString para recibir la ficha del personaje
+
     @Override
     public String toString() {
-        return "Personaje{" + "nombre=" + nombre + ", raza=" + raza + ", arquetipo=" + arquetipo + ", alineacion=" + alineacion + ", nivel=" + nivel + ", edad=" + edad + ", healthPoints=" + healthPoints + ", manaPoints=" + manaPoints + '}';
+        return "El siguiente personaje es:\n"
+                + "Nombre: " + nombre + "\n"
+                + "Raza: " + raza + "\n"
+                + "Arquetipo: " + arquetipo + "\n"
+                + "Alineación: " + alineacion + "\n"
+                + "Edad: " + edad + "\n"
+                + "Nivel: " + nivel + "\n"
+                + "Puntos de vida: " + healthPoints + "\n"
+                + "Puntos de magia: " + manaPoints + "\n"
+                + "Puntos de experiencia actuales: " + manaPoints + "\n"
+                + "Trasfondo:\n" + trasfondo
+                +"\n";
     }
-        
     
+    //hashCode porque lo dimos en clase
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 53 * hash + Objects.hashCode(this.nombre);
-        hash = 53 * hash + Objects.hashCode(this.raza);
-        hash = 53 * hash + Objects.hashCode(this.arquetipo);
-        hash = 53 * hash + this.nivel;
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.healthPoints) ^ (Double.doubleToLongBits(this.healthPoints) >>> 32));
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.manaPoints) ^ (Double.doubleToLongBits(this.manaPoints) >>> 32));
+        hash = 67 * hash + Objects.hashCode(this.nombre);
+        hash = 67 * hash + Objects.hashCode(this.raza);
+        hash = 67 * hash + Objects.hashCode(this.arquetipo);
+        hash = 67 * hash + Objects.hashCode(this.alineacion);
+        hash = 67 * hash + Objects.hashCode(this.trasfondo);
+        hash = 67 * hash + this.nivel;
+        hash = 67 * hash + this.edad;
+        hash = 67 * hash + this.healthPoints;
+        hash = 67 * hash + this.manaPoints;
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.puntosExp) ^ (Double.doubleToLongBits(this.puntosExp) >>> 32));
         return hash;
     }
 
+
+    //equals para que funcionen los métodos comparatorios
+    //Entendemos que para que dos personajes sean iguales deben tener el mismo nivel, edad, raza, arquetipo, alineación, puntos de vida y puntos de magia/maná.
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -116,11 +161,25 @@ public class Personaje {
         if (this.nivel != other.nivel) {
             return false;
         }
+        if (this.edad != other.edad) {
+            return false;
+        }
+        if (this.healthPoints != other.healthPoints) {
+            return false;
+        }
+        if (this.manaPoints != other.manaPoints) {
+            return false;
+        }
         if (!Objects.equals(this.raza, other.raza)) {
             return false;
         }
-        return Objects.equals(this.arquetipo, other.arquetipo);
+        if (!Objects.equals(this.arquetipo, other.arquetipo)) {
+            return false;
+        }
+        if (!Objects.equals(this.alineacion, other.alineacion)) {
+            return false;
+        }
+        return true;
     }
-    
-    
+
 }
