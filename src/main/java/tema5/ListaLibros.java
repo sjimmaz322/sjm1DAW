@@ -37,10 +37,7 @@ public class ListaLibros {
     
     //Eliminar un libro
     public boolean eliminarLibro(Libros libro){
-        if (lista.contains(libro)){
-            lista.remove(libro);
-            return true;
-        }
-        return false;
+
+        return lista.remove(libro);
     }
 }
