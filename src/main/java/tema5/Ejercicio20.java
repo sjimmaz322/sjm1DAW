@@ -21,10 +21,14 @@ public class Ejercicio20 {
     public static void main(String[] args) {
      
         ListaLibros catalogo = new ListaLibros();
+        ListaLibros catalogo2 = new ListaLibros();
         
         catalogo.insertarLibro(new Libros("1234", "La muerte a pellizcos", "Planeta", 10, 0.8));
+        catalogo2.insertarLibro(new Libros("1245", "La muerte a bocaos", "Planeta", 10, 0.8));
         
         catalogo.imprimirConsola();
+        
+        System.out.println("Tamaño del catálogo: " +catalogo.getNumLibros());
     }
     
 }
