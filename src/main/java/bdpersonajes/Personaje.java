@@ -121,7 +121,7 @@ public class Personaje {
                 + "Nivel: " + nivel + "\n"
                 + "Puntos de vida: " + healthPoints + "\n"
                 + "Puntos de magia: " + manaPoints + "\n"
-                + "Puntos de experiencia actuales: " + manaPoints + "\n"
+                + "Puntos de experiencia actuales: " + puntosExp + "\n"
                 + "Trasfondo:\n" + trasfondo
                 +"\n";
     }
@@ -145,7 +145,8 @@ public class Personaje {
 
 
     //equals para que funcionen los métodos comparatorios
-    //Entendemos que para que dos personajes sean iguales deben tener el mismo nivel, edad, raza, arquetipo, alineación, puntos de vida y puntos de magia/maná.
+    //Entendemos que para que dos personajes sean iguales deben tener la misma edad, raza, arquetipo, alineación.
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -158,16 +159,7 @@ public class Personaje {
             return false;
         }
         final Personaje other = (Personaje) obj;
-        if (this.nivel != other.nivel) {
-            return false;
-        }
         if (this.edad != other.edad) {
-            return false;
-        }
-        if (this.healthPoints != other.healthPoints) {
-            return false;
-        }
-        if (this.manaPoints != other.manaPoints) {
             return false;
         }
         if (!Objects.equals(this.raza, other.raza)) {
@@ -176,10 +168,8 @@ public class Personaje {
         if (!Objects.equals(this.arquetipo, other.arquetipo)) {
             return false;
         }
-        if (!Objects.equals(this.alineacion, other.alineacion)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.alineacion, other.alineacion);
     }
+    
 
 }
