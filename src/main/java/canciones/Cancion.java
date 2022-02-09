@@ -93,8 +93,6 @@ public class Cancion {
     @Override
     public String toString() {
         return "La canción se llama "+titulo+" creada por "+autor+" pertenece al género "+genero+" fue lanzada en "+anioLanzamiento+" y ocupa el numero de pista "+numPista+" en el disco.";
-    }
-
-    
+    }   
     
 }
