@@ -7,6 +7,7 @@ public class Personaje {
     private String nombre, raza, arquetipo, alineacion, trasfondo;
     private int nivel, edad, healthPoints, manaPoints;
     private double puntosExp;
+    
     /*
     Razas:  Dracónidos, Elfos, Enanos, Gnomos, Humanos, Medianos, Semi-elfos, Semi-orcos, Tiflin, 
     Arquetipos: Bárbaro, Bardo, Brujo, Clérigo, Druida, Explorador, Guerrero, Hechicero, Mago, Monje, Paladín, Pícaro.

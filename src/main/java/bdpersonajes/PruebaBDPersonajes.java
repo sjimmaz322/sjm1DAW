@@ -20,7 +20,7 @@ public class PruebaBDPersonajes {
         lista1.insertarPersonaje(new Personaje("X-24/J", "Warforged", "Guerrero", "Lawful Evil", 7, 2, 12, 5, 0, "Máquina creada con un solo propósito, destruir todo lo que se interponga en su camino."));
         lista1.insertarPersonaje(new Personaje("Norem Mortis", "Dracónido", "Hechicero", "Chaotic Evil", 50, 31, 12, 88, 0, "Poderoso hechicero medio dragón que solo quiere sembrar el caos y la destrucción por diversión"));
         
-        lista1.imprimirVentana(); //Imprime una ventana por cada personaje, solo usar en caso de que se tenga tiempo.
+        //lista1.imprimirVentana(); //Imprime una ventana por cada personaje, solo usar en caso de que se tenga tiempo.
        
         
         //Lista de personajes en un rango de edad determinado
@@ -30,7 +30,7 @@ public class PruebaBDPersonajes {
         //Lista de personajes de raza humana
         System.out.println("Personajes Humanos");
         lista1.buscarRazas("Humano").forEach(System.out::println);
-        
+                  
         //Eliminamos el único personaje Goblin
         lista1.eliminarPersonaje(new Personaje("", "Goblin", "Bardo", "Neutral Evil", 0, 27, 0, 0, 0," "));
         
