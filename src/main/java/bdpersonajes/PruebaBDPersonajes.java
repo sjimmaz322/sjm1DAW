@@ -32,7 +32,7 @@ public class PruebaBDPersonajes {
         lista1.buscarRazas("Humano").forEach(System.out::println);
         
         //Eliminamos el único personaje Goblin
-        lista1.eliminarPersonaje(new Personaje("Yierik Dandel", "Goblin", "Bardo", "Neutral Evil", 26, 27, 4, 9, 0," "));
+        lista1.eliminarPersonaje(new Personaje("", "Goblin", "Bardo", "Neutral Evil", 0, 27, 0, 0, 0," "));
         
         //Lista de todos los personajes Goblins, sale vacía
         System.out.println("Personajes Goblins");
@@ -42,7 +42,7 @@ public class PruebaBDPersonajes {
         lista1.insertarPersonaje(new Personaje("Galah Drot", "Goblin", "Explorador", "True Neutral", 1, 15, 6, 5, 0,
                 "Pequeño goblin amante de la naturaleza, hará lo que tenga que hacer para preservarla,\npero no dañará a drede"));
         
-        //Lista de todos los personajes Goblins, solo aparece Galah Drot
+//        //Lista de todos los personajes Goblins, solo aparece Galah Drot
         System.out.println("Personajes Goblins");
         lista1.buscarRazas("Goblin").forEach(System.out::println);
     }
