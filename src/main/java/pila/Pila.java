@@ -59,6 +59,10 @@ public class Pila {
        return false;
     }
     public void rellenar(char[] array){
+        for (int i = 0; i < array.length; i++) {
+            pila.add(array[i]);
+            
+        }
     }
 
     @Override

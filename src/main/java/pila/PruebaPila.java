@@ -7,14 +7,11 @@ public class PruebaPila {
     
     public static void main(String[] args) {
         Random rd = new Random();
+        char[] lista = {'S','a','m','u','e','l','J','i','m','e','n','e','z'};
         
         Pila miPila = new Pila();
 
-        for (int i = 0; i < 123; i++) {
-            
-            char a = (char)(rd.nextInt(122-65+1)+65);
-            miPila.push(a);
-        }
+        miPila.rellenar(lista);
 
         
         miPila.imprimirConsola();
@@ -30,6 +27,9 @@ public class PruebaPila {
         System.out.println("El tamaño de la lista es: " + miPila.getSize());
         
         miPila.getPila();
+        
+        String cadena = miPila.toString();
+        System.out.println(cadena);
         
     }
     
