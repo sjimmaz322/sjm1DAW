@@ -22,6 +22,7 @@ public class PruebaBDPersonajes {
         
         //lista1.imprimirVentana(); //Imprime una ventana por cada personaje, solo usar en caso de que se tenga tiempo.
        
+        lista1.imprimirConsola();
         
         //Lista de personajes en un rango de edad determinado
         System.out.println("Personajes entre 18 y 50 años");

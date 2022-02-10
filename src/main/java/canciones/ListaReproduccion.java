@@ -29,11 +29,13 @@ public class ListaReproduccion {
     private ArrayList<Cancion> listaReproduccion;
 
     public ListaReproduccion() {
+        this.listaReproduccion = new ArrayList<>();
     }
 
     public ListaReproduccion(ArrayList<Cancion> listaReproduccion) {
         this.listaReproduccion = listaReproduccion;
     }
+    
 
     public void imprimirConsola() {//Método que imprime por consola todos los elementos de la lista
 
