@@ -7,7 +7,7 @@ public class PruebaPila {
     
     public static void main(String[] args) {
         Random rd = new Random();
-        char[] lista = {'S','a','m','u','e','l','J','i','m','e','n','e','z'};
+        char[] lista = {'S','a','m','u','e','l','A','l','e','j','a','n','d','r','o','J','i','m','e','n','e','z','M','a','z','a','s'};
         
         Pila miPila = new Pila();
 
