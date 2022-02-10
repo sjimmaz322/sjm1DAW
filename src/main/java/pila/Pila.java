@@ -9,7 +9,7 @@ public class Pila {
 
     private ArrayList<Character> pila;
 
-    public Pila(int tamanio) {
+    public Pila() {
         this.pila = new ArrayList<>();
     }
 
@@ -57,6 +57,8 @@ public class Pila {
            return true;
        } 
        return false;
+    }
+    public void rellenar(char[] array){
     }
 
     @Override
