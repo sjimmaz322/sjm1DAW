@@ -1,6 +1,5 @@
 package pila;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class PruebaPila {
@@ -20,9 +19,11 @@ public class PruebaPila {
         
         System.out.println(resultado);
         
-        String resultado2 = miPila.isFull() ? "Está llena" : "No está llena";
+        String resultado2 = miPila.isFullFull() ? "Está llena" : "No está llena";
         
         System.out.println(resultado2);
+        
+        String resultado3 = miPila.isFull() ? "Está llena pero no del todo" : "Está vacía";
         
         System.out.println("El tamaño de la lista es: " + miPila.getSize());
         

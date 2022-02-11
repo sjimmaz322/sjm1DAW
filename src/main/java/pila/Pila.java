@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Pila {
 
     private ArrayList<Character> pila;
+    private final int TAMANIO = 100;
 
     public Pila() {
         this.pila = new ArrayList<>();
@@ -46,20 +47,28 @@ public class Pila {
             pila.forEach(System.out::println);
         }
     }
-    public boolean isFull(){
-       if (pila.size()!=0){
+    public boolean isFullFull(){
+       if (pila.size()== TAMANIO){
            return true;
        } 
        return false;
     }
+    public boolean isFull(){
+       if (pila.size()!= 0){
+           return true;
+       } 
+       return false;
+    }
+    
     public boolean isEmpty(){
        if (pila.size()==0){
            return true;
        } 
        return false;
     }
+    
     public void rellenar(char[] array){
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < pila.size(); i++) {
             pila.add(array[i]);
             
         }

@@ -1,5 +1,8 @@
 package canciones;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class PruebaReproduccion {
 
     public static void main(String[] args) {
@@ -11,7 +14,7 @@ public class PruebaReproduccion {
         listaNueva.grabarCancion(new Cancion("Forget and Forgive", "Swan Fyahbwoy", "Rap", 4, 2018));
         listaNueva.grabarCancion(new Cancion("Guapa", "El Chojin", "Rap", 3, 2015));
         
-        listaNueva.imprimirConsola();
+        listaNueva.imprimirConsola();     
         
     }
 
