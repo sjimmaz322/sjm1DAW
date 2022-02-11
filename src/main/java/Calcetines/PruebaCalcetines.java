@@ -13,7 +13,8 @@ public class PruebaCalcetines {
         
         String comparation = calce1.getColor().toString();//Método equals
 
-        String resultado = calce2.equals(calce1) ? "Son iguales" : "No son iguales"; //Comparador terciario para recibir el mensaje de comparar
+        //Comparador terciario para recibir el mensaje de comparar
+        String resultado = calce2.equals(calce1) ? "Son iguales" : "No son iguales"; 
         
         System.out.println(resultado);
         

@@ -1,6 +1,5 @@
 package Calcetines;
 
-import Calcetines.Colores;
 import java.util.Objects;
 import java.util.Random;
 
