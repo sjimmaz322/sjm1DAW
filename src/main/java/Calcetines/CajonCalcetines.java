@@ -13,7 +13,7 @@ public class CajonCalcetines {
     //ArrayList que es la lista de los calcetines contenidos en el cajon
     private ArrayList<Calcetines> contenido;
     //Generador del tamaño del cajón
-    private int tamanio = rd.nextInt(20 - 1) + 1;
+    private int tamanio = rd.nextInt(20 - 10 + 1) + 10;
 
     public CajonCalcetines(ArrayList<Calcetines> contenido) {//Constructor paremetrizado que recibe la ArrayList
         this.contenido = new ArrayList<>();
@@ -55,10 +55,13 @@ public class CajonCalcetines {
             contenido.get(i);
             for (int j = 1; j < contenido.size(); j++) {
                 if (!(contenido.get(i).equals(contenido.get(j)))) {
+                    desparejo.remove(contenido.get(i));
+                    desparejo.remove(contenido.get(j));
+                }else{
                     desparejo.add(contenido.get(i).toString());
-
                 }
             }
+
         }
 
         return desparejado;

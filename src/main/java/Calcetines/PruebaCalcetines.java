@@ -20,6 +20,7 @@ public class PruebaCalcetines {
         
         //Creamos nuevo cajón
         CajonCalcetines cajon1 = new CajonCalcetines();
+        
         String[] desparejo = new String[cajon1.getTamanio()];
         //Rellenamos el cajón creado
         cajon1.rellenarCajon();
