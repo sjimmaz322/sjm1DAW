@@ -4,6 +4,8 @@
  */
 package tema5;
 
+import java.util.Arrays;
+
 /*
 Desarrollar una lista de Libros.
 La funcionalidad de la lista será la habitual: conocer el número de libros que hay en la lista,
@@ -19,31 +21,56 @@ y binarySearch().
 public class Ejercicio20 {
 
     public static void main(String[] args) {
+        
+        
 
         ListaLibros catalogo = new ListaLibros();
-        ListaLibros catalogo2 = new ListaLibros();
 
-        catalogo.insertarLibro(new Libros("1234", "La muerte a pellizcos", "Planeta", 10, 0.8));
-        catalogo.insertarLibro(new Libros("1232", "La muerte a pellizcos", "Planeta", 10, 0.18));
-        catalogo.insertarLibro(new Libros("1235", "La muerte a pellizcos", "Planeta", 10, 0.9));
-        catalogo.insertarLibro(new Libros("1236", "La muerte a pellizcos", "Planeta", 10, 0.8));
 
-        //catalogo2.insertarLibro(new Libros("1245", "La muerte a bocaos", "Planeta", 10, 0.8));
-        catalogo.imprimirConsola();
-
-        System.out.println("Tamaño del catálogo: " + catalogo.getNumLibros());
-
-        Libros libro = catalogo.buscarISBN("1234");
-        System.out.println("El libro buscado es: " + libro);
-
-        libro = catalogo.buscarISBNVieja("1232");
-        System.out.println("El libro buscado es: " + libro);
+        catalogo.insertarLibro(new Libros("12s4", "La muerte a pellizcos", "Planeta", 10, 0.8));
+        catalogo.insertarLibro(new Libros("1z32", "La espera a mordiscos", "Planeta", 10, 0.18));
+        catalogo.insertarLibro(new Libros("12hr", "La vida a soplios", "Planeta", 10, 0.9));
+        catalogo.insertarLibro(new Libros("fg36", "La negociación a mazazos", "Planeta", 10, 0.8));
         
-        catalogo.eliminarLibro(new Libros("1235", "", "", 0, 0));
-        
+        System.out.println("Lista desordenada");
         catalogo.imprimirConsola();
-        System.out.println("Libros de precio 0.8€");
-        catalogo.buscarPrecio(0.8).forEach(System.out::println);
+        
+        catalogo.ordenarPorISBN();
+        
+        System.out.println("Lista ordenada");
+        catalogo.imprimirConsola();
+        
+        int posicion = catalogo.buscarISBN(new Libros ("1z32", "La muerte a pellizcos", "Planeta", 10, 0.18));
+        System.out.println("Está en la posición: "+posicion);
+        
+        System.out.println("Ordenamos por nombre");
+        catalogo.ordenarComparatorNombre();
+        catalogo.imprimirConsola();
+        
+        
+        /*
+        Aplicar esto en la lista de canciones
+        */
+//
+//        //catalogo2.insertarLibro(new Libros("1245", "La muerte a bocaos", "Planeta", 10, 0.8));
+//        catalogo.imprimirConsola();
+//
+//        System.out.println("Tamaño del catálogo: " + catalogo.getNumLibros());
+//
+//        Libros libro = catalogo.buscarISBN("1234");
+//        System.out.println("El libro buscado es: " + libro);
+//
+//        libro = catalogo.buscarISBNVieja("1232");
+//        System.out.println("El libro buscado es: " + libro);
+//        
+//        catalogo.eliminarLibro(new Libros("1235", "", "", 0, 0));
+//        
+//        catalogo.imprimirConsola();
+//        System.out.println("Libros de precio 0.8€");
+//        catalogo.buscarPrecio(0.8).forEach(System.out::println);
+//        
+//        
+//        
     }
 
 }

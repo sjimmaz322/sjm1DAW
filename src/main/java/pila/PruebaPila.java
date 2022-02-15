@@ -6,11 +6,23 @@ public class PruebaPila {
     
     public static void main(String[] args) {
         Random rd = new Random();
-        char[] lista = {'S','a','m','u','e','l','A','l','e','j','a','n','d','r','o','J','i','m','e','n','e','z','M','a','z','a','s'};
         
-        Pila miPila = new Pila();
+        char[] lista = {'S','a','m','u','e','l','A','l','e','j','a','n','d','r','o','J','i','m','e','n','e','z','M','a','z','a','s'
+                ,'S','a','m','u','e','l','A','l','e','j','a','n','d','r','o','J','i','m','e','n','e','z','M','a','z','a','s'
+                ,'S','a','m','u','e','l','A','l','e','j','a','n','d','r','o','J','i','m','e','n','e','z','M','a','z','a','s'
+                ,'S','a','m','u','e','l','A','l','e','j','a','n','d','r','o','J','i','m','e','n','e','z','M','a','z','a','s'};
+        
+        
+        
+        Pila miPila = new Pila(35);
 
+        
+//        for (int i = 0; i < lista.length; i++) {
+//            miPila.push(lista[i]);    
+//        }
+        
         miPila.rellenar(lista);
+        
 
         
         miPila.imprimirConsola();
@@ -24,6 +36,8 @@ public class PruebaPila {
         System.out.println(resultado2);
         
         String resultado3 = miPila.isFull() ? "Está llena pero no del todo" : "Está vacía";
+        
+        System.out.println(resultado3);
         
         System.out.println("El tamaño de la lista es: " + miPila.getSize());
         

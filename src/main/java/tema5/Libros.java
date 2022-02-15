@@ -10,9 +10,11 @@ import java.util.Objects;
  *
  * @author samjimmaz
  */
-public class Libros {
+// La interfaz comparable implementa el orden natural según equals
+// Obliga a implementar el método compareTo
+public class Libros implements Comparable<Libros> {
     
-    private String ibsn;
+    private String isbn;
     private String nombre;
     private String editorial;
     private int numPags;
@@ -22,19 +24,19 @@ public class Libros {
     }
 
     public Libros(String ibsn, String nombre, String editorial, int numPags, double precio) {
-        this.ibsn = ibsn;
+        this.isbn = ibsn;
         this.nombre = nombre;
         this.editorial = editorial;
         this.numPags = numPags;
         this.precio = precio;
     }
 
-    public String getIbsn() {
-        return ibsn;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setIbsn(String ibsn) {
-        this.ibsn = ibsn;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public String getNombre() {
@@ -71,13 +73,13 @@ public class Libros {
 
     @Override
     public String toString() {
-        return "Libros{" + "ibsn=" + ibsn + ", nombre=" + nombre + ", editorial=" + editorial + ", numPags=" + numPags + ", precio=" + precio + '}';
+        return "Libros{" + "ibsn=" + isbn + ", nombre=" + nombre + ", editorial=" + editorial + ", numPags=" + numPags + ", precio=" + precio + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 67 * hash + Objects.hashCode(this.ibsn);
+        hash = 67 * hash + Objects.hashCode(this.isbn);
         hash = 67 * hash + Objects.hashCode(this.nombre);
         hash = 67 * hash + Objects.hashCode(this.editorial);
         hash = 67 * hash + this.numPags;
@@ -98,9 +100,16 @@ public class Libros {
         }
         final Libros other = (Libros) obj;
         
-        return Objects.equals(this.ibsn, other.ibsn);
+        return Objects.equals(this.isbn, other.isbn);
     }
-    
+
+    // El método compareTo devuelve <0 si this es anterior
+    // =0 si this y libro t son iguales
+    // >0 si this es posterior
+    @Override
+    public int compareTo(Libros l) {
+       return this.isbn.compareTo(l.isbn);
+    }
     
     
 }

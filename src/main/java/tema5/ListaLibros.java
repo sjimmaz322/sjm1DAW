@@ -1,6 +1,7 @@
 package tema5;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /*
 
@@ -45,7 +46,7 @@ public class ListaLibros {
         Libros aux = null;
         for (int i = 0; i < lista.size(); i++) {
             aux = lista.get(i);
-            if (aux.getIbsn().equals(isbn)){
+            if (aux.getIsbn().equals(isbn)){
                 return aux;
             }
         }
@@ -72,4 +73,20 @@ public class ListaLibros {
             
         
     }
+    //Collections.sort(lista) lista debe contener cobjetos que implementan comparable
+    public void ordenarPorISBN(){
+        Collections.sort(this.lista);
+    }
+    
+    // Búsqueda binaria de un objeto según la ordenación natural
+    // binarySearch no funciona con una lista no ordenada
+    public int buscarISBN(Libros l){
+        
+        return Collections.binarySearch(lista, l);
+    }
+    
+    public void ordenarComparatorNombre(){
+        Collections.sort(this.lista, (Libros l1,Libros l2) -> l1.getNombre().compareTo(l2.getNombre()));
+    }
+    
 }

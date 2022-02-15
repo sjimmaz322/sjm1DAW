@@ -2,7 +2,7 @@ package canciones;
 
 import java.util.Objects;
 
-public class Cancion {
+public class Cancion implements Comparable<Cancion>{
     
     private String titulo, autor, genero;
     private int numPista, anioLanzamiento;
@@ -78,21 +78,18 @@ public class Cancion {
             return false;
         }
         final Cancion other = (Cancion) obj;
-        if (this.anioLanzamiento != other.anioLanzamiento) {
-            return false;
-        }
-        if (!Objects.equals(this.titulo, other.titulo)) {
-            return false;
-        }
-        if (!Objects.equals(this.autor, other.autor)) {
-            return false;
-        }
-        return Objects.equals(this.genero, other.genero);
+        return Objects.equals(this.titulo, other.titulo);
     }
+
+
 
     @Override
     public String toString() {
         return "La canción se llama "+titulo+" creada por "+autor+" pertenece al género "+genero+" fue lanzada en "+anioLanzamiento+" y ocupa el numero de pista "+numPista+" en el disco.";
-    }   
+    }
+    @Override
+    public int compareTo(Cancion c) {
+       return this.titulo.compareTo(c.titulo);
+    }
     
 }

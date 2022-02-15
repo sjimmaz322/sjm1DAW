@@ -8,23 +8,25 @@ import java.util.ArrayList;
 public class Pila {
 
     private ArrayList<Character> pila;
-    private final int TAMANIO = 100;
+    private int tamanio;
 
-    public Pila() {
+    public Pila(int tamanio) {
         this.pila = new ArrayList<>();
+        this.tamanio = tamanio;
     }
 
     public ArrayList<Character> getPila() {
         return pila;
     }
 
-    public void setPila(ArrayList<Character> pila) {
+    public void setPila(ArrayList<Character> pila, int tamanio) {
         this.pila = pila;
+        this.tamanio = tamanio;
     }
 
     public void push(char sjt) {
         pila.add(sjt);
-        if (pila.size() > 100) {
+        if (pila.size() > tamanio) {
             pila.remove(pila.size() - 1);
 
         }
@@ -38,7 +40,9 @@ public class Pila {
     }
 
     public void pop() {
+        if(pila.size()!=0){
         pila.remove(pila.size() - 1);
+        }
     }
 
     public void imprimirConsola() {//Método que imprime por consola todos los elementos de la lista
@@ -48,7 +52,7 @@ public class Pila {
         }
     }
     public boolean isFullFull(){
-       if (pila.size()== TAMANIO){
+       if (pila.size()== tamanio){
            return true;
        } 
        return false;
@@ -68,7 +72,7 @@ public class Pila {
     }
     
     public void rellenar(char[] array){
-        for (int i = 0; i < pila.size(); i++) {
+        for (int i = 0; i < tamanio; i++) {
             pila.add(array[i]);
             
         }
