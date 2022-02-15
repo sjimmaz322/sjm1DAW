@@ -8,10 +8,11 @@ public class Calcetines {
     private int talla;
     private Colores color;
     //Random que nos permitirá que se creen de manera aleatoria los calcetines
-    Random rd = new Random();
+    private static Random rd = new Random();
 
     public Calcetines() {//Constructor por defecto que creará calcetines aleatorio
         int opcion = rd.nextInt(3) + 1;
+        
         if (opcion == 1) {
             color = color.GRISCLARO;
         } else if (opcion == 2) {
@@ -19,8 +20,7 @@ public class Calcetines {
         } else {
             color = color.NEGRO;
         }
-        this.color = color;
-
+        
         this.talla = rd.nextInt(43 - 40 + 1) + 40;
     }
 
