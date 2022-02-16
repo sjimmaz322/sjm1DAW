@@ -27,10 +27,11 @@ public class Ejercicio20 {
         ListaLibros catalogo = new ListaLibros();
 
 
-        catalogo.insertarLibro(new Libros("12s4", "La muerte a pellizcos", "Planeta", 10, 0.8));
-        catalogo.insertarLibro(new Libros("1z32", "La espera a mordiscos", "Planeta", 10, 0.18));
-        catalogo.insertarLibro(new Libros("12hr", "La vida a soplios", "Planeta", 10, 0.9));
+        catalogo.insertarLibro(new Libros("12s4", "La muerte a pellizcos", "Planeta", 8, 0.8));
+        catalogo.insertarLibro(new Libros("1z32", "La espera a mordiscos", "Planeta", 14, 0.18));
+        catalogo.insertarLibro(new Libros("12hr", "La vida a soplios", "Planeta", 6, 0.9));
         catalogo.insertarLibro(new Libros("fg36", "La negociación a mazazos", "Planeta", 10, 0.8));
+        catalogo.insertarLibro(new Libros("12s4", "La muerte a pellizcos", "Planeta",9, 0.8));
         
         System.out.println("Lista desordenada");
         catalogo.imprimirConsola();
@@ -47,10 +48,19 @@ public class Ejercicio20 {
         catalogo.ordenarComparatorNombre();
         catalogo.imprimirConsola();
         
+        //Inferencia de tipos
         
-        /*
-        Aplicar esto en la lista de canciones
-        */
+        catalogo.ordenarComparatorNumPags();
+        System.out.println("Imprimimos el catálogo por páginas");
+        catalogo.imprimirConsola();
+        
+        catalogo.ordenarNombrePags();
+        System.out.println("Ordenamos por nombre y páginas");
+        catalogo.imprimirConsola();
+        
+        int posicion2 = catalogo.buscarBynaryNombre(new Libros ("1z32", "La muerte a pellizcos", "Planeta", 10, 0.18));
+        System.out.println("El libro si está, está en la posición: "+posicion2);
+        
 //
 //        //catalogo2.insertarLibro(new Libros("1245", "La muerte a bocaos", "Planeta", 10, 0.8));
 //        catalogo.imprimirConsola();

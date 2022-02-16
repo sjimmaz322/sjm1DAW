@@ -13,7 +13,7 @@ import java.util.Objects;
 // La interfaz comparable implementa el orden natural según equals
 // Obliga a implementar el método compareTo
 public class Libros implements Comparable<Libros> {
-    
+
     private String isbn;
     private String nombre;
     private String editorial;
@@ -99,7 +99,7 @@ public class Libros implements Comparable<Libros> {
             return false;
         }
         final Libros other = (Libros) obj;
-        
+
         return Objects.equals(this.isbn, other.isbn);
     }
 
@@ -108,8 +108,7 @@ public class Libros implements Comparable<Libros> {
     // >0 si this es posterior
     @Override
     public int compareTo(Libros l) {
-       return this.isbn.compareTo(l.isbn);
+        return this.isbn.compareTo(l.isbn);
     }
-    
-    
+
 }

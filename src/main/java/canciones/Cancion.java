@@ -2,8 +2,8 @@ package canciones;
 
 import java.util.Objects;
 
-public class Cancion implements Comparable<Cancion>{
-    
+public class Cancion implements Comparable<Cancion> {
+
     private String titulo, autor, genero;
     private int numPista, anioLanzamiento;
 
@@ -81,15 +81,14 @@ public class Cancion implements Comparable<Cancion>{
         return Objects.equals(this.titulo, other.titulo);
     }
 
-
-
     @Override
     public String toString() {
-        return "La canción se llama "+titulo+" creada por "+autor+" pertenece al género "+genero+" fue lanzada en "+anioLanzamiento+" y ocupa el numero de pista "+numPista+" en el disco.";
+        return "La canción se llama " + titulo + " creada por " + autor + " pertenece al género " + genero + " fue lanzada en " + anioLanzamiento + " y ocupa el numero de pista " + numPista + " en el disco.";
     }
+
     @Override
     public int compareTo(Cancion c) {
-       return this.titulo.compareTo(c.titulo);
+        return this.titulo.compareTo(c.titulo);
     }
-    
+
 }

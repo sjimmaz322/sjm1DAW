@@ -35,7 +35,6 @@ public class ListaReproduccion {
     public ListaReproduccion(ArrayList<Cancion> listaReproduccion) {
         this.listaReproduccion = listaReproduccion;
     }
-    
 
     public void imprimirConsola() {//Método que imprime por consola todos los elementos de la lista
 
@@ -147,6 +146,27 @@ public class ListaReproduccion {
     @Override
     public String toString() {
         return "ListaReproduccion{" + "listaReproduccion=" + listaReproduccion + '}';
+    }
+    
+    public void ordenarPorTitulo() {
+        Collections.sort(this.listaReproduccion);
+    }
+
+    public void ordenarComparatorTitulo() {
+        Collections.sort(this.listaReproduccion, (Cancion c1, Cancion c2) -> c1.getTitulo().compareTo(c2.getTitulo()));
+    }
+    
+    public void ordenarComparatorAutor(){
+        Collections.sort(this.listaReproduccion, (Cancion c1,Cancion c2) -> c1.getAutor().compareTo(c2.getAutor()));
+    }
+
+    public int buscarTitulo(Cancion c) {
+            
+        return Collections.binarySearch(listaReproduccion, c);
+    }
+        public int buscarBynaryNombre(Cancion c){
+        //La lista debe estar ordenada según el criterio que se pasa a este método (nombre en este caso)
+        return Collections.binarySearch(listaReproduccion, c, (c1,c2) -> c1.getTitulo().compareTo(c2.getTitulo()));
     }
     
 }
