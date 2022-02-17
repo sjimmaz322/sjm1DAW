@@ -15,9 +15,9 @@ public class Ejercicio14 {
 
         int[][] matriz1 = new int[3][3];
         
-        Matrices.rellenarMatrizRandom(matriz1);
+        Matrices.rellenarMatrizIntRandom(matriz1);
         
-        Matrices.mostrarMatriz(matriz1);
+        Matrices.mostrarMatrizInt(matriz1);
 
     }
 
