@@ -1,6 +1,7 @@
 package matrices;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Matrices {
 
@@ -98,7 +99,7 @@ public class Matrices {
 
         for (int i = 0; i < aux.length; i++) {
             for (int j = 0; j < aux[i].length; j++) {
-                aux[i][j] = rd.nextInt(max-min+1) + min;
+                aux[i][j] = rd.nextInt(max - min + 1) + min;
             }
         }
     }
@@ -155,5 +156,49 @@ public class Matrices {
         }
 
         return maximo;
+    }
+
+    public static void recorrerFila(int[][] aux) {
+        Scanner sc = new Scanner(System.in);
+        int x = 0;
+
+        System.out.println("¿Qué fila desea consultar?");
+        try {
+            x = sc.nextInt();
+
+            if (x <= aux[x].length && x >= 0) {
+                System.out.println("La fila " + x);
+                for (int i = 0; i < aux[x].length; i++) {
+                    System.out.println("La celda " + x + "-" + i + " contiene un " + aux[x][i]);
+                }
+            } else {
+                System.out.println("Ha elegido un valor incorrecto");
+            }
+        } catch (ArrayIndexOutOfBoundsException aiobe) {
+            System.out.println("Ha elegido un valor fuera de límites");
+        }
+
+    }
+
+    public static void recorrerColumna(int[][] aux) {
+        Scanner sc = new Scanner(System.in);
+        int x = 0;
+
+        System.out.println("¿Qué columna desea consultar?");
+        try {
+            x = sc.nextInt();
+
+            if (x <= aux.length && x >= 0) {
+                System.out.println("La columna " + x);
+                for (int i = 0; i < aux.length; i++) {
+                    System.out.println("La celda " + i + "-" + x + " contiene un " + aux[i][x]);
+                }
+            } else {
+                System.out.println("Ha elegido un valor fuera de límites");
+            }
+        } catch (ArrayIndexOutOfBoundsException aiobe) {
+            System.out.println("Ha elegido un valor fuera de límites");
+        }
+
     }
 }
