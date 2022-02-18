@@ -73,8 +73,8 @@ public class Avion {
         boolean correcto = true;
         int fila = 0;
         int columna = 0;
-        
-        do{
+
+        do {
             do {
                 correcto = true;
                 System.out.println("Introduzca la fila en la que desea el asiento");
@@ -116,8 +116,6 @@ public class Avion {
 
         } while (reservado);
     }
-    
-    
 
     public static void mostrarAvion(boolean[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {

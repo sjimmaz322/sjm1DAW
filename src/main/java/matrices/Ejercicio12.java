@@ -18,12 +18,16 @@ public class Ejercicio12 {
         matriz[2][0] = 5;
         matriz[2][1] = 6;
 
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                System.out.println("El valor de "+i+"-"+j+" es "+matriz[i][j]);
-            }
-        }
-
+        Matrices.mostrarMatrizInt(matriz);
+        
+        double media = Matrices.calcularMediaValoresMatriz(matriz);
+        System.out.println("La media de los valores es: "+media);
+        
+        int minimo = Matrices.valorMinimo(matriz);
+        System.out.println("El valor más pequeño de la matriz es: "+minimo);
+        
+        int maximo = Matrices.valorMaximo(matriz);
+        System.out.println("El valor más grande de la matriz es: "+maximo);
     }
 
 }

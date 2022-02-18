@@ -10,15 +10,17 @@ public class Ejercicio19 {
     public static void main(String[] args) {
 
         // Creamos la matriz avion
-        Avion[][] avion = new Avion[25][4];
+        // Avion[][] avion = new Avion[25][4];
+        boolean[][] avion = new boolean[25][4];
 
-        //Rellenamos los asiento con un boolean false para vacio y true para lleno.
-        //Avion.rellenarAvionEntero(avion);
+        // Rellenamos los asiento con un boolean false para vacio y true para lleno.
+        Matrices.rellenarMatrizBooleanRandom(avion);
 
         //Mostramos el avión (hay un método pero utilizo solo el código para que el mensaje no sea genérico)
-
+        //Avion.mostrarAvion(avion);
         
-
+        //Solicitamos un asiento
+        Avion.solicitarAsiento(avion);
         
     }
 

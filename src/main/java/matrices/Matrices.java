@@ -15,7 +15,6 @@ public class Matrices {
         this.columnas = columnas;
         this.matrizInt = new int[filas][columnas];
     }
-    
 
     public Matrices() {
         this.matrizInt = new int[this.relleno][this.relleno];
@@ -78,7 +77,7 @@ public class Matrices {
     public static void mostrarMatrizBoolean(boolean[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                String ocupacion = matriz[i][j] ? "La celda está libre":"La celda está ocupada";
+                String ocupacion = matriz[i][j] ? "La celda está libre" : "La celda está ocupada";
                 System.out.println("El valor de " + i + "-" + j + " es " + ocupacion);
             }
         }
@@ -104,4 +103,47 @@ public class Matrices {
         }
     }
 
+    public static double calcularMediaValoresMatriz(int[][] aux) {
+        double resultado = 0;
+        int contador = 0;
+        for (int i = 0; i < aux.length; i++) {
+            for (int j = 0; j < aux[i].length; j++) {
+                resultado += aux[i][j];
+                contador++;
+            }
+            resultado = resultado / contador;
+        }
+
+        return resultado;
+    }
+
+    public static int valorMinimo(int[][] aux) {
+        int minimo = 100;
+        for (int i = 0; i < aux.length; i++) {
+            for (int j = 0; j < aux[i].length; j++) {
+                if (minimo > aux[i][j]) {
+                    minimo = aux[i][j];
+                }
+
+            }
+
+        }
+
+        return minimo;
+    }
+
+    public static int valorMaximo(int[][] aux) {
+        int maximo = 0;
+        for (int i = 0; i < aux.length; i++) {
+            for (int j = 0; j < aux[i].length; j++) {
+                if (maximo < aux[i][j]) {
+                    maximo = aux[i][j];
+                }
+
+            }
+
+        }
+
+        return maximo;
+    }
 }
