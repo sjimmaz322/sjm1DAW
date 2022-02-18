@@ -93,6 +93,16 @@ public class Matrices {
         }
     }
 
+    public static void rellenarMatrizIntRandomRango(int[][] aux, int max, int min) {
+        Random rd = new Random();
+
+        for (int i = 0; i < aux.length; i++) {
+            for (int j = 0; j < aux[i].length; j++) {
+                aux[i][j] = rd.nextInt(max-min+1) + min;
+            }
+        }
+    }
+
     public static void rellenarMatrizBooleanRandom(boolean[][] aux) {
         Random rd = new Random();
 
