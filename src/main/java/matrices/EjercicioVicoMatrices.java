@@ -14,8 +14,8 @@ public class EjercicioVicoMatrices {
      */
     public static void main(String[] args) {
 
-        int[][] matriz = new int[2][3];
-
+        int [][] matriz = Matrices.crearMatriz();
+        
         Matrices.rellenarMatrizIntRandomRango(matriz, 10, 1);
 
         Matrices.mostrarMatrizInt(matriz);
@@ -23,12 +23,9 @@ public class EjercicioVicoMatrices {
         Matrices.recorrerFila(matriz);
 
         Matrices.recorrerColumna(matriz);
-
-        int minimo = Matrices.valorMinimo(matriz);
-        int maximo = Matrices.valorMaximo(matriz);
-
-        System.out.println(" ");
-        System.out.println("La matriz tiene una celda con el valor mínimo de " + minimo + " y una celda con el valor máximo de " + maximo);
+        
+        Matrices.mostrarVecinos(matriz);
+        
     }
 
 }

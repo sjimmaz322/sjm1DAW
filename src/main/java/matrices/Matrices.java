@@ -6,65 +6,18 @@ import java.util.Scanner;
 public class Matrices {
 
     Random rd = new Random();
-    private int[][] matrizInt;
-    private boolean[][] matrizBoo;
-    private int filas, columnas;
-    private int relleno = rd.nextInt(10) + 1;
-
-    public Matrices(int filas, int columnas) {
-        this.filas = filas;
-        this.columnas = columnas;
-        this.matrizInt = new int[filas][columnas];
-    }
-
-    public Matrices() {
-        this.matrizInt = new int[this.relleno][this.relleno];
-    }
-
-    public Matrices(int filas) {
-        this.filas = filas;
-        this.matrizInt = new int[filas][filas];
-    }
-
-    public Random getRd() {
-        return rd;
-    }
-
-    public int[][] getMatriz() {
-        return matrizInt;
-    }
-
-    public void setMatriz(int[][] matriz) {
-        this.matrizInt = matrizInt;
-    }
-
-    public int getFilas() {
-        return filas;
-    }
-
-    public void setFilas(int filas) {
-        this.filas = filas;
-    }
-
-    public int getColumnas() {
-        return columnas;
-    }
-
-    public void setColumnas(int columnas) {
-        this.columnas = columnas;
-    }
-
-    public int getRelleno() {
-        return relleno;
-    }
-
-    public void setRelleno(int relleno) {
-        this.relleno = relleno;
-    }
-
-    @Override
-    public String toString() {
-        return "Matrices{" + "rd=" + rd + ", matriz=" + matrizInt + ", filas=" + filas + ", columnas=" + columnas + ", relleno=" + relleno + '}';
+        
+    public static int[][] crearMatriz(){
+        int fila = 0, columna = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("¿Cuántas filas desea que tenga su matriz?");
+        fila = sc.nextInt();
+        System.out.println("¿Cuántas columnas desea que tenga su matriz?");
+        columna = sc.nextInt();
+        
+        int[][] aux = new int[fila][columna];
+        
+        return aux;
     }
 
     public static void mostrarMatrizInt(int[][] matriz) {
@@ -166,7 +119,7 @@ public class Matrices {
         try {
             x = sc.nextInt();
 
-            if (x <= aux[x].length && x >= 0) {
+            if (x < aux[x].length && x >= 0) {
                 System.out.println("La fila " + x);
                 for (int i = 0; i < aux[x].length; i++) {
                     System.out.println("La celda " + x + "-" + i + " contiene un " + aux[x][i]);
@@ -188,7 +141,7 @@ public class Matrices {
         try {
             x = sc.nextInt();
 
-            if (x <= aux.length && x >= 0) {
+            if (x < aux.length && x >= 0) {
                 System.out.println("La columna " + x);
                 for (int i = 0; i < aux.length; i++) {
                     System.out.println("La celda " + i + "-" + x + " contiene un " + aux[i][x]);
@@ -200,5 +153,31 @@ public class Matrices {
             System.out.println("Ha elegido un valor fuera de límites");
         }
 
+    }
+
+    public static void mostrarVecinos(int[][] aux) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("¿De qué fila desea conocer las vecinas?");
+        int fila = sc.nextInt();
+        System.out.println("¿De qué columna desea conocer las vecinas?");
+        int columna = sc.nextInt();
+
+        if (fila < aux.length && fila >= 0) {
+
+            if (columna < aux[0].length && columna >= 0) {
+                System.out.println("Las vecinas de la celda " + fila + "-" + columna);
+                for (int i = fila - 1; i <= fila + 1; i++) {
+                    if (i < aux.length && i >= 0) {
+                        for (int j = columna - 1; j <= columna + 1; j++) {
+                            if (j < aux[i].length && j >= 0) {
+                                if (!(i == fila && j == columna)) {
+                                    System.out.println("La celda " + i + "-" + j + " " + aux[i][j]);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
