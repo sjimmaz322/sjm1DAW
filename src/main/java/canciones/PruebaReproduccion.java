@@ -20,6 +20,8 @@ public class PruebaReproduccion {
         
         listaNueva.imprimirConsola();
         
+    
+        
         
         
     }

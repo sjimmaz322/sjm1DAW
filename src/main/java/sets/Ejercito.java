@@ -8,6 +8,7 @@ import java.util.Set;
 public class Ejercito {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         //Creamos la lista HashSet ya que no puede haber soldados duplicados
         Set<Soldats> army = new HashSet<>();
 
@@ -18,15 +19,15 @@ public class Ejercito {
         army.add(new Soldats("87654321X", "Elmin", "Gapocha", "Triste", 23));
         army.add(new Soldats("32145687R", "Ester", "Colero", "Oliente", 25));
         army.add(new Soldats("34326875F", "Dolores", "de Cabeza", "Fuertes", 22));
-        
-        
-        Ejercito.alistarSoldado(army);
-        
+
+        // Ejercito.alistarSoldado(army);
         Ejercito.listarSoldados(army);
-        
+
         Ejercito.tamanioEjercito(army);
         
-        
+        Ejercito.licenciarSoldado(army);
+
+        Ejercito.listarSoldados(army);
     }
 
     public static void alistarSoldado(Set<Soldats> armada) {//Método para alistar a un nuevo soldado
@@ -53,12 +54,23 @@ public class Ejercito {
     }
 
     public static void listarSoldados(Set<Soldats> armada) {//Método para imprimir la lista de cadetes
-        
+
         armada.forEach(System.out::println);
     }
-    public static void tamanioEjercito(Set<Soldats> armada){//Método para comprobar el tamaño del ejército
-            System.out.println("Ahora el ejercito contiene "+ armada.size() + " efectivos.");
-        
+
+    public static void tamanioEjercito(Set<Soldats> armada) {//Método para comprobar el tamaño del ejército
+        System.out.println("Ahora el ejercito contiene " + armada.size() + " efectivos.");
+
     }
 
+    public static void licenciarSoldado(Set<Soldats> armada) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduza el NIF del soldado a licenciar");
+        String nif = sc.nextLine();
+        Soldats s = new Soldats(nif, " ", " ", " ", 0);
+        if (armada.contains(s)){
+        armada.remove(s);
+        }
+        
+    }
 }
