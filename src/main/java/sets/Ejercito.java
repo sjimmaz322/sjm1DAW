@@ -24,9 +24,9 @@ public class Ejercito {
         
         Ejercito.listarSoldados(army);
         
-        String tamanio = Ejercito.tamanioEjercito(army);
+        Ejercito.tamanioEjercito(army);
         
-        System.out.println(tamanio);
+        
     }
 
     public static void alistarSoldado(Set<Soldats> armada) {//Método para alistar a un nuevo soldado
@@ -52,12 +52,13 @@ public class Ejercito {
         armada.add(new Soldats(nif, nombre, apellido1, apellido2, edad));
     }
 
-    public static void listarSoldados(Set<Soldats> armada) {
+    public static void listarSoldados(Set<Soldats> armada) {//Método para imprimir la lista de cadetes
         
         armada.forEach(System.out::println);
     }
-    public static String tamanioEjercito(Set<Soldats> armada){
-        return "Ahora el ejercito contiene "+ armada.size() + " efectivos.";
+    public static void tamanioEjercito(Set<Soldats> armada){//Método para comprobar el tamaño del ejército
+            System.out.println("Ahora el ejercito contiene "+ armada.size() + " efectivos.");
+        
     }
 
 }
