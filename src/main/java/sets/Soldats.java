@@ -8,7 +8,7 @@ getters, setters, toString y método equals.
 Se entienden que dos soldados son iguales si su nif es igual. 
  */
 
-public class Soldats {
+public class Soldats implements Comparable<Soldats> {
     
     private String nif, nombre, apellido1, apellido2;
     private int edad;
@@ -86,7 +86,17 @@ public class Soldats {
         final Soldats other = (Soldats) obj;
         return Objects.equals(this.nif, other.nif);
     }
-    
+
+    @Override
+    public String toString() {
+        return "El soldado "+nombre+" "+apellido1+" "+apellido2+" de "+edad+" años el dueño del NIF "+nif;
+    }
+
+
+    @Override
+    public int compareTo(Soldats s) {
+        return this.nif.compareTo(s.nif);
+    }
     
     
     
