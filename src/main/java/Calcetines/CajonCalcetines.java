@@ -45,28 +45,12 @@ public class CajonCalcetines {
         return contenido;
     }
 
-//    public String[] compararCalcetines() {//Método para comparar calcetines (no funciona y no tiene pinta de que vaya a hacerlo)
-//        ArrayList<String> desparejo = new ArrayList<>();
-//        String[] desparejado = new String[contenido.size()];
-//        for (int i = 0; i < contenido.size(); i++) {
-//            contenido.get(i);
-//            
-//            for (int j = 1; j < contenido.size(); j++) {
-//                if (!(contenido.get(i).equals(contenido.get(j)))) {
-//                    desparejo.remove(contenido.get(i));
-//                    desparejo.remove(contenido.get(j));
-//                }else{
-//                    desparejo.add(contenido.get(i).toString());
-//                    desparejado[i] = desparejo.get(i);
-//                }
-//            }
-//
-//        }
-//
-//        return desparejado;
-//    }
-    
-    
+    public String[] compararCalcetines() {//Método para comparar calcetines (no funciona y no tiene pinta de que vaya a hacerlo)
+        ArrayList<String> desparejo = new ArrayList<>();
+        String[] desparejado = new String[contenido.size()];
+        for (int i = 0; i < contenido.size(); i++) {
+            contenido.get(i);
+            for (int j = 1; j < contenido.size(); j++) {
 
     @Override
     public String toString() {
