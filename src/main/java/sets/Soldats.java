@@ -97,6 +97,7 @@ public class Soldats implements Comparable<Soldats> {
     public int compareTo(Soldats s) {
         return this.nif.compareTo(s.nif);
     }
+
     
     
     
