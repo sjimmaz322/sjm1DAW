@@ -1,16 +1,14 @@
 package sets;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
-public class Ejercito {
+public class EjercitoOrdenado {
+private Set<Soldats> listaSoldados;
 
-    private Set<Soldats> listaSoldados;
-
-    public Ejercito() {
-        this.listaSoldados = new HashSet<>();
+    public EjercitoOrdenado() {
+        this.listaSoldados = new TreeSet<>();
     }
 
     public int numSoldados() {
