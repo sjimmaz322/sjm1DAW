@@ -19,7 +19,7 @@ public class RegistroMilitar {
     public RegistroMilitar() {
         this.listadoBelico = new HashMap();
     }
-     
+   
 
 
     public Map<String, Ejercito> getListado() {
