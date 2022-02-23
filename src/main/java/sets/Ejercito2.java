@@ -47,9 +47,9 @@ public class Ejercito2 {
         return arraySoldados;
     
     }
-    public void imprimirLista(){
-        for (Soldats listaSoldado : listaSoldados) {
-            
-        }
+    public ArrayList<Soldats> imprimirLista(){
+        ArrayList<Soldats> ejercitoLista = new ArrayList<>(listaSoldados);
+//        ejercitoLista.addAll(listaSoldados);
+        return ejercitoLista;
     }
 }
