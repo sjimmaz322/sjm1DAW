@@ -1,5 +1,6 @@
-package sets;
+package paquetec;
 
+import sets.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;

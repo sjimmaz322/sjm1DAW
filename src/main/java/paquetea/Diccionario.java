@@ -29,19 +29,30 @@ public class Diccionario {
         diccionario1.aniadeElemento("Bell", "Campana");
         /*10*/
         diccionario1.aniadeElemento("Wolf", "Lobo");
-        
+        //Creamos lista de las palabras en inglés
         ArrayList listaIngles = diccionario1.listaIngles();
         for (int i = 0; i < listaIngles.size(); i++) {
             System.out.println(listaIngles.get(i));
             
         }
+        //Creamos la lista de las traducciones
         ArrayList listaEspaniol = diccionario1.listaEspaniol();
         for (int i = 0; i < listaEspaniol.size(); i++) {
             System.out.println(listaEspaniol.get(i));
             
         }
-        
+        //Eliminados la palabra Knight
+        diccionario1.borrarElemento("Knight");
+        //Cambiamos la traducción de hollow
         diccionario1.remplazarElemento("Hollow", "Vacío");
+       
+        System.out.println("Nueva lista en español");
+        ArrayList listaEspaniol2 = diccionario1.listaEspaniol();
+        for (int i = 0; i < listaEspaniol2.size(); i++) {
+            System.out.println(listaEspaniol2.get(i));
+            
+        }
+        diccionario1.imprimirLista();
     }
 
 }

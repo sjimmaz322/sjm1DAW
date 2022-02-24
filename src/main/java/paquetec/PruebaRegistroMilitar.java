@@ -1,15 +1,14 @@
 
 package paquetec;
 
-import sets.Ejercito;
-import sets.Soldats;
+
 
 
 public class PruebaRegistroMilitar {
 
     public static void main(String[] args) {
         
-       RegistroMilitar listado = new RegistroMilitar(); 
+      RegistroMilitar listado = new RegistroMilitar(); 
         
       Ejercito armada1 = new Ejercito();
       Soldats s1 = new Soldats("1", "Juan", "Perez", "Mora", 18);

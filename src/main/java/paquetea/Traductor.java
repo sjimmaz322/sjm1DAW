@@ -4,17 +4,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.TreeMap;
 
 public class Traductor {
     
    private Map<String, String> traductore;
 
     public Traductor() {
-        this.traductore = new HashMap();
+        this.traductore = new TreeMap();
     }
 
     public Map<String, String> getTraductore() {
         return traductore;
+    }
+    public void imprimirLista(){
+        for (String key : traductore.keySet()) {
+            System.out.printf("Clave %s -- Objeto %s %n", key, traductore.get(key));
+        }
+                
     }
     
     public void aniadeElemento(String eng, String esp){

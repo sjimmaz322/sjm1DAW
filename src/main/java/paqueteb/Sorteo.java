@@ -8,12 +8,12 @@ public class Sorteo {
     public static void main(String[] args) {
         Random rd = new Random();
         Decimo listado = new Decimo();
-
-        String numDecimo;
+        String numDecimo = "";
         int premio;
+        
         //Rellenamos el sorteo con 1000 numeros con 1000 premios
         for (int i = 0; i < 1000; i++) {
-            numDecimo = "";
+            
             premio = rd.nextInt(1000000) + 1;
             for (int j = 0; j < 5; j++) {
                 numDecimo += rd.nextInt(10);

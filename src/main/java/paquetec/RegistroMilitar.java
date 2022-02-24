@@ -5,9 +5,10 @@
  */
 package paquetec;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import sets.Ejercito;
+
 
 /**
  *
@@ -32,5 +33,8 @@ public class RegistroMilitar {
     public void eliminarClaveEjercito(String clave, Ejercito aux ) {
         listadoBelico.remove(clave, aux);
     }
-   
+
+
 }
+   
+
