@@ -19,7 +19,7 @@ public class Traductor {
     }
     public void imprimirLista(){
         for (String key : traductore.keySet()) {
-            System.out.printf("Clave %s -- Objeto %s %n", key, traductore.get(key));
+            System.out.printf("Palabra %s -- Traducción %s %n", key, traductore.get(key));
         }
                 
     }

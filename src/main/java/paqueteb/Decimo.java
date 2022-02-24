@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.TreeMap;
 
 public class Decimo {
 
     private Map<String, Integer> loteria;
 
     public Decimo() {
-        this.loteria = new HashMap();
+        this.loteria = new TreeMap();
     }
 
     public Map<String, Integer> getLoteria() {
@@ -20,9 +21,14 @@ public class Decimo {
     public void aniadeBoletoPremiado(String boleto, Integer premio) {
         loteria.put(boleto, premio);
     }
-    
 
-   
+    public void imprimirTodo() {
+        for (String key : loteria.keySet()) {
+            System.out.println("El número de boleto " + key + " tiene un premio de " + loteria.get(key));
+
+        }
+    }
+
     public Map<String, Integer> listadoPremios() {
         return loteria;
     }
@@ -36,6 +42,7 @@ public class Decimo {
         ArrayList<Integer> premiosDecimos = new ArrayList<Integer>(loteria.values());
         return premiosDecimos;
     }
+
     public Integer consultarDecimo(String decimo) {
         return this.loteria.get(decimo);
     }
@@ -64,6 +71,5 @@ public class Decimo {
         }
         return true;
     }
-    
 
 }
