@@ -1,19 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquetec;
 
 import java.util.Objects;
 
-/**
- *
- * @author Mapacherben
- */
-    public class Soldados implements Comparable<Soldados> {
+public class Soldados implements Comparable<Soldados> {
 
-     private String nif;
+    private String nif;
     private String nombre;
     private String apellido1;
     private String apellido2;
@@ -26,8 +17,6 @@ import java.util.Objects;
         this.apellido2 = apellido2;
         this.edad = edad;
     }
-
-    
 
     public String getNif() {
         return nif;
@@ -71,8 +60,8 @@ import java.util.Objects;
 
     @Override
     public String toString() {
-        return "Soldado "+nombre+" "+apellido1+" "+apellido2+" de "+edad+" años y con nif "+nif;
-        
+        return "Soldado " + nombre + " " + apellido1 + " " + apellido2 + " de " + edad + " años y con nif " + nif;
+
     }
 
     @Override
