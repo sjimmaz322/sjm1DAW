@@ -1,35 +1,33 @@
 
 package paquetec;
 
-
-
+import java.util.HashMap;
+import java.util.Map;
 
 public class PruebaRegistroMilitar {
 
     public static void main(String[] args) {
-        
-      RegistroMilitar listado = new RegistroMilitar(); 
-        
-      Ejercito armada1 = new Ejercito();
-      Soldats s1 = new Soldats("1", "Juan", "Perez", "Mora", 18);
-      Soldats s2 = new Soldats("2", "Juana", "Perez", "Mora", 19);
-      Soldats s3 = new Soldats("3", "Gabriel", "Perez", "Mora", 12);
-      armada1.aniadirSoldado(s1);
-      armada1.aniadirSoldado(s2);
-      armada1.aniadirSoldado(s3);
-      
-      Ejercito armada2 = new Ejercito();
-      Soldats s4 = new Soldats("1", "Luis", "García", "Hernández", 21);
-      Soldats s5 = new Soldats("2", "Marta", "García", "Hernández", 22);
-      Soldats s6 = new Soldats("3", "Lucía", "García", "Hernández", 23);
-      armada2.aniadirSoldado(s1);
-      armada2.aniadirSoldado(s2);
-      armada2.aniadirSoldado(s3);
-      
-      listado.aniadeClaveEjercito("001", armada1);
-      listado.aniadeClaveEjercito("002", armada2);
-      
-      listado.getListado();
+
+        Map<String, RegistroMilitar> claves = new HashMap();
+        RegistroMilitar listado1 = new RegistroMilitar();
+
+        listado1.alistarSoldado(new Soldados("14578954X", "Juan", "Perez", "Mora", 18));
+        listado1.alistarSoldado(new Soldados("24781784D", "Guillermo", "Perez", "Mora", 19));
+        listado1.alistarSoldado(new Soldados("47895112C", "Macarena", "Perez", "Mora", 20));
+        claves.put("001", listado1);
+        RegistroMilitar listado2 = new RegistroMilitar();
+
+        //Añadimos objeros a la lista
+        listado2.alistarSoldado(new Soldados("14578412F", "Javier", "García", "Hernández", 21));
+        listado2.alistarSoldado(new Soldados("24712569H", "Paula", "García", "Hernández", 22));
+        listado2.alistarSoldado(new Soldados("34784548O", "Luisa", "García", "Hernández", 23));
+        claves.put("002", listado2);
+
+
+        System.out.println("Recuento de ejercitos\n");
+        System.out.println("Ejercito 1\n");
+        listado1.mostrarLista();
+        System.out.println("\nEjercito 2\n");
+        listado2.mostrarLista();
     }
-    
 }
