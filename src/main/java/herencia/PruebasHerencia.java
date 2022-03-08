@@ -16,13 +16,9 @@ public class PruebasHerencia {
     public static void main(String[] args) {
 
         String atributos;
-        
-        Vehicles v1 = new Vehicles();
 
         Turismo t1 = new Turismo(); // Constructor por defecto de Java
-        atributos = v1.getAtributos();
-        System.out.println(atributos);
-        System.out.println("Ahora con herencia");
+
         atributos = t1.getAtributos();
         System.out.println(atributos);
 
