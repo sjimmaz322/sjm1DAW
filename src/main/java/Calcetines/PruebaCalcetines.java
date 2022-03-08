@@ -23,10 +23,10 @@ public class PruebaCalcetines {
         //Creamos nuevo cajón
         CajonCalcetines cajon1 = new CajonCalcetines();
         
-        String[] desparejo = new String[cajon1.getTamanio()];
-        //Rellenamos el cajón creado
-        //Recibimos por pantalla el contenido del cajón
-        cajon1.imprimirCajon();
+//        String[] desparejo = new String[cajon1.getTamanio()];
+//        //Rellenamos el cajón creado
+//        //Recibimos por pantalla el contenido del cajón
+//        cajon1.imprimirCajon();
         
         //De esta linea para abajo ignorar directamente
 
