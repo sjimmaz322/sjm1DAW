@@ -26,7 +26,15 @@ public class Turismo extends Vehicles {
         atributosSuperClase = super.getAtributos();
 
         // Ahora concateno los atributos de la superclase con los de la subclase
-        return atributosSuperClase + " Puertas: " + this.puertas + " Marcha automática: " + this.marchaAutomatica;
+        return atributosSuperClase + "\nPuertas: " + this.puertas + "\nMarcha automática: " + this.marchaAutomatica;
     }
 
+    public int getPuertas() {
+        return puertas;
+    }
+
+    public boolean isMarchaAutomatica() {
+        return marchaAutomatica;
+    }
+    
 }

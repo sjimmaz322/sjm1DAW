@@ -70,8 +70,8 @@ public class Vehicles {
     }
 
     public String getAtributos() {
-        String atributos = ("Matrícula: " + this.matricula + "Marca: " + this.marca + "Modelo: " + this.modelo
-                + "Plazas: " + this.asientos + "Color: " + this.color);
+        String atributos = ("Matrícula: " + this.matricula + "\nMarca: " + this.marca + "\nModelo: " + this.modelo
+                + "\nPlazas: " + this.asientos + "\nColor: " + this.color);
         return atributos;
     }
 
