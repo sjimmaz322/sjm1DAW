@@ -69,7 +69,6 @@ public class Matrices {
 
     public static double calcularMediaValoresMatriz(int[][] aux) {
         double resultado = 0;
-        int contador = 0;
         for (int i = 0; i < aux.length; i++) {
             for (int j = 0; j < aux[i].length; j++) {
                 resultado += aux[i][j];
