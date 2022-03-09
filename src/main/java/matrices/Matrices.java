@@ -73,9 +73,8 @@ public class Matrices {
         for (int i = 0; i < aux.length; i++) {
             for (int j = 0; j < aux[i].length; j++) {
                 resultado += aux[i][j];
-                contador++;
             }
-            resultado = resultado / contador;
+            resultado = resultado / aux.length*aux[i].length;
         }
 
         return resultado;
