@@ -13,12 +13,14 @@ public class Ejercicio14 {
 
     public static void main(String[] args) {
 
-        int[][] matriz1 = new int[3][3];
+        int[][] matriz1 = new int[2][2];
         
         Matrices.rellenarMatrizIntRandom(matriz1);
         
         Matrices.mostrarMatrizInt(matriz1);
-
+        
+        double media = Matrices.calcularMediaValoresMatriz(matriz1);
+        System.out.println(media);
     }
 
 
