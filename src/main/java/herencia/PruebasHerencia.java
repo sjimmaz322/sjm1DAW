@@ -31,6 +31,7 @@ public class PruebasHerencia {
         Furgoneta f1 = new Furgoneta();
         String atributos3 = f1.getAtributos();
         System.out.println(atributos3);
+        
         System.out.println("----");
         String colorTurismo =t1.getColor();
         System.out.println("El turismo 1 es de color "+colorTurismo);
