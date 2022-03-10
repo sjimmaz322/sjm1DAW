@@ -17,24 +17,25 @@ public class PruebasHerencia {
 
         String atributos;
 
-        System.out.println("--Turismo--");
+        System.out.println("\t--Turismo--");
         Turismo t1 = new Turismo();
         atributos = t1.getAtributos();
         System.out.println(atributos);
 
-        System.out.println("\n--Deportivo--");
+        System.out.println("\n\t--Deportivo--");
         Deportivo d1 = new Deportivo();
-        String atributos2 = d1.getAtributos();
-        System.out.println(atributos2);
+        atributos = d1.getAtributos();
+        System.out.println(atributos);
 
-        System.out.println("\n--Furgoneta--");
+        System.out.println("\n\t--Furgoneta--");
         Furgoneta f1 = new Furgoneta();
-        String atributos3 = f1.getAtributos();
-        System.out.println(atributos3);
-        
-        System.out.println("----");
+        atributos = f1.getAtributos();
+        System.out.println(atributos);
+            
+        System.out.println("\n\t--Otras pruebas--");
         String colorTurismo =t1.getColor();
         System.out.println("El turismo 1 es de color "+colorTurismo);
+        
     }
 
 }
