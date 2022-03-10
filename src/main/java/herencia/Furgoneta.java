@@ -12,10 +12,11 @@ import java.util.Random;
  */
 public class Furgoneta extends Vehicles{
      Random rd = new Random();
-    private int capacidad;
+    private int capacidad, volumen;
 
     public Furgoneta() {
         this.capacidad = rd.nextInt(3500-1000)+1000 + 1;
+        this.volumen = rd.nextInt(16-2)+2+1;
       
     }
 
@@ -28,11 +29,15 @@ public class Furgoneta extends Vehicles{
         atributosSuperClase = super.getAtributos();
 
         // Ahora concateno los atributos de la superclase con los de la subclase
-        return atributosSuperClase + "\nCapacidad de carga: " + this.capacidad+" kg";
+        return atributosSuperClase + "\nCapacidad de carga: " + this.capacidad+" kg.\nCapacidad en volumen: "+this.volumen+" m3";
     }
 
     public int getCapacidad() {
         return capacidad;
+    }
+
+    public int getVolumen() {
+        return volumen;
     }
 
     
