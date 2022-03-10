@@ -31,11 +31,18 @@ public class PruebasHerencia {
         Furgoneta f1 = new Furgoneta();
         atributos = f1.getAtributos();
         System.out.println(atributos);
-            
+
         System.out.println("\n\t--Otras pruebas--");
-        String colorTurismo =t1.getColor();
-        System.out.println("El turismo 1 es de color "+colorTurismo);
+        String colorTurismo = t1.getColor();
+        System.out.println("El turismo 1 es de color " + colorTurismo);
         
+        Trabajador trabajador1 = new Trabajador("Samuel", "Jiménez", "31014322H");
+        Camarero camarero1 = new Camarero("Samuel", "Jiménez", "31014322H","Camarero");
+        
+        trabajador1.cotizar();
+        camarero1.cotizar();
+        
+
     }
 
 }
