@@ -16,5 +16,10 @@ public class Trabajador {
     public void cotizar(){
         System.out.println("El trabajador cotiza.");
     }
+
+    @Override
+    public String toString() {
+        return "Trabajador{" + "nombre=" + nombre + ", apellido1=" + apellido1 + ", nif=" + nif + '}';
+    }
     
 }

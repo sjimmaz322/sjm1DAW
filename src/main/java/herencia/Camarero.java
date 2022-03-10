@@ -21,5 +21,16 @@ public class Camarero extends Trabajador{
     public void cotizar(){
         System.out.println("El trabajador cotiza como camarero.");
     }
+
+    @Override
+    public String toString() {
+        String atributosSuperClase;
+
+        // Llamada al método getAtributos() de la clase Vehiculo
+        atributosSuperClase = super.toString();
+        return atributosSuperClase+"Camarero{" + "rango=" + rango + '}';
+    }
+
+    
     
 }
