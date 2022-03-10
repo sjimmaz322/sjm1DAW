@@ -17,17 +17,17 @@ public class PruebasHerencia {
 
         String atributos;
 
-        System.out.println("---");
+        System.out.println("--Turismo--");
         Turismo t1 = new Turismo(); // Constructor por defecto de Java
         atributos = t1.getAtributos();
         System.out.println(atributos);
 
-        System.out.println("---");
+        System.out.println("--Deportivo--");
         Deportivo d1 = new Deportivo();
         String atributos2 = d1.getAtributos();
         System.out.println(atributos2);
 
-        System.out.println("---");
+        System.out.println("--Furgoneta--");
         Furgoneta f1 = new Furgoneta();
         String atributos3 = f1.getAtributos();
         System.out.println(atributos3);
