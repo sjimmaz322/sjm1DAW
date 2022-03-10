@@ -13,7 +13,7 @@ public class Turismo extends Vehicles {
     private boolean marchaAutomatica;
 
     public Turismo() {
-        this.puertas = rd.nextInt(4) + 1;
+        this.puertas = rd.nextInt(5) + 2;
         this.marchaAutomatica = rd.nextBoolean();
     }
 
