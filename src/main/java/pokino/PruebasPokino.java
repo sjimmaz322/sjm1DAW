@@ -15,7 +15,7 @@ public class PruebasPokino {
      */
     public static void main(String[] args) {
         
-        Naipe n1 = new Naipe();
+        Naipe n1 = new Naipe(Palo.OROS, Valor.SOTA);
         
         System.out.println(n1.toString());
         

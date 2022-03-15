@@ -13,9 +13,12 @@ public class Naipe {
     Palo paloCarta;
     Valor valorCarta;
 
-    public Naipe() {
-        
+    public Naipe(Palo paloCarta, Valor valorCarta) {
+        this.paloCarta = paloCarta;
+        this.valorCarta = valorCarta;
     }
+
+
 
     public Palo getPaloCarta() {
         return paloCarta;
@@ -28,7 +31,7 @@ public class Naipe {
     @Override
     public String toString() {
         
-        return "El naipe es un "+valorCarta+" de "+paloCarta;
+        return "El naipe es: "+valorCarta.getTipo()+" de "+paloCarta.getTipo();
     }
     
     
