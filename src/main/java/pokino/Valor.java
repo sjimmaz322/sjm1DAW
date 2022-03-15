@@ -4,17 +4,26 @@
  */
 package pokino;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import static pokino.Palo.values;
+
 /**
  *
  * @author samjimmaz
  */
 public enum Valor {
-    
-    AS("As"), DOS("Dos"),TRES("Tres"),CUATRO("Cuatro"),CINCO("Cinco"),SEIS("Seis"),
-    SIETE("Siete"),OCHO("Ocho"),NUEVE("Nueve"),SOTA("Sota"),CABALLO("Caballo"),REY("Rey");
-    
-    
+
+    AS("As"), DOS("Dos"), TRES("Tres"), CUATRO("Cuatro"), CINCO("Cinco"), SEIS("Seis"),
+    SIETE("Siete"), OCHO("Ocho"), NUEVE("Nueve"), SOTA("Sota"), CABALLO("Caballo"), REY("Rey");
+
     private final String tipo;
+
+    private static final List<Valor> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
+    private static final int SIZE = VALUES.size();
+    private static final Random RD = new Random();
 
     private Valor(String tipo) {
         this.tipo = tipo;
@@ -23,6 +32,9 @@ public enum Valor {
     public String getTipo() {
         return tipo;
     }
-    
-    
+
+    public static Valor randomType() {
+        return VALUES.get(RD.nextInt(SIZE));
+    }
+
 }

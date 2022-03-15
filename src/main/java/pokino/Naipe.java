@@ -10,9 +10,9 @@ public class Naipe {
     Palo paloCarta;
     Valor valorCarta;
 
-    public Naipe(Palo paloCarta, Valor valorCarta) {
-        this.paloCarta = paloCarta;
-        this.valorCarta = valorCarta;
+    public Naipe() {
+        this.paloCarta = Palo.randomType();
+        this.valorCarta = Valor.randomType();
     }
 
 
