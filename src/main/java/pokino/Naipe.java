@@ -14,8 +14,7 @@ public class Naipe {
     Valor valorCarta;
 
     public Naipe() {
-        this.paloCarta = paloCarta;
-        this.valorCarta = valorCarta;
+        
     }
 
     public Palo getPaloCarta() {
