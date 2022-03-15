@@ -36,17 +36,6 @@ public class PruebasHerencia {
         String colorTurismo = t1.getColor();
         System.out.println("El turismo 1 es de color " + colorTurismo);
 
-        Trabajador trabajador1 = new Trabajador("Samuel", "Jiménez", "31014322H");
-        Camarero camarero1 = new Camarero( "Camarero","Samuel", "Jiménez", "31014322H");
-
-        trabajador1.cotizar();
-        camarero1.cotizar();
-        
-        System.out.println("\t----");
-        System.out.println(trabajador1);
-        System.out.println("\t----");
-        System.out.println(camarero1);
-
     }
 
 }
