@@ -2,8 +2,7 @@ package herencia;
 
 import java.util.Random;
 
-/**
- *
+/*
  * @author samjimmaz
  */
 public class Turismo extends Vehicles {
