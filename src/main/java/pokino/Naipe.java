@@ -14,7 +14,6 @@ public class Naipe {
     }
 
 
-
     public Palo getPaloCarta() {
         return paloCarta;
     }
