@@ -1,10 +1,12 @@
 package pokino;
 
+import java.util.Random;
+
 /*
  * @author samjimmaz
  */
 public class Naipe {
-    
+    Random rd = new Random();
     Palo paloCarta;
     Valor valorCarta;
 
