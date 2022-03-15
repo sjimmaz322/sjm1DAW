@@ -14,5 +14,22 @@ public class Carton {
         Estampa 4 de la misma esquina
         Pokino 5 en horizontal, vertical o diagonal.
     
+    Necesario:
+    Barajas.
+    
     */
+    
+    private final int FILAS = 5;
+    private final int COLUMNAS = 5;
+    private Naipe[][] carton;
+
+    public Carton() {
+        this.carton = new Naipe[FILAS][FILAS];
+    }
+
+
+
+
+    
+    
 }
