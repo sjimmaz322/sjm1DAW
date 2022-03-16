@@ -21,6 +21,9 @@ public class Camarero extends Trabajador{
     public void cotizar(){
         System.out.println("El trabajador cotiza como camarero.");
     }
+    public void servirMesa(){
+        System.out.println("El camarero está sirviendo una mesa");
+    }
 
     @Override
     public String toString() {
