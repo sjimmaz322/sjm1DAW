@@ -14,4 +14,7 @@ public class Ejercicio5 {
     Imprime los hashCode de cada instancia, y comprueba cuáles son iguales y cuáles distintos.
     Comprobaciones de las propiedades transitiva, reflexiva, simétrica y nula.
     */
+    
+    
+    
 }

@@ -1,6 +1,8 @@
 package pokino;
 
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.TreeSet;
 /*
  * @author samjimmaz
@@ -10,19 +12,15 @@ public class PruebasPokino {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {      
 
         Naipe[][] carton1 = new Naipe[5][5];
         boolean[][] estado = new boolean[5][5];
-        TreeSet<Naipe> naipes = new TreeSet<Naipe>();
+        
 
-        for (int i = 0; i < 52; i++) {
-            Naipe n = new Naipe();
-            naipes.add(n);
-        }
     }
 
-    public static void mostrarCarton(Naipe[][] matriz) {
+    private static void mostrarCarton(Naipe[][] matriz) {
 
         System.out.println("|" + matriz[0][0] + "|" + matriz[0][1] + "|" + matriz[0][2] + "|" + matriz[0][3] + "|" + matriz[0][4] + "|");
         System.out.println("|" + matriz[1][0] + "|" + matriz[1][1] + "|" + matriz[1][2] + "|" + matriz[1][3] + "|" + matriz[1][4] + "|");
