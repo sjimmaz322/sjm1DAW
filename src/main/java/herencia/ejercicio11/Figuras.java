@@ -1,11 +1,8 @@
 package herencia.ejercicio11;
 
-/*
- * @author samjimmaz
- */
 public class Figuras {
 
-    private double altura, base;
+    protected double altura, base;
 
     public Figuras(double altura, double base) {
         this.altura = altura;
