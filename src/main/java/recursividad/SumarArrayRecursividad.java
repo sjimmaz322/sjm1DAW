@@ -10,10 +10,10 @@ public class SumarArrayRecursividad {
     }
 
     private static int sumar(int[] array, int tamanio) {
-        if (tamanio == 1) {
-            return array[0];
+        if (tamanio == 1) {//Caso base
+            return array[0];//Ciclo pasivo
         } else {
-            return array[tamanio - 1] + sumar(array, tamanio - 1);
+            return array[tamanio - 1] + sumar(array, tamanio - 1);//Ciclo activo
         }
     }
 }
