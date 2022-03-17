@@ -9,15 +9,34 @@ public class Rectangulo extends Figuras {
     }
 
     public Rectangulo() {
+        this.altura = 3;
+        this.base=3;
     }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+    
 
     @Override
     public String toString() {
         return "La figura tiene una altura de " + super.altura + " y una base de " + super.base;
     }
 
-    public String calcularArea() {
-        String area = "El área del rectángulo es: " + super.altura * super.base + " unidades cuadradas";
-        return area;
+    public double calcularArea() {
+        
+        return altura*base;
     }
 }

@@ -9,6 +9,24 @@ public class Triangulo extends Figuras {
     }
 
     public Triangulo() {
+        this.altura = 3;
+        this.base=3;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
     }
 
     @Override
@@ -16,10 +34,9 @@ public class Triangulo extends Figuras {
         return "El triángulo tiene una altura de " + super.altura + " y una base de " + super.base;
     }
 
-    @Override
-    public String calcularArea() {
-        String area = "El área del triángulo es: " + super.altura * super.base + " unidades cuadradas";
-        return area;
+    public double calcularArea() {
+        
+        return altura*base;
     }
 
 }

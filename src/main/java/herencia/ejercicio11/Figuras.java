@@ -1,6 +1,6 @@
 package herencia.ejercicio11;
 
-public class Figuras {
+public abstract class Figuras {
 
     protected double altura, base;
 
@@ -35,9 +35,10 @@ public class Figuras {
         return "La figura tiene una altura de " + altura + " y una base de " + base;
     }
 
-    public String calcularArea() {
-        String area = "El área de la figura es: " + altura * base + " unidades cuadradas";
-        return area;
-    }
+    public abstract double calcularArea();
+    //{
+////        String area = "El área de la figura es: " + altura * base + " unidades cuadradas";
+////        return area;
+//    }
 
 }
