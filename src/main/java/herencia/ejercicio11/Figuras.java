@@ -13,8 +13,8 @@ public class Figuras {
     }
 
     public Figuras() {
-        this.altura=3;
-        this.base=3;
+        this.altura = 3;
+        this.base = 3;
     }
 
     public double getAltura() {
@@ -35,9 +35,12 @@ public class Figuras {
 
     @Override
     public String toString() {
-        return "La figura tiene una altura de "+altura+" y una base de "+base;
+        return "La figura tiene una altura de " + altura + " y una base de " + base;
     }
-    
-    
-    
+
+    public String calcularArea() {
+        String area = "El área de la figura es: " + altura * base + " unidades cuadradas";
+        return area;
+    }
+
 }

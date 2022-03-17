@@ -8,39 +8,43 @@ package herencia.ejercicio11;
  *
  * @author samjimmaz
  */
-public class Rombiode extends Figuras{
-    private double altura, base;
+public class Romboide extends Figuras {
 
-    public Rombiode(double altura, double base) {
+    protected double altura, base;
+
+    public Romboide(double altura, double base) {
         super(altura, base);
     }
 
-    public Rombiode() {
-        this.altura=3;
-        this.base=3;
+    public Romboide() {
+        this.altura = 3;
+        this.base = 3;
     }
 
-    @Override
     public double getAltura() {
         return altura;
     }
 
-    @Override
     public void setAltura(double altura) {
         this.altura = altura;
     }
 
-    @Override
     public double getBase() {
         return base;
     }
 
-    @Override
     public void setBase(double base) {
         this.base = base;
     }
+
     @Override
-     public String toString() {
-        return "El rombóide tiene una altura de "+altura+" y una base de "+base;
+    public String toString() {
+        return "El rombóide tiene una altura de " + altura + " y una base de " + base;
+    }
+
+    @Override
+    public String calcularArea() {
+        String area = "El área del romboide es: " + altura * base + " unidades cuadradas";
+        return area;
     }
 }

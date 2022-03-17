@@ -8,39 +8,42 @@ package herencia.ejercicio11;
  *
  * @author samjimmaz
  */
-public class Rectangulo extends Figuras{
-    private double altura, base;
+public class Rectangulo extends Figuras {
+
+    protected double altura, base;
 
     public Rectangulo(double altura, double base) {
         super(altura, base);
     }
 
     public Rectangulo() {
-        this.altura=3;
-        this.base=3;
+        this.altura = 3;
+        this.base = 3;
     }
 
-    @Override
     public double getAltura() {
         return altura;
     }
 
-    @Override
     public void setAltura(double altura) {
         this.altura = altura;
     }
 
-    @Override
     public double getBase() {
         return base;
     }
 
-    @Override
     public void setBase(double base) {
         this.base = base;
     }
+
     @Override
-     public String toString() {
-        return "El cuadrado tiene una altura de "+altura+" y una base de "+base;
+    public String toString() {
+        return "La figura tiene una altura de " + altura + " y una base de " + base;
+    }
+
+    public String calcularArea() {
+        String area = "El área del rectángulo es: " + altura * base + " unidades cuadradas";
+        return area;
     }
 }
