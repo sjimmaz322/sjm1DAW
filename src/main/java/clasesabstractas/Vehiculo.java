@@ -3,7 +3,7 @@ package clasesabstractas;
 /*
  * @author samjimmaz
  */
-public abstract class CochesAbs {//Si pone final no va a tener descendencia.
+public abstract class Vehiculo {//Si pone final no va a tener descendencia.
     
     private int bastidor;
     
