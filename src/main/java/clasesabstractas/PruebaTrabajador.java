@@ -11,24 +11,20 @@ public class PruebaTrabajador {
     Trabajadores. Añade en la lista dos objetos Camarero y dos objetos del tipo inventado por ti.  Finalmente recorre la lista y
     llama al método cotizar() de cada uno de los trabajadores, comprobando el comportamiento polimórfico de dicho método.
      */
-
     public static void main(String[] args) {
 
         // Trabajador t1 = new Trabajador(); - No podemos instanciar un trabajador por ser una clase abstracta.
-        ArrayList plantilla = new ArrayList();
+        ArrayList<Trabajador> plantilla = new ArrayList();
+
+        plantilla.add(new Camarero("Abelardo", "Estopoulos", "X1"));
+        plantilla.add(new Camarero("Benancio", "Franciscano", "X2"));
+        plantilla.add(new Cocinero("Clementino", "Germano", "X3"));
+        plantilla.add(new Cocinero("Demetrio", "Hierros", "X4"));
+
         
-        Camarero c1 = new Camarero("Abelardo", "Estopoulos", "X1");
-        Trabajador c2 = new Camarero("Benancio", "Franciscano", "X2");
-        Trabajador c3 = new Cocinero("Clementino", "Germano", "X3");
-        Trabajador c4 = new Cocinero("Demetrio", "Hierros", "X4");
-
-        plantilla.add(c1);
-        plantilla.add(c2);
-        plantilla.add(c3);
-        plantilla.add(c4);
-
-        for (int i = 0; i <plantilla.size(); i++) {
-            System.out.println(plantilla.get(i).toString());
+        if(plantilla.get(0) instanceof Camarero){
+            ((Camarero)plantilla.get(0)).servirMesa();
+            
         }
     }
 
