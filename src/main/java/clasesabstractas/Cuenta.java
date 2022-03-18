@@ -10,8 +10,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 public abstract class Cuenta {
     Random rd = new Random();
     
-    private String numeroCuenta;
-    private double saldo;
+    protected String numeroCuenta;
+    protected double saldo;
     Persona persona;
 
     public Cuenta(double saldo, Persona persona) {
@@ -45,7 +45,7 @@ public abstract class Cuenta {
         return Objects.equals(this.numeroCuenta, other.numeroCuenta);
     }
     
-    public abstract void actualizarSaldo(double cuantia);
+    public abstract void actualizarSaldo();
     
     public abstract void retirar(double cuantia);
     

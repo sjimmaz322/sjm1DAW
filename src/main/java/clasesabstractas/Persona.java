@@ -77,7 +77,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Nombre completo : "+nombre+" "+apellido+". NIF: "+nif;
+        return nombre+" "+apellido+" con DNI "+nif;
     }
     
     

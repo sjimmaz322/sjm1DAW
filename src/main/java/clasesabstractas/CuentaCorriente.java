@@ -15,10 +15,10 @@ public class CuentaCorriente extends Cuenta {
     private final double interes = 1.5;
     private double saldoMin;
 
-    public CuentaCorriente(double interes, double saldoMin, double saldo, Persona persona) {
+    public CuentaCorriente(double saldoMin, double saldo, Persona persona) {
         super(saldo, persona);
 
-        this.saldoMin = saldoMin;
+        this.saldoMin = Math.abs(saldoMin);
     }
 
     public double getInteres() {
@@ -42,12 +42,22 @@ public class CuentaCorriente extends Cuenta {
     }
 
     @Override
-    public void actualizarSaldo(double cuantia) {
+    public void actualizarSaldo() {
+        if (saldo>1000){
+            saldo = saldo +(saldoMin*(interes/100));
+        }else{
+            saldo = saldo +(saldo*(interes/100));
+        }
 
     }
 
     @Override
     public void retirar(double cuantia) {
+        if((saldo-cuantia)>saldoMin){
+           saldo -= cuantia;
+        }else{
+            System.out.println("Operación no disponible\nMotivo:Saldo insuficiente");
+        }
 
     }
 

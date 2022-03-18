@@ -46,12 +46,23 @@ public class CuentaAhorro extends Cuenta {
     }
 
     @Override
-    public void actualizarSaldo(double cuantia) {
+    public void actualizarSaldo() {
+        
+        saldo = saldo +(saldo*(interes/100))-comisionAnual;
+        
+        if(saldo<0){
+            System.out.println("Su cuenta se encuentra actualmente al descubierto\nSu saldo actual es de "+saldo);
+        }
 
     }
 
     @Override
     public void retirar(double cuantia) {
+        if((saldo-cuantia)>0){
+            saldo-=cuantia;
+        }else{
+            System.out.println("Operación no disponible\nMotivo: Saldo insuficiente");
+        }
 
     }
 
