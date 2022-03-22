@@ -5,8 +5,8 @@ import java.util.Random;
 import org.apache.commons.lang3.RandomStringUtils;
 
 /*
- * @author samjimmaz
- */
+* @author samjimmaz
+*/
 public abstract class Cuenta {
     Random rd = new Random();
     
