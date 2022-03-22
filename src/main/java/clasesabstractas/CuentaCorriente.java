@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public class CuentaCorriente extends Cuenta {
 
-    private final double interes = 1.5;
+    private double interes = 1.5;
     private double saldoMin;
 
     public CuentaCorriente(double saldoMin, double saldo, Persona persona) {
