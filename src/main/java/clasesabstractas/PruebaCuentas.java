@@ -11,11 +11,11 @@ public class PruebaCuentas {
 
         ArrayList<Cuenta> registro = new ArrayList();
 
-        CuentaCorriente cuco1 = new CuentaCorriente(250, 500, new Persona("Alejandro", "Mazas", "31014322H"));
+        Cuenta cuco1 = new CuentaCorriente(250, 500, new Persona("Alejandro", "Mazas", "31014322H"));
 
         registro.add(cuco1);
 
-        CuentaAhorro cuah1 = new CuentaAhorro(2.7, 12.5, 250, new Persona("Samuel", "Jiménez", "20903211G"));
+        Cuenta cuah1 = new CuentaAhorro(2.7, 12.5, 250, new Persona("Samuel", "Jiménez", "20903211G"));
 
         registro.add(cuah1);
 
