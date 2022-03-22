@@ -52,7 +52,7 @@ public abstract class Cuenta {
 
     @Override
     public String toString() {
-        return "La cuenta de "+persona.toString()+" tiene un número de cuenta "+numeroCuenta+" y un saldo de "+saldo+"€.";
+        return "La cuenta de "+persona.toString()+" tiene el número de cuenta "+numeroCuenta+" y un saldo de "+saldo+"€.";
     }
     
     

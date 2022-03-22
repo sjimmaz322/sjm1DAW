@@ -15,7 +15,7 @@ public class PruebaCuentas {
 
         registro.add(cuco1);
 
-        CuentaAhorro cuah1 = new CuentaAhorro(2.7, 12.5, 250, new Persona("Samuel", "Jiménez", "31014322H"));
+        CuentaAhorro cuah1 = new CuentaAhorro(2.7, 12.5, 250, new Persona("Samuel", "Jiménez", "20903211G"));
 
         registro.add(cuah1);
 
