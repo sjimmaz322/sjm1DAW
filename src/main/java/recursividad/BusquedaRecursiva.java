@@ -1,4 +1,4 @@
-package clasesabstractas;
+package recursividad;
 
 public class BusquedaRecursiva {
 
