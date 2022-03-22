@@ -12,7 +12,7 @@ public abstract class Cuenta {
     
     protected String numeroCuenta;
     protected double saldo;
-    Persona persona;
+    protected Persona persona;
 
     public Cuenta(double saldo, Persona persona) {
 
