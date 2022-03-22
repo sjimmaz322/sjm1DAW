@@ -30,6 +30,11 @@ public class PruebaCuentas {
         System.out.println(registro.get(0).toString());
         System.out.println("---");
         System.out.println(registro.get(1).toString());
+        
+        CuentaCorriente cC1 = (CuentaCorriente)cuco1;
+        CuentaAhorro cA1 = (CuentaAhorro)cuah1;
+        
+        
     }
 
 }
