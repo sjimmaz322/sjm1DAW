@@ -26,7 +26,10 @@ public class PruebaCuentas {
         registro.get(1).actualizarSaldo();
         registro.get(0).retirar(200);
         registro.get(1).retirar(250);
-
+        System.out.println("---");
+        System.out.println(registro.get(0).toString());
+        System.out.println("---");
+        System.out.println(registro.get(1).toString());
     }
 
 }
