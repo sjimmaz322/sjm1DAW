@@ -11,10 +11,6 @@ public class PruebaCuentas {
 
         ArrayList<Cuenta> registro = new ArrayList();
 
-//      Cuenta c1 = new Cuenta(204.65, new Persona("Samuel", "Jiménez", "31014322H"));
-//        
-//      System.out.println(c1.toString());
-//      CuentaCorriente cuco1 = new CuentaCorriente(saldoMin, saldo, persona);
         CuentaCorriente cuco1 = new CuentaCorriente(250, 500, new Persona("Alejandro", "Mazas", "31014322H"));
 
         registro.add(cuco1);
