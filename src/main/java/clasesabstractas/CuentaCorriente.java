@@ -12,17 +12,16 @@ import java.util.Random;
  */
 public class CuentaCorriente extends Cuenta {
 
-    private double interes = 1.5;
+    private double interesFijo = 1.5;
     private double saldoMin;
 
     public CuentaCorriente(double saldoMin, double saldo, Persona persona) {
         super(saldo, persona);
-
         this.saldoMin = Math.abs(saldoMin);
     }
 
-    public double getInteres() {
-        return interes;
+    public double getInteresFijo() {
+        return interesFijo;
     }
 
     public double getSaldoMin() {
@@ -44,9 +43,9 @@ public class CuentaCorriente extends Cuenta {
     @Override
     public void actualizarSaldo() {
         if (saldo>1000){
-            saldo = saldo +(saldoMin*(interes/100));
+            saldo = saldo +(saldoMin*(interesFijo/100));
         }else{
-            saldo = saldo +(saldo*(interes/100));
+            saldo = saldo +(saldo*(interesFijo/100));
         }
 
     }
@@ -63,7 +62,7 @@ public class CuentaCorriente extends Cuenta {
 
     @Override
     public String toString() {
-        return super.toString() + "\nEs del tipo Cuenta Corriente con un interés de " + interes + " y un saldo mínimo de " + saldoMin;
+        return super.toString() + "\nEs del tipo Cuenta Corriente con un interés de " + interesFijo + " y un saldo mínimo de " + saldoMin;
 
     }
 
