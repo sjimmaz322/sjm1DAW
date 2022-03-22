@@ -28,7 +28,9 @@ public class PruebaPolitica {
         System.out.println("Haffaz es un "+camaraDip1);
         System.out.println("Steven es un "+camaraSen1);
         
-        
+        //Hacemos castig para acceder a todos los métodos de las clases Diputado y Senador
+        Diputado diput1 = (Diputado)dip1;
+        Senador senad1 = (Senador)sen1;    
         
     }
 
