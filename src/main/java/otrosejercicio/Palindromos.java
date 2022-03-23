@@ -17,7 +17,7 @@ public class Palindromos {
         String palin = resultado ? "La palabra " + palabra + " es un palíndormo" : "La palabra " + palabra + " no es un palíndormo";
 
         System.out.println(palin);
-        
+
         String palin2 = resultadoRecur ? "La palabra " + palabra + " es un palíndormo" : "La palabra " + palabra + " no es un palíndormo";
 
         System.out.println(palin2);
@@ -34,14 +34,6 @@ public class Palindromos {
             list2.add(palabra.charAt(j));
         }
 
-//        Esto es para comprobar que las palabras se san la vuelta en el segundo caso
-//        for (int k = 0; k < list1.size(); k++) {
-//            System.out.print(list1.get(k));
-//        }
-//        System.out.print(" ");
-//        for (int m = 0; m < list2.size(); m++) {
-//            System.out.print(list2.get(m));
-//        }
         for (int k = 0; k < list1.size(); k++) {
             if (!(list1.get(k).equals(list2.get(k)))) {
                 return false;
@@ -50,10 +42,10 @@ public class Palindromos {
         }
         return true;
     }
+
     private static boolean comprobarPalabraRecur(String palabra, int pos) {
         ArrayList list3 = new ArrayList();
         ArrayList list4 = new ArrayList();
-        
 
         for (int i = 0; i < palabra.length(); i++) {
             list3.add(palabra.charAt(i));
@@ -61,14 +53,14 @@ public class Palindromos {
         for (int j = palabra.length() - 1; j >= 0; j--) {
             list4.add(palabra.charAt(j));
         }
-        if (!(list3.get(pos).equals(list4.get(pos)))){
+        if (!(list3.get(pos).equals(list4.get(pos)))) {
             return false;
-        }else{
-            if(pos<palabra.length()){
-            comprobarPalabraRecur(palabra, pos+1);             
+        } else {
+            if (pos != palabra.length()-1) {
+                comprobarPalabraRecur(palabra, pos + 1);
             }
             return true;
         }
-        
+
     }
 }
