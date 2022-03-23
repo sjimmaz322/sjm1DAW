@@ -20,7 +20,7 @@ public class PruebaPolitica {
         
         System.out.println("Información del diputado 1\n");
         System.out.println(dip1);
-        System.out.println("Información del senador 1\n");
+        System.out.println("\nInformación del senador 1\n");
         System.out.println(sen1);
         System.out.println("---");
         String camaraDip1 = dip1.camaraTrabaja();
