@@ -56,7 +56,7 @@ public class Palindromos {
         if (!(list3.get(pos).equals(list4.get(pos)))) {
             return false;
         } else {
-            if (pos != palabra.length()-1) {
+            if (pos != palabra.length() - 1) {
                 comprobarPalabraRecur(palabra, pos + 1);
             }
             return true;
