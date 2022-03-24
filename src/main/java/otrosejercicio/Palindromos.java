@@ -18,7 +18,7 @@ public class Palindromos {
 
         System.out.println(palin);
 
-        String palin2 = resultadoRecur ? "La palabra " + palabra + " es un palíndormo" : "La palabra " + palabra + " no es un palíndormo";
+        String palin2 = resultadoRecur ? "La palabra " + palabra + " si que es un palíndormo" : "La palabra " + palabra + " no tiene pinta de que sea un palíndormo";
 
         System.out.println(palin2);
     }
