@@ -24,6 +24,9 @@ public class GestionHospital {
 
         Paciente pac1 = new Paciente("00000001", "Helen", "Fermito", new Nif("45786412"));
         Paciente pac2 = new Paciente("00000002", "Sae", "Chopupa", new Nif("12457862"));
+        Paciente pac3 = new Paciente("00000003", "Medu", "Eletodo", new Nif("74185236"));
+        Paciente pac4 = new Paciente("00000004", "Sae", "Chopupa", new Nif("45632872"));
+        Paciente pac5 = new Paciente("00000005", "Sae", "Chopupa", new Nif("74596322"));
 
         //Contratamos a los trabajadores
         hospital01.contratarEmpleado(adm1);
@@ -42,6 +45,9 @@ public class GestionHospital {
         //Ingresamos a los pacientes
         hospital01.ingresarPaciente(pac1);
         hospital01.ingresarPaciente(pac2);
+        hospital01.ingresarPaciente(pac3);
+        hospital01.ingresarPaciente(pac4);
+        hospital01.ingresarPaciente(pac5);
 
         for (Employee listaEmpleado : plantilla) {
             if (listaEmpleado instanceof Medico) {
