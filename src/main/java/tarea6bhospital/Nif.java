@@ -19,16 +19,43 @@ public class Nif {
         this.letra = calcularLetra(numero);
     }
 
-    private char calcularLetra(String numero){
-        int num = Integer.valueOf(numero);
-        for (int i = 0; i < numero.length(); i++) {
-            num += numero.indexOf(i);
-        }
-        num = num/23;
+    public String getNumero() {
+        return numero;
+    }
 
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public char getLetra() {
+        return letra;
+    }
+
+    public void setLetra(char letra) {
+        this.letra = letra;
+    }
+
+    public LocalDate getCaducidad() {
+        return caducidad;
+    }
+
+    public void setCaducidad(LocalDate caducidad) {
+        this.caducidad = caducidad;
+    }
+
+    private char calcularLetra(String numero){
+        
+        int num = Integer.parseInt(numero);
+        num = num%23;
+        
         char[] letras = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
         
         return letras[num];
+    }
+
+    @Override
+    public String toString() {
+        return numero+letra+" caduca el "+caducidad;
     }
 
 }

@@ -12,6 +12,8 @@ public class Prueba {
         Medico m1 = new Medico("Psicología", "12457885", 956.20, "Samuel", "Jiménez", new Nif("31014322"));
         
         System.out.println(m1);
+        
+        System.out.println(m1.calcularIRPF()+" es el IRPF que paga");
     }
 
 }

@@ -4,6 +4,8 @@
  */
 package tarea6bhospital;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author samjimmaz
@@ -16,16 +18,64 @@ public class Administrativo extends Employee {
         super(numSS, salario, nombre, apellidos, dni);
         this.grupo = grupo;
     }
+
+    public Grupo getGrupo() {
+        return grupo;
+    }
+
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
+    }
+
+    public String getNumSS() {
+        return numSS;
+    }
+
+    public void setNumSS(String numSS) {
+        this.numSS = numSS;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public Nif getDni() {
+        return dni;
+    }
+
+    public void setDni(Nif dni) {
+        this.dni = dni;
+    }
     
     
 
     @Override
     public void renovarNif() {
-
+        super.getDni().setCaducidad(LocalDate.now().plusYears(10));
     }
     @Override
     public double calcularIRPF(){
-        double irpf = 0;
+        double irpf = ((this.getGrupo().getIrpf()*super.getSalario())/100);
         return irpf;
     }
 }

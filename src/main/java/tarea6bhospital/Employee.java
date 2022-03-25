@@ -13,6 +13,22 @@ public abstract class Employee extends Person{
         this.numSS = numSS;
         this.salario = salario;
     }
+
+    public String getNumSS() {
+        return numSS;
+    }
+
+    public void setNumSS(String numSS) {
+        this.numSS = numSS;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
     
     @Override
     public abstract void renovarNif();

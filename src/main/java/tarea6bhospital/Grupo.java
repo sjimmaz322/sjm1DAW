@@ -5,9 +5,9 @@ package tarea6bhospital;
  */
 public enum Grupo {
     
-    D(15.0),
-    E(16.0),
-    F(17.0);
+    C(17.5),
+    D(18.0),
+    E(18.5);
     
     private double irpf;
 
