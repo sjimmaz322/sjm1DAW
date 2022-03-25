@@ -93,10 +93,12 @@ public class GestionHospital {
         medi.tratarPaciente(enfermos.get(rd.nextInt(5)));
 
         //Imprimimos cuanto paga cada médico de IRPF
+        System.out.println("\nIRPF de cada médico");
         System.out.println(med1.getNombre() + " pagará de IRPF " + med1.calcularIRPF() + " € anualmente.");
         System.out.println(med2.getNombre() + " pagará de IRPF " + med2.calcularIRPF() + " € anualmente.");
 
         //Imprimimos cuanto paga de IRPF cada administrativo
+        System.out.println("\nIRPF de cada administrativo");
         System.out.println(adm1.getNombre() + " pagará de IRPF " + adm1.calcularIRPF() + " € anualmente.");
         System.out.println(adm2.getNombre() + " pagará de IRPF " + adm2.calcularIRPF() + " € anualmente.");
         System.out.println(adm3.getNombre() + " pagará de IRPF " + adm3.calcularIRPF() + " € anualmente.");
@@ -105,15 +107,16 @@ public class GestionHospital {
         //Primero un médico
 //        System.out.println(med1.dni.getCaducidad());
         med1.renovarNif(LocalDate.of(2023, Month.MARCH, 15));
-        System.out.println(med1.dni.getCaducidad());
+        System.out.println("\n"+med1.dni.getCaducidad());
         
         //Ahora un paciente
 //        System.out.println(pac3.dni.getCaducidad());
         pac3.renovarNif(LocalDate.of(2022, Month.JUNE, 3));
 //        System.out.println("La fecha de caducidad debería ser el 2032-06-03"); Extrañamente funciona
-        System.out.println(pac3.dni.getCaducidad());
+        System.out.println("\n"+pac3.dni.getCaducidad());
         
         //Registramos un documento como el administrador adm1
         admi1.registrarDocumento("Registro fiebre avial", "Puchino");
+        
     }
 }

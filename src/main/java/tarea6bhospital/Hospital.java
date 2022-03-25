@@ -67,7 +67,7 @@ public class Hospital {
 
     @Override
     public String toString() {
-        return "Este es el hospital " + nombre + " ubicado en " + direccion + "\nCon una lista de empleados:\n" + listaEmpleados + "\nY una lista de pacientes:\n" + listaPacientes;
+        return "Este hospital es el Hospital " + nombre + " ubicado en " + direccion + "\nCon una lista de empleados:\n" + listaEmpleados + "\nY una lista de pacientes:\n" + listaPacientes;
 
     }
 

@@ -50,7 +50,7 @@ public class Medico extends Employee {
         Scanner sc = new Scanner(System.in);
         String medicamento = sc.nextLine();
         System.out.println("\n"+this.getNombre() + " " + this.getApellidos() + " como médico le ha recetado a "
-                + paciente.getNombre() + " " + paciente.getApellidos() + " como paciente la medicina " + medicamento);
+                + paciente.getNombre() + " " + paciente.getApellidos() + " como paciente la medicina: " + medicamento);
 
         paciente.tomarMedicina(medicamento);
 

@@ -72,8 +72,8 @@ public class Administrativo extends Employee {
     }
 
     public void registrarDocumento(String nombreDoc, String hash){
-        System.out.println("El administrativo "+this.getNombre()+" "+this.getApellidos()+" registra el documento de nombre "
-                + nombreDoc +" cuyo hashCode es "+hash.hashCode());
+        System.out.println("\nEl administrativo "+this.getNombre()+" "+this.getApellidos()+" registra el documento de nombre "
+                +"'"+ nombreDoc +"'"+" cuyo hashCode es "+"'"+hash.hashCode()+"'");
     }
     
     @Override
