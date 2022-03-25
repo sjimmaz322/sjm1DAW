@@ -26,7 +26,7 @@ public class MiPanel extends JPanel {
 	// Método que inicializa los elementos gráficos del formulario
 	private void initComponents(){
 		// Construimos la etiqueta con el texto que queremos que muestre
-    		etiqueta = new JLabel("Etiqueta de MiPanel");
+    		etiqueta = new JLabel("");
 		// Añade la etiqueta al contenedor MiPanel (al JPanel)
     		this.add(etiqueta);
 	}

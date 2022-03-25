@@ -25,7 +25,7 @@ public class Panel {
         ventanaPrincipal.setLocationRelativeTo(null);
 
         // Añadimos un objeto MiPanel al JFrame
-        ventanaPrincipal.add(new MiPanel(Color.red));
+        ventanaPrincipal.add(new MiPanel(Color.LIGHT_GRAY));
 
         // Hacemos visible la ventana
         ventanaPrincipal.setVisible(true);

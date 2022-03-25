@@ -17,7 +17,7 @@ public class VentanaSimple {
      */
     public static void main(String[] args) {
         // Construimos la ventana
-	JFrame ventanaPrincipal = new JFrame ("Aplicación");
+	JFrame ventanaPrincipal = new JFrame ("Samuel Alejandro Jiménez Mazas");
 
 	// Establecemos posición y tamaño
 	ventanaPrincipal.setBounds(250, 250, 800, 600);
