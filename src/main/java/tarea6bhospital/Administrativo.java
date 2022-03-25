@@ -11,7 +11,7 @@ import java.time.LocalDate;
  * @author samjimmaz
  */
 public class Administrativo extends Employee {
-    
+
     private Grupo grupo;
 
     public Administrativo(Grupo grupo, String numSS, double salario, String nombre, String apellidos, Nif dni) {
@@ -66,16 +66,19 @@ public class Administrativo extends Employee {
     public void setDni(Nif dni) {
         this.dni = dni;
     }
-    
-    
 
-    @Override
-    public void renovarNif() {
-        super.getDni().setCaducidad(LocalDate.now().plusYears(10));
+    public void renovarNif(LocalDate solicitud) {
+        this.getDni().setCaducidad(solicitud.plusYears(10));
     }
+
+    public void registrarDocumento(String nombreDoc, String hash){
+        System.out.println("El administrativo "+this.getNombre()+" "+this.getApellidos()+" registra el documento de nombre "
+                + nombreDoc +" cuyo hashCode es "+hash.hashCode());
+    }
+    
     @Override
-    public double calcularIRPF(){
-        double irpf = ((this.getGrupo().getIrpf()*super.getSalario())/100);
+    public double calcularIRPF() {
+        double irpf = ((this.getGrupo().getIrpf() * super.getSalario()) / 100);
         return irpf;
     }
 }

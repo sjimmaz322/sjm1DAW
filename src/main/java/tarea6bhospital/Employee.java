@@ -1,10 +1,12 @@
 package tarea6bhospital;
 
+import java.time.LocalDate;
+
 /* 
  * @author samjimmaz
  */
-public abstract class Employee extends Person{
-    
+public abstract class Employee extends Person {
+
     protected String numSS;
     protected double salario;
 
@@ -29,16 +31,16 @@ public abstract class Employee extends Person{
     public void setSalario(double salario) {
         this.salario = salario;
     }
-    
-    @Override
-    public abstract void renovarNif();
-    
+
+    public void renovarNif(LocalDate solicitud) {
+        this.getDni().setCaducidad(solicitud.plusYears(10));
+    }
+
     public abstract double calcularIRPF();
 
     @Override
     public String toString() {
-        return super.toString()+"\nNúmero de la Seguridad Social "+numSS+ " con un salario de "+salario+" €.";
+        return super.toString() + "Número de la Seguridad Social " + numSS + " con un salario de " + salario + " €.\n";
     }
-    
-    
+
 }

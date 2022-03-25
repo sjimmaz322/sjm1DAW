@@ -1,5 +1,7 @@
 package tarea6bhospital;
 
+import java.time.LocalDate;
+
 /*
  * @author samjimmaz
  */
@@ -37,14 +39,14 @@ public abstract class Person {
     public void setDni(Nif dni) {
         this.dni = dni;
     }
-    
-    public abstract void renovarNif();
+
+    public void renovarNif(LocalDate solicitud) {
+        this.getDni().setCaducidad(solicitud.plusYears(10));
+    }
 
     @Override
     public String toString() {
-        return "Datos:\nNombre"+nombre+"\nApellidos"+apellidos+"\nDNI "+dni;
+        return "\nDatos:\nNombre: " + nombre + "\nApellidos: " + apellidos + "\nDNI: " + dni + "\n";
     }
-    
-    
-    
+
 }

@@ -30,18 +30,22 @@ public class Paciente extends Person {
 
     public void tomarMedicina(String medicamento) {
         Random random = new Random();
-        boolean curado = random.nextBoolean();
-
+        boolean estado = random.nextBoolean();
+        System.out.println(" ");
         System.out.println("Soy "+super.getNombre()+" estoy tomando " + medicamento);
-        if (curado) {
-            System.out.println("Me siento mejor (Vivirá)");
-        } else {
-            System.out.println("Apuntad mi epitafio (De esta no sale)");
-        }
+        
+        String cura = estado?"Me siento mejor (Vivirá)":"Apuntad mi epitafio (De esta no sale)";
+        System.out.println(cura);
+    }
+
+
+    public void renovarNif(LocalDate solicitud) {
+        this.getDni().setCaducidad(solicitud.plusYears(10));
     }
 
     @Override
-    public void renovarNif() {
-        super.getDni().setCaducidad(LocalDate.now().plusYears(10));
+    public String toString() {
+        return super.toString()+"Número de historial: "+numHistorial;
     }
+    
 }

@@ -64,4 +64,11 @@ public class Hospital {
     public void setListaPacientes(ArrayList<Paciente> listaPacientes) {
         this.listaPacientes = listaPacientes;
     }
+
+    @Override
+    public String toString() {
+        return "Este es el hospital " + nombre + " ubicado en " + direccion + "\nCon una lista de empleados:\n" + listaEmpleados + "\nY una lista de pacientes:\n" + listaPacientes;
+
+    }
+
 }
