@@ -1,24 +1,13 @@
-package practicapanel;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+package interfaces;
 
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
 
-/**
- *
- * @author samjimmaz
- */
+
 public class Panel {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
       JFrame ventanaPrincipal = new JFrame("Samuel Jiménez Mazas");
 

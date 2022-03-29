@@ -1,17 +1,7 @@
-package practicapanel;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-
+package interfaces;
 
 import javax.swing.JFrame;
 
-/**
- *
- * @author samjimmaz
- */
 public class VentanaSimple {
 
     /**
@@ -27,7 +17,8 @@ public class VentanaSimple {
 	// Hacemos visible la ventana
 	ventanaPrincipal.setVisible(true);
 
-// Acción por defecto al pulsar el botón de cierre 	 ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Acción por defecto al pulsar el botón de cierre 	 
+        ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
     
