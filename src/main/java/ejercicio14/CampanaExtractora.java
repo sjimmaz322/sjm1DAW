@@ -36,4 +36,6 @@ public class CampanaExtractora extends Electrodomestico {
         return super.toString() + "\nCampanaExtractora{" + "decibelios=" + decibelios + '}';
     }
 
+
+
 }
