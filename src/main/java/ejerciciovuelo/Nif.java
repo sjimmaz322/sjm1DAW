@@ -1,4 +1,4 @@
-package tarea6bhospital;
+package ejerciciovuelo;
 
 import java.lang.reflect.Array;
 import java.time.LocalDate;

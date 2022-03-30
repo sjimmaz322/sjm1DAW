@@ -1,4 +1,4 @@
-package tarea6bhospital;
+package ejerciciovuelo;
 
 import java.time.LocalDate;
 
