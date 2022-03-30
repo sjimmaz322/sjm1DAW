@@ -4,8 +4,7 @@
  */
 package ejercicio14;
 
-/**
- *
+/*
  * @author samjimmaz
  */
 public class CampanaExtractora extends Electrodomestico {
@@ -14,9 +13,9 @@ public class CampanaExtractora extends Electrodomestico {
 
     public CampanaExtractora(double decibelios, double consumo, String modelo) {
         super(consumo, modelo);
-        this.decibelios = decibelios;
         if (decibelios < 50) {
-            this.decibelios = 51;
+            double dec = 51;
+            decibelios = dec;
         }
         this.decibelios = decibelios;
     }

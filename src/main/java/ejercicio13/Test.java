@@ -17,8 +17,9 @@ public class Test {
      */
     public static void main(String[] args) {
 
-        //Creamos la lista de personas
+        //Creamos la lista de personas y la de Identificables
         ArrayList<Persone> listaPersonas = new ArrayList<>();
+        ArrayList<Identificable> listaIdent = new ArrayList<>();
 
         //No puedo crear objetos de la clase Persone, es una clase abstracta, un molde, no una clase creable en si.
         //Creamos los objetos estudiantes y profesor
@@ -39,6 +40,7 @@ public class Test {
         listaPersonas.add(p3);
 
         for (Persone per : listaPersonas) {
+            System.out.println(per);
 
             if (per instanceof Estudiante) {
                 System.out.println(per.getClass());
@@ -50,6 +52,20 @@ public class Test {
             }
             per.identificate();
             System.out.println("\n");
+        }
+        
+        //Añadimos los elementos a la lista
+        listaIdent.add(e1);
+        listaIdent.add(e2);
+        listaIdent.add(e3);
+        listaIdent.add(p1);
+        listaIdent.add(p2);
+        listaIdent.add(p3);
+        
+        //Solo tenemos acceso a los métodos de Identificable
+        //Si queremos acceder a los otros debemos hacer castings
+        for (Identificable i : listaIdent) {
+            i.identificate();
         }
 
     }
