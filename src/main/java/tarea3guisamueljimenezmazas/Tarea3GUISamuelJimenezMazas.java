@@ -35,7 +35,7 @@ public class Tarea3GUISamuelJimenezMazas extends JPanel implements ActionListene
         botonNombre = new JButton("Nombre");
         botonApellido = new JButton("Apellido");
         botonGenerar = new JButton("Generar Aleatorio");
-        etiqueta = new JLabel("Generar Aleatorio");
+        etiqueta = new JLabel("Numero");
         texto = new JTextArea(1, 25);
         texto.setBackground(Color.ORANGE);
 
@@ -46,6 +46,7 @@ public class Tarea3GUISamuelJimenezMazas extends JPanel implements ActionListene
         // Añadimos el botón al panel
         this.add(botonApellido);
         this.add(botonGenerar);
+        this.add(etiqueta);
         // Controlador del evento
         botonApellido.addActionListener(this);
 
@@ -118,7 +119,7 @@ public class Tarea3GUISamuelJimenezMazas extends JPanel implements ActionListene
             String numero = String.valueOf(num);
             texto.setText(numero);
             texto.setBackground(Color.ORANGE);
-            etiqueta.getAccessibleContext().setAccessibleName(numero);
+//            etiqueta.
         }
     }
 }
