@@ -4,6 +4,7 @@
  */
 package tarea3guisamueljimenezmazas;
 
+import java.awt.BorderLayout;
 import javax.swing.JFrame;
 
 /**
@@ -19,6 +20,9 @@ public class Test {
         JFrame frame = new JFrame("App");
         // La ventana no se puede redimensionar
         frame.setResizable(false);
+        
+        frame.setSize(800, 600);
+        frame.setLocationRelativeTo(null);
         // Posición de la ventana
         frame.setLocationRelativeTo(null);
         // Incluimos el panel en la ventana
@@ -29,6 +33,14 @@ public class Test {
         frame.setVisible(true);
         //Acción por defecto al pulsar el botón de cierre de la ventana
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        frame.setLayout(new BorderLayout());
+        frame.setResizable(false);
+        
+        Tarea3GUISamuelJimenezMazas panel = new Tarea3GUISamuelJimenezMazas();
+        panel.getEtiqueta().setText("Panel Color Cián");
+        frame.add(panel, BorderLayout.CENTER);
+
     }
 
 }
