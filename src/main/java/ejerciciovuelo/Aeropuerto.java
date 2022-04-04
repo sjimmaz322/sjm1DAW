@@ -13,27 +13,25 @@ public class Aeropuerto {
 
         Vuelo v1 = new Vuelo("V001", "Albacete", "Noruega", "37 horas", new ArrayList<Pasajero>());
         v1.getUsuarios().add(new Pasajero("Turista", "Samuel", "Jiménez", new Nif("31014322")));
-        
-        lista = Aeropuerto.mapeado(registro);
+
 
     }
 
-    public static Map mapeado(ArrayList<Vuelo> vAux) {
-        
-        Map<String, ArrayList<Pasajero>> listado = new HashMap<String, ArrayList<Pasajero>>();
-        for (Vuelo v : vAux) {
-            listado.put(v.getCiudadDestino(), v.getUsuarios());
-        }
+   private static Map<Vuelo, Integer> mapeado(ArrayList<Vuelo> listaVuelos) {
+        Map<Vuelo, Integer> listaPasajeros = new HashMap<>();
+        for (int i = 0; i < listaVuelos.size(); i++) {
 
-        return listado;
-    }
-        public static Map mapeadoOrdenado(ArrayList<Vuelo> vAux) {
-        
-        Map<String, ArrayList<Pasajero>> listado = new HashMap<String, ArrayList<Pasajero>>();
-        for (Vuelo v : vAux) {
-            listado.put(v.getCiudadDestino(), v.getUsuarios());
         }
-        
-        return listado;
+        return listaPasajeros;
+    }
+
+    private static int mapeado(String codigo, ArrayList<Vuelo> listaPasajeros) {
+        int numPasajeros = 0;
+        for (int i = 0; i < listaPasajeros.size(); i++) {
+            if (listaPasajeros.get(i).equals(codigo)) {
+                numPasajeros = listaPasajeros.get(i).getUsuarios().size();
+            }
+        }
+        return numPasajeros;
     }
 }
