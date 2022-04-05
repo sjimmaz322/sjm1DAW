@@ -23,21 +23,20 @@ public class Aeropuerto {
         System.out.println("El avión 00004 tiene: " + numeroPasajeros("00004", listaVuelos) + " pasajeros");
     
     }
-        private static Map<Vuelo, Integer> devuelvePasajeros(ArrayList<Vuelo> listaVuelos) {
-        Map<Vuelo, Integer> listaPasajeros = new HashMap<>();
-        for (int i = 0; i < listaVuelos.size(); i++) {
-
-        }
+        private static HashMap<String, Integer> devuelvePasajeros(ArrayList<Vuelo> listaVuelos) {
+        HashMap<String, Integer> listaPasajeros = new HashMap<>();
+            for (Vuelo listaVuelo : listaVuelos) {
+                listaPasajeros.put(listaVuelo.getCiudadDestino(), listaVuelo.getUsuarios().size());
+            }
         return listaPasajeros;
     }
 
     //Método el cual sirve para contarbilizar el número de pasajeros de un avión
     private static int numeroPasajeros(String codigo, ArrayList<Vuelo> listaVuelos) {
-
-        for (int i = 0; i < listaVuelos.size(); i++) {
-            if (listaVuelos.get(i).getCodVuelo().equalsIgnoreCase(codigo)) {
-                return listaVuelos.get(i).getUsuarios().size();
-            }
+        
+        for (Vuelo lis : listaVuelos) {
+            
+        }
 
         }
         return 0;

@@ -65,6 +65,8 @@ public class Vuelo {
         this.usuarios = usuarios;
     }
 
+
+
     @Override
     public String toString() {
         return "Vuelo{" + "codVuelo=" + codVuelo + ", ciudadOrigen=" + ciudadOrigen + ", ciudadDestino=" + ciudadDestino + ", duracionVuelo=" + duracionVuelo + ", usuarios=" + usuarios + '}';
