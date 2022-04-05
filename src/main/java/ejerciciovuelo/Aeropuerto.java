@@ -3,6 +3,7 @@ package ejerciciovuelo;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Aeropuerto {
 
@@ -22,26 +23,30 @@ public class Aeropuerto {
         
         listaVuelos.add(v1);
         
-        System.out.println(Aeropuerto.listaDestinos(listaVuelos));
+        System.out.println(Aeropuerto.pasajerosPorVuelo(listaVuelos));
+        
+        System.out.println(Aeropuerto.listaPasajeros(v1.getCiudadDestino(), listaVuelos));
     
     }
-        private static HashMap<String, Integer> listaDestinos(ArrayList<Vuelo> listaVuelos) {
+        private static HashMap<String, Integer> pasajerosPorVuelo(ArrayList<Vuelo> listaVuelos) {
         HashMap<String, Integer> listaPasajeros = new HashMap<>();
             for (Vuelo listaVuelo : listaVuelos) {
+                if (listaVuelos.contains(listaVuelo)){
+                listaPasajeros.put(listaVuelo.getCiudadDestino(), listaVuelo.getUsuarios().size()+listaVuelo.getUsuarios().size());
+                }else{
                 listaPasajeros.put(listaVuelo.getCiudadDestino(), listaVuelo.getUsuarios().size());
+                }
             }
         return listaPasajeros;
     }
 
     //Método el cual sirve para contarbilizar el número de pasajeros de un avión
-    private static int numeroPasajeros(String codigo, ArrayList<Vuelo> listaVuelos) {
-        
+    private static TreeMap<String, ArrayList<Pasajero>> listaPasajeros(String codigo, ArrayList<Vuelo> listaVuelos) {
+        TreeMap<String, ArrayList<Pasajero>> aux = new TreeMap<>();
         for (Vuelo lis : listaVuelos) {
-            
-        }
-
-        
-        return 0;
+            aux.put(lis.getCiudadDestino(), lis.getUsuarios());
+        }  
+        return aux;
     }
 
 //    private static Map<Vuelo, Integer> mapeado(ArrayList<Vuelo> listaVuelos) {
