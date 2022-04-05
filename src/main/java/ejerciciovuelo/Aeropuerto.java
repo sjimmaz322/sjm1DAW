@@ -40,7 +40,6 @@ public class Aeropuerto {
         return listaPasajeros;
     }
 
-    //Método el cual sirve para contarbilizar el número de pasajeros de un avión
     private static TreeMap<String, ArrayList<Pasajero>> listaPasajeros(String codigo, ArrayList<Vuelo> listaVuelos) {
         TreeMap<String, ArrayList<Pasajero>> aux = new TreeMap<>();
         for (Vuelo lis : listaVuelos) {
@@ -49,22 +48,4 @@ public class Aeropuerto {
         return aux;
     }
 
-//    private static Map<Vuelo, Integer> mapeado(ArrayList<Vuelo> listaVuelos) {
-//        Map<Vuelo, Integer> listaPasajeros = new HashMap<>();
-//        for (int i = 0; i < listaVuelos.size(); i++) {
-//
-//        }
-//        return listaPasajeros;
-//    }
-//
-//    private static int getPasajeros(String codigo, ArrayList<Vuelo> listaVuelos) {
-//
-//        for (int i = 0; i < listaVuelos.size(); i++) {
-//            if (listaVuelos.get(i).getCodVuelo().equalsIgnoreCase(codigo)) {
-//                return listaVuelos.get(i).getUsuarios().size();
-//            }
-//
-//        }
-//        return 0;
-//    }
 }
