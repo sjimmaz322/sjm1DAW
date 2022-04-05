@@ -18,12 +18,14 @@ public class Aeropuerto {
         v1.getUsuarios().add(new Pasajero("Turista", "P2", "p2", new Nif("002")));
         v1.getUsuarios().add(new Pasajero("Turista", "P3", "p3", new Nif("003")));
         v1.getUsuarios().add(new Pasajero("Turista", "P4", "p4", new Nif("004")));
-        v1.getUsuarios().add(new Pasajero("Turista", "P5", "p5", new Nif("005")));        
+        v1.getUsuarios().add(new Pasajero("Turista", "P5", "p5", new Nif("005")));
         
-        System.out.println("El avión 00004 tiene: " + numeroPasajeros("00004", listaVuelos) + " pasajeros");
+        listaVuelos.add(v1);
+        
+        System.out.println(Aeropuerto.listaDestinos(listaVuelos));
     
     }
-        private static HashMap<String, Integer> devuelvePasajeros(ArrayList<Vuelo> listaVuelos) {
+        private static HashMap<String, Integer> listaDestinos(ArrayList<Vuelo> listaVuelos) {
         HashMap<String, Integer> listaPasajeros = new HashMap<>();
             for (Vuelo listaVuelo : listaVuelos) {
                 listaPasajeros.put(listaVuelo.getCiudadDestino(), listaVuelo.getUsuarios().size());
