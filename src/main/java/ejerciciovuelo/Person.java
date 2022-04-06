@@ -46,7 +46,7 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "\nDatos:\nNombre: " + nombre + "\nApellidos: " + apellidos + "\nDNI: " + dni + "\n";
+        return "\nDatos:\nNombre: " + nombre + "\nApellidos: " + apellidos + "\nDNI: " + dni;
     }
 
 }
