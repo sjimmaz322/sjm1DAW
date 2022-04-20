@@ -38,11 +38,10 @@ public class Ejercicio5 {
                     total += Integer.parseInt(string);
                 }
                 System.out.println();
-                System.out.println("El total de la fila " + contador + " es de: " + total);
-                total = 0;
                 contador++;
 
             }
+            System.out.println("El total es de: " + total);
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
