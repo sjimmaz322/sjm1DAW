@@ -1,4 +1,6 @@
 package archivos;
+
+
 /*
 Usando la clase Vehículo, implementa un programa que realice lo siguiente:
 Crea 30 vehículos (10 Turismos, 10 Deportivos y 10 Furgonetas) con valores de tu elección y guárdalos en una lista de objetos tipo Vehiculo.
@@ -11,7 +13,7 @@ Cada vehículo irá en una línea distinta del fichero.
 public class Ejercicio4 {
    
     public static void main(String[] args) {
-      
+       
     }
     
 }

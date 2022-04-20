@@ -4,7 +4,6 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
-import java.util.Scanner;
 
 /*
 Implementa un programa que guarde exactamente 75 líneas de texto en un fichero,cuyo nombre se deja a tu elección.
@@ -15,7 +14,6 @@ Posibles ejemplos de líneas generadas:
 	a;C;T;B;D;s;u;i;w;g
 	Q;w;e;r;t;y;S;H;J;K;G
 	….
-
  */
 public class Ejercicio3 {
 
@@ -23,7 +21,6 @@ public class Ejercicio3 {
 
         String idFichero = "lineas.txt"; //Creamos el fichero.
         char tmp; //Creamos una variable auxiliar para ayudarnos en la escritura
-        int contador = 0;
         int aux;
         Random rd = new Random();
 
@@ -40,10 +37,12 @@ public class Ejercicio3 {
                     flujo.write(temp + ";");
                     i--;
                 }
-            }
+                flujo.flush();
+                }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        
 
     }
 

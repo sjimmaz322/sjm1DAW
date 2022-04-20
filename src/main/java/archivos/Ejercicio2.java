@@ -38,23 +38,3 @@ public class Ejercicio2 {
     }
 }
 
-//        BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero));
-//        do {
-//            try {
-//                System.out.println("Introduzca lo que desea");
-//                tmp = sc.nextLine();
-//
-//                if (!sc.hasNext("EOF")) {
-//                }
-//                flujo.write(tmp + "\t");
-//                flujo.flush();
-//
-//                System.out.println("Fichero " + idFichero + " creado correctamente.");
-//            } catch (IOException e) {
-//                System.out.println(e.getMessage());
-//            }
-//            // Metodo fluh() guarda cambios en disco 
-//
-//        } while (!sc.hasNext("EOF"));
-//
-//    }
