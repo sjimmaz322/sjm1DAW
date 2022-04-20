@@ -30,8 +30,8 @@ public class Ejercicio6 {
 
                 for (String string : tokens) {
                     System.out.print(string);
-                if(string.toLowerCase().contains("web")){
-                    pos = string.indexOf("web");
+                if(string.contains("web")){
+                    System.out.println(string.contains("web"));
                 }
                 }
                 System.out.println();
