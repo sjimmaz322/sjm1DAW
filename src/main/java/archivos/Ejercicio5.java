@@ -17,7 +17,6 @@ public class Ejercicio5 {
         // Variables para guardar los datos que se van leyendo
         String[] tokens;
         String linea;
-        int contador = 1;
         int total = 0;
 
         System.out.println("Leyendo el fichero: " + idFichero);
@@ -38,7 +37,6 @@ public class Ejercicio5 {
                     total += Integer.parseInt(string);
                 }
                 System.out.println();
-                contador++;
 
             }
             System.out.println("El total es de: " + total);

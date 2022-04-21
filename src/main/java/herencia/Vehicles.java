@@ -7,72 +7,100 @@ import java.util.Random;
  * @author samjimmaz
  */
 public class Vehicles {
-    //Atributos
+  private Long bastidor;
+    private String matricula;
+    private String marca;
+    private String modelo;
+    private String color;
+    private double tarifa;
+    private boolean disponible;
 
-    String matricula;
-    double tarifa;
-    boolean disponible;
-    String marca;
-    String modelo;
-    String color;
-    String asientos;
+    public Vehicles(Long bastidor, String matricula, String marca, String modelo, String color, double tarifa) {
+        this.bastidor = bastidor;
+        this.matricula = matricula;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+        this.tarifa = tarifa;
+        this.disponible = false;
+    }
 
-    //Añadir random para recoger un valor de i de los arrays
-    private static Random rd = new Random();
-    //Generar las arrays de las cuales coger los datos
-    private static String[] marcas = {"VolksWagen", "Dacia", "Seat", "Opel", "Mercedez", "Nisan", "Renault", "KIA"};
-    private static String[] plazas = {"2", "3", "4", "5", "6", "7"};
-    private static String[] colores = {"Negro", "Blanco", "Gris", "Azul", "Verde", "Rojo", "Amarillo", "Rosa"};
-    private static String[] modelos = {"SUV", "Familiar", "Todoterreno", "Deportivo", "Berlina", "Compacto"};
-
-    // El método constructor de la clase Vehiculo 
     public Vehicles() {
+    }
+    
 
-        this.matricula = matricula.valueOf(rd.nextInt(9999) + 1);
-        this.marca = marcas[rd.nextInt(marcas.length)];
-        this.asientos = plazas[rd.nextInt(plazas.length)];
-        this.color = colores[rd.nextInt(colores.length)];
-        this.modelo = modelos[rd.nextInt(modelos.length)];
-        this.tarifa = 100.0;
-        this.disponible = true;
+    public Long getBastidor() {
+        return bastidor;
+    }
+
+    public void setBastidor(Long bastidor) {
+        this.bastidor = bastidor;
     }
 
     public String getMatricula() {
-        return this.matricula;
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public String getMarca() {
-        return this.marca;
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public String getModelo() {
-        return this.modelo;
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     public String getColor() {
-        return this.color;
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public double getTarifa() {
-        return this.tarifa;
-    }
-
-    public boolean getDisponible() {
-        return this.disponible;
+        return tarifa;
     }
 
     public void setTarifa(double tarifa) {
         this.tarifa = tarifa;
     }
 
+    public boolean isDisponible() {
+        return disponible;
+    }
+
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
 
+
     public String getAtributos() {
-        String atributos = ("Matrícula: " + this.matricula + "\nMarca: " + this.marca + "\nModelo: " + this.modelo
-                + "\nPlazas: " + this.asientos + "\nColor: " + this.color);
-        return atributos;
+
+        String atributosSuperClase;
+
+        // Llamada al método getAtributos() de la clase Vehiculo
+        atributosSuperClase =  bastidor + ";" + matricula + ";" + marca + ";" + modelo + ";" + color + ";" + tarifa + ";" + disponible;
+
+        // Ahora concateno los atributos de la superclase con los de la subclase
+        return atributosSuperClase;
     }
+
+    @Override
+    public String toString() {
+        return  bastidor + ":" + matricula + ":" + marca + ":" + modelo + ":" + color + ":" + tarifa + ":" + disponible;
+    }
+    
 
 }

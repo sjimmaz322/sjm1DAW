@@ -11,34 +11,47 @@ import java.util.Random;
  * @author samjimmaz
  */
 public class Furgoneta extends Vehicles{
-     Random rd = new Random();
-    private int capacidad, volumen;
+      // Atributos específicos
+
+    private int carga;
+    private int volumen;
+
+    public Furgoneta(Long bastidor, String matricula, String marca, String modelo, String color, double tarifa, int carga, int volumen) {
+        super(bastidor, matricula, marca, modelo, color, tarifa); // Constructor padre
+        this.carga = carga;
+        this.volumen = volumen;
+    }
 
     public Furgoneta() {
-        this.capacidad = rd.nextInt(3500-1000)+1000 + 1;
-        this.volumen = rd.nextInt(16-2)+2+1;
-      
     }
+    
+// métodos ‘get’ de la subclase Furgoneta. Se omiten setters
 
-    @Override
-    public String getAtributos() {
-
-        String atributosSuperClase;
-
-        // Llamada al método getAtributos() de la clase Vehiculo
-        atributosSuperClase = super.getAtributos();
-
-        // Ahora concateno los atributos de la superclase con los de la subclase
-        return atributosSuperClase + "\nCapacidad de carga: " + this.capacidad+" kg.\nCapacidad en volumen: "+this.volumen+" m3";
-    }
-
-    public int getCapacidad() {
-        return capacidad;
+    public int getCarga() {
+        return this.carga;
     }
 
     public int getVolumen() {
-        return volumen;
+        return this.volumen;
     }
 
+    public void setCarga(int carga) {
+        this.carga = carga;
+    }
+
+    public void setVolumen(int volumen) {
+        this.volumen = volumen;
+    }
     
+
+    @Override
+    public String getAtributos() {
+        return "2-" + super.getAtributos() + "; " + this.carga + "; " + this.volumen;
+    }
+
+    @Override
+    public String toString() {
+        return "2:" + super.toString() + ":" + carga + ":" + volumen;
+    }
+
 }

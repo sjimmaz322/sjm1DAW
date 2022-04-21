@@ -11,28 +11,36 @@ import java.util.Random;
  * @author samjimmaz
  */
 public class Deportivo extends Vehicles{
-    Random rd = new Random();
-    private int cilindrada;
+  private int cilindrada; // Atributo específico para Deportivo
+
+    public Deportivo(Long bastidor, String matricula, String marca, String modelo, String color, double tarifa, int cilindrada) {
+        super(bastidor, matricula, marca, modelo, color, tarifa); // Constructor padre
+        this.cilindrada = cilindrada;
+    }
+// métodos ‘get’ de la subclase Deportivo. Se omiten setters 
 
     public Deportivo() {
-        this.cilindrada = rd.nextInt(2000-500)+500 + 1;
+    }
+
+    
+
+    public void setCilindrada(int cilindrada) {
+        this.cilindrada = cilindrada;
+    }
+    
+
+    public int getCilindrada() {
+        return this.cilindrada;
+    }
+    
+    @Override
+    public String getAtributos() {
+        return "1-" + super.getAtributos() + "; " + this.cilindrada;
     }
 
     @Override
-    public String getAtributos() {
-
-        String atributosSuperClase;
-
-        // Llamada al método getAtributos() de la clase Vehiculo
-        atributosSuperClase = super.getAtributos();
-
-        // Ahora concateno los atributos de la superclase con los de la subclase
-        return atributosSuperClase + "\nCilindrada: " + this.cilindrada+" cc";
+    public String toString() {
+        return "1:" + super.toString() + ":" + cilindrada;
     }
-
-    public int getCilindrada() {
-        return cilindrada;
-    }
-
 
 }
