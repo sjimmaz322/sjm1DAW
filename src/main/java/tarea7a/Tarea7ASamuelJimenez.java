@@ -1,23 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
 package tarea7a;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author samjimmaz
+/*
+
  */
 public class Tarea7ASamuelJimenez {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
         // Fichero a leer con datos de ejemplo
         String idFichero = "RelPerCen.csv";
@@ -26,15 +25,17 @@ public class Tarea7ASamuelJimenez {
         String[] tokens;
         String linea;
 
+        //Creamos las listas para contener los profesores requeridos
         ArrayList<Profesor> listaProfesores = new ArrayList<>();
+        ArrayList<Profesor> profesoresVeteranos = new ArrayList<>();
 
-        System.out.println("Leyendo el fichero: " + idFichero);
+        System.out.println("Leyendo el fichero: " + idFichero);//Sout puramente estético
 
-        try ( Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {
-            datosFichero.nextLine();
-            while (datosFichero.hasNextLine()) {
+        try (Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {//Try-with-resourcer para leer el documento con Scanner
+            datosFichero.nextLine();//Nos saltamos la primera linea que no nos interesa
+            while (datosFichero.hasNextLine()) {//Mientras sigua habiendo lineas se ejecutará, necesario para recorrer todo el documento
 
-                linea = datosFichero.nextLine();
+                linea = datosFichero.nextLine();//Guardamos el espacio de memoria para la información
 
                 // Se guarda en el array de String cada elemento de la
                 // línea en función del carácter separador coma
@@ -48,7 +49,7 @@ public class Tarea7ASamuelJimenez {
                 String inicio = descomillar(tokens[4]);
                 p1.setFechInicio(LocalDate.parse(inicio, DateTimeFormatter.ofPattern("dd/MM/yyyy")));
 
-                String fin = descomillar(tokens[5]);
+                String fin = descomillar(tokens[5]);//Si no hay fecha de finalización usamos la fecha actual
                 if (fin.length() <= 0) {
                     p1.setFechFin(LocalDate.now());
                 } else {
@@ -67,12 +68,45 @@ public class Tarea7ASamuelJimenez {
         }
 
         //Una vez tenemos la lista completa, la imprimimos
-        for (int i = 0; i < listaProfesores.size(); i++) {
-            System.out.println(listaProfesores.get(i).toString());
-            System.out.println("\n");
-
+//        for (int i = 0; i < listaProfesores.size(); i++) {
+//            System.out.println(listaProfesores.get(i).toString());
+//            System.out.println("\n");
+//
+//        }
+        //Añadimos los profesores que lleven trabajando más de 100 dias con ChronoUnit
+        for (Profesor prof : listaProfesores) {
+            if (ChronoUnit.DAYS.between(prof.getFechInicio(), prof.getFechFin()) > 100) {
+                profesoresVeteranos.add(prof);
+            }
         }
+        //Comprobamos que la criba ha funcionado
+//        for (int i = 0; i < profesoresVeteranos.size(); i++) {
+//            System.out.println(profesoresVeteranos.get(i).toString());
+//            System.out.println("\n");
+//
+//        }
+        //Comprobamos que no hemos copiado dos veces la misma lista
+//        System.out.println(listaProfesores.size());
+//        System.out.println(profesoresVeteranos.size());
 
+        String idFichero2 = "listadoVeteranos.csv"; //Creamos el fichero.
+
+        try (BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
+            flujo.write("Nombre\tDNI\tPuesto\tFecha de Toma\tFecha de Cese\tTeléfono\tEvaluador\tCoodinador");
+            flujo.newLine();
+            
+            for (Profesor profesor : profesoresVeteranos) {
+                flujo.write(profesor.toString());
+                flujo.newLine();
+
+            }
+
+            // Metodo fluh() guarda cambios en disco 
+            flujo.flush();
+            System.out.println("Fichero " + idFichero2 + " creado correctamente.");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     private static String descomillar(String s) {//Método para quitar comillas, equivalente a trim (?)
