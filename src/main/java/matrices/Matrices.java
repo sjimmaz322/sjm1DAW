@@ -1,5 +1,6 @@
 package matrices;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -43,6 +44,28 @@ public class Matrices {
         for (int i = 0; i < aux.length; i++) {
             for (int j = 0; j < aux[i].length; j++) {
                 aux[i][j] = rd.nextInt(100) + 1;
+            }
+        }
+    }
+    public static void rellenarMatriz(int[][] aux) {
+        Scanner sc = new Scanner(System.in);
+        int relleno = 0;
+        boolean correcto = true;
+        do{
+            try{
+        relleno = sc.nextInt();
+            }catch (InputMismatchException ime){
+                System.out.println("Introduzca un número del 1 al 9");
+                correcto = false;
+            }
+        if (relleno >0 && relleno<10){
+            correcto = true;
+        }
+        }while (!correcto);
+        for (int i = 0; i < aux.length; i++) {
+            for (int j = 0; j < aux[i].length; j++) {
+                aux[i][j] = relleno;
+                sc.nextLine();
             }
         }
     }
