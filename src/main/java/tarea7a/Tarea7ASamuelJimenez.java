@@ -32,6 +32,8 @@ public class Tarea7ASamuelJimenez {
         ArrayList<Profesor> listaProfesores = new ArrayList<>();
         ArrayList<Profesor> profesoresVeteranos = new ArrayList<>();
 
+        Map<String, Integer> listaDept = new HashMap();
+        
         System.out.println("Leyendo el fichero: " + idFichero);//Sout puramente estético
 
         try (Scanner datosFichero = new Scanner(new File(idFichero), "ISO-8859-1")) {//Try-with-resourcer para leer el documento con Scanner
@@ -110,6 +112,10 @@ public class Tarea7ASamuelJimenez {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        
+        listaDept = mapear(listaProfesores);
+        
+        System.out.println(listaDept+"\n");
     }
 
     private static String descomillar(String s) {//Método para quitar comillas, equivalente a trim (?)
@@ -117,21 +123,21 @@ public class Tarea7ASamuelJimenez {
         return quitar;
     }
 
-//    private static Map<String, Integer> mapear(ArrayList<Profesor> listaProfesores) {
-//        Map<String, Integer> listadoDepartamentos = new HashMap();
-//        int contadorDepartamento = 1;
-//        for (Profesor profesor : listaProfesores) {
-//            if (listadoDepartamentos.containsKey(profesor.getPuesto())) {
-//                contadorDepartamento++;
-//                listadoDepartamentos.put(profesor.getPuesto(), contadorDepartamento);
-//            } else {
-//                contadorDepartamento = 1;
-//                listadoDepartamentos.put(profesor.getPuesto(), contadorDepartamento);
-//
-//            }
-//        }
-//
-//        return listadoDepartamentos;
-//
-//    }
+    private static Map<String, Integer> mapear(ArrayList<Profesor> listaProfesores) {
+        Map<String, Integer> listadoDepartamentos = new HashMap();
+        int contadorDepartamento = 1;
+        for (Profesor profesor : listaProfesores) {
+            if (listadoDepartamentos.containsKey(profesor.getPuesto())) {
+                contadorDepartamento++;
+                listadoDepartamentos.put(profesor.getPuesto(), contadorDepartamento);
+            } else {
+                contadorDepartamento = 1;
+                listadoDepartamentos.put(profesor.getPuesto(), contadorDepartamento);
+
+            }
+        }
+
+        return listadoDepartamentos;
+
+    }
 }

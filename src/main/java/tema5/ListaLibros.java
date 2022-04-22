@@ -80,6 +80,26 @@ public class ListaLibros {
         Collections.sort(this.lista);
     }
 
+    public void ordenarISBNComparator() {//Creada clase comparator e implementada como objeto
+        Collections.sort(lista, new ComparadorISBN());
+    }
+
+    public void ordenarNombreComparator() {
+        Collections.sort(lista, new ComparadorNombre());
+    }
+
+    public void ordenarPorNombreClaseInterna() {//Implementado un método dentro de un método para el comparator, crea un objeto temporal
+        //al dejar de usarse, desaparece el objeto creado, liberando memoria
+        Collections.sort(lista, new Comparator<Libros>() {
+            @Override
+            public int compare(Libros t, Libros t1) {
+
+                return t.getNombre().compareTo(t1.getNombre());
+            }
+
+        });
+    }
+
     // Búsqueda binaria de un objeto según la ordenación natural
     // binarySearch no funciona con una lista no ordenada
     public int buscarISBN(Libros l) {
@@ -93,19 +113,19 @@ public class ListaLibros {
 
     public void ordenarComparatorNumPags() {
         Collections.sort(lista, (Libros l1, Libros l2) -> l1.getNumPags() - l2.getNumPags());
-        Collections.sort(lista, (Libros l1, Libros l2)-> Integer.compare(l1.getNumPags(), l1.getNumPags()));
+        Collections.sort(lista, (Libros l1, Libros l2) -> Integer.compare(l1.getNumPags(), l1.getNumPags()));
     }
-    
-    public void ordenarNombrePags(){//Criterios concatenados
-        Comparator<Libros> criterioNombre = (l1,l2) -> l1.getNombre().compareTo(l2.getNombre());
+
+    public void ordenarNombrePags() {//Criterios concatenados
+        Comparator<Libros> criterioNombre = (l1, l2) -> l1.getNombre().compareTo(l2.getNombre());
         Comparator<Libros> criterioPaginas = (l1, l2) -> l1.getNumPags() - l2.getNumPags();
         Comparator<Libros> criterioNombreYPaginas = criterioNombre.thenComparing(criterioPaginas);
         Collections.sort(lista, criterioNombreYPaginas);
     }
-    
-    public int buscarBynaryNombre(Libros l){
+
+    public int buscarBynaryNombre(Libros l) {
         //La lista debe estar ordenada según el criterio que se pasa a este método (nombre en este caso)
-        return Collections.binarySearch(lista, l, (l1,l2) -> l1.getNombre().compareTo(l2.getNombre()));
+        return Collections.binarySearch(lista, l, (l1, l2) -> l1.getNombre().compareTo(l2.getNombre()));
     }
 
 }
