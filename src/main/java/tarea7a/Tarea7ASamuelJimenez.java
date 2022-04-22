@@ -15,7 +15,8 @@ import java.util.Scanner;
 
 /*
 
- */
+*/
+
 public class Tarea7ASamuelJimenez {
 
     public static void main(String[] args) {
