@@ -92,24 +92,24 @@ public class Tarea7ASamuelJimenez {
 //        System.out.println(listaProfesores.size());
 //        System.out.println(profesoresVeteranos.size());
 
-        String idFichero2 = "listadoVeteranos.csv"; //Creamos el fichero.
-
-        try (BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
-            flujo.write("Nombre\tDNI\tPuesto\tFecha de Toma\tFecha de Cese\tTeléfono\tEvaluador\tCoodinador");
-            flujo.newLine();
-
-            for (Profesor profesor : profesoresVeteranos) {
-                flujo.write(profesor.toString());
-                flujo.newLine();
-
-            }
-
-            // Metodo fluh() guarda cambios en disco 
-            flujo.flush();
-            System.out.println("Fichero " + idFichero2 + " creado correctamente.");
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+//        String idFichero2 = "listadoVeteranos.csv"; //Creamos el fichero.
+//
+//        try (BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
+//            flujo.write("Nombre\tDNI\tPuesto\tFecha de Toma\tFecha de Cese\tTeléfono\tEvaluador\tCoodinador");
+//            flujo.newLine();
+//
+//            for (Profesor profesor : profesoresVeteranos) {
+//                flujo.write(profesor.toString());
+//                flujo.newLine();
+//
+//            }
+//
+//            // Metodo fluh() guarda cambios en disco 
+//            flujo.flush();
+//            System.out.println("Fichero " + idFichero2 + " creado correctamente.");
+//        } catch (IOException e) {
+//            System.out.println(e.getMessage());
+//        }
     }
 
     private static String descomillar(String s) {//Método para quitar comillas, equivalente a trim (?)
@@ -117,21 +117,21 @@ public class Tarea7ASamuelJimenez {
         return quitar;
     }
 
-    private static Map<String, Integer> mapear(ArrayList<Profesor> listaProfesores) {
-        Map<String, Integer> listadoDepartamentos = new HashMap();
-        int contadorDepartamento = 1;
-        for (Profesor profesor : listaProfesores) {
-            if (listadoDepartamentos.containsKey(profesor.getPuesto())) {
-                contadorDepartamento++;
-                listadoDepartamentos.put(profesor.getPuesto(), contadorDepartamento);
-            } else {
-                contadorDepartamento = 1;
-                listadoDepartamentos.put(profesor.getPuesto(), contadorDepartamento);
-
-            }
-        }
-
-        return listadoDepartamentos;
-
-    }
+//    private static Map<String, Integer> mapear(ArrayList<Profesor> listaProfesores) {
+//        Map<String, Integer> listadoDepartamentos = new HashMap();
+//        int contadorDepartamento = 1;
+//        for (Profesor profesor : listaProfesores) {
+//            if (listadoDepartamentos.containsKey(profesor.getPuesto())) {
+//                contadorDepartamento++;
+//                listadoDepartamentos.put(profesor.getPuesto(), contadorDepartamento);
+//            } else {
+//                contadorDepartamento = 1;
+//                listadoDepartamentos.put(profesor.getPuesto(), contadorDepartamento);
+//
+//            }
+//        }
+//
+//        return listadoDepartamentos;
+//
+//    }
 }
