@@ -98,42 +98,13 @@ public class Ejercicio9 {
 
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
 
-            for (int i = 0; i < listaFurgoneta.size(); i++) {
-                flujo.write(listaFurgoneta.get(i).toString());
+            for (Furgoneta fur : listaFurgoneta) {
+                flujo.write(fur.toString());
                 flujo.newLine();
-
             }
             // Metodo flush() guarda cambios en disco 
             flujo.flush();
             System.out.println("Fichero " + idFichero2 + " creado correctamente.");
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-        
-        try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero3))) {
-
-            for (int i = 0; i < listaTurismo.size(); i++) {
-                flujo.write(listaTurismo.get(i).toString());
-                flujo.newLine();
-
-            }
-            // Metodo flush() guarda cambios en disco 
-            flujo.flush();
-            System.out.println("Fichero " + idFichero3 + " creado correctamente.");
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-        
-        try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero4))) {
-
-            for (int i = 0; i < listaDeportivo.size(); i++) {
-                flujo.write(listaDeportivo.get(i).toString());
-                flujo.newLine();
-
-            }
-            // Metodo flush() guarda cambios en disco 
-            flujo.flush();
-            System.out.println("Fichero " + idFichero4 + " creado correctamente.");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
