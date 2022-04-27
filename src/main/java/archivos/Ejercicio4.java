@@ -23,22 +23,23 @@ public class Ejercicio4 {
 
     public static void main(String[] args) {
    // Fichero a crear. Ruta relativa a la carpeta raíz del proyecto
-        String idFichero = "coches.txt";
+        String idFichero = "vehicle.txt";
         String idFichero2 = "turismo.dat";
         String idFichero3 = "deportivo.dat";
         String idFichero4 = "furgoneta.dat";
         ArrayList<Vehicles> lista = new ArrayList();
+        
         //Turismos
-        lista.add(new Turismo(345674L, "4060 TUR", "Skoda", "Fabia", "Blanco", 90.0, 2, false));
-        lista.add(new Turismo(345674L, "4060 TUR", "Seat", "Leon", "Negro", 90.0, 2, false));
-        lista.add(new Turismo(345674L, "4060 TUR", "Skoda", "Fabia", "Dorado", 90.0, 2, false));
-        lista.add(new Turismo(345674L, "4060 TUR", "Seat", "Ibiza", "Blanco", 90.0, 2, false));
-        lista.add(new Turismo(345674L, "4062 TUR", "Porshe", "Panamera", "Negro", 90.0, 2, false));
-        lista.add(new Turismo(345674L, "4067 TUR", "Seat", "Leon", "Blanco", 90.0, 2, false));
-        lista.add(new Turismo(345674L, "4068 TUR", "Seat", "Ibiza", "Blanco", 90.0, 2, false));
-        lista.add(new Turismo(345674L, "4061 TUR", "Skoda", "Fabia", "Blanco", 90.0, 2, false));
-        lista.add(new Turismo(345674L, "4063 TUR", "Skoda", "Fabia", "Blanco", 90.0, 2, false));
-        lista.add(new Turismo(345674L, "4060 TUR", "Porshe", "Panamera", "Blanco", 90.0, 2, false));
+        lista.add(new Turismo(345674L, "4060 TUR", "Skoda", "Fabia", "Blanco", 90.0, 2));
+        lista.add(new Turismo(345674L, "4060 TUR", "Seat", "Leon", "Negro", 90.0, 2));
+        lista.add(new Turismo(345674L, "4060 TUR", "Skoda", "Fabia", "Dorado", 90.0, 2));
+        lista.add(new Turismo(345674L, "4060 TUR", "Seat", "Ibiza", "Blanco", 90.0, 2));
+        lista.add(new Turismo(345674L, "4062 TUR", "Porshe", "Panamera", "Negro", 90.0, 2));
+        lista.add(new Turismo(345674L, "4067 TUR", "Seat", "Leon", "Blanco", 90.0, 2));
+        lista.add(new Turismo(345674L, "4068 TUR", "Seat", "Ibiza", "Blanco", 90.0, 2));
+        lista.add(new Turismo(345674L, "4061 TUR", "Skoda", "Fabia", "Blanco", 90.0, 2));
+        lista.add(new Turismo(345674L, "4063 TUR", "Skoda", "Fabia", "Blanco", 90.0, 2));
+        lista.add(new Turismo(345674L, "4060 TUR", "Porshe", "Panamera", "Blanco", 90.0, 2));
 
         //Deportivos
         lista.add(new Deportivo(78654L, "4070 DEP", "Ford", "Mustang", "Rojo", 150.0, 2000));
@@ -67,7 +68,7 @@ public class Ejercicio4 {
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero))) {
 
             for (int i = 0; i < lista.size(); i++) {
-                flujo.write(lista.get(i).toString() + ";");
+                flujo.write(lista.get(i).toString());
                 flujo.newLine();
             }
             // Metodo flush() guarda cambios en disco 
@@ -76,10 +77,11 @@ public class Ejercicio4 {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        //De aquí para abajo es el ejercicio 8 porque soy mu tonto
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero2))) {
 
             for (int i = 0; i < 10; i++) {
-                flujo.write(lista.get(i).toString() + ";");
+                flujo.write(lista.get(i).toString());
                 flujo.newLine();
             }
             // Metodo flush() guarda cambios en disco 
@@ -91,7 +93,7 @@ public class Ejercicio4 {
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero3))) {
 
             for (int i = 10; i < 20; i++) {
-                flujo.write(lista.get(i).toString() + ";");
+                flujo.write(lista.get(i).toString());
                 flujo.newLine();
             }
             // Metodo flush() guarda cambios en disco 
@@ -103,7 +105,7 @@ public class Ejercicio4 {
         try ( BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero4))) {
 
             for (int i = 20; i < 30; i++) {
-                flujo.write(lista.get(i).toString() + ";");
+                flujo.write(lista.get(i).toString());
                 flujo.newLine();
             }
             // Metodo flush() guarda cambios en disco 

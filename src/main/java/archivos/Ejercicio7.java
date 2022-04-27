@@ -14,6 +14,9 @@ public class Ejercicio7 {
     public static void main(String[] args) {
         // Fichero a leer con datos de ejemplo
         String idFichero = "coches.txt";
+        String idFichero2 = "turismo.cvs";
+        String idFichero3 = "deportivo.cvs";
+        String idFichero4 = "furgoneta.cvs";
 
         // Variables para guardar los datos que se van leyendo
         String[] tokens;
@@ -44,7 +47,9 @@ public class Ejercicio7 {
                 tokens = linea.split(":");
 
                 switch (Integer.parseInt(tokens[0])) {
+                    
                     case 0:
+                        
                         Turismo t1 = new Turismo();
                         t1.setBastidor(Long.parseLong(tokens[1]));
                         t1.setMatricula(tokens[2]);

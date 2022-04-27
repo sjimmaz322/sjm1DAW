@@ -13,7 +13,7 @@ public class Turismo extends Vehicles {
     // El constructor tiene como parametros todos los atributos necesarios para
     // poder inicializar los atributos de Vehiculo y Turismo
 
-    public Turismo(Long bastidor, String matricula, String marca, String modelo, String color, double tarifa, int puertas, boolean marchaAutomatica) {
+    public Turismo(Long bastidor, String matricula, String marca, String modelo, String color, double tarifa, int puertas) {
 
         // Llamada al constructor de la superclase
         // con los atributos propios de Vehiculo
