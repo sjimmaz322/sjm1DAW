@@ -40,7 +40,7 @@ public class Deportivo extends Vehicles{
 
     @Override
     public String toString() {
-        return "1:" + super.toString() + ":" + cilindrada;
+        return  super.toString() + ";" + cilindrada;
     }
 
 }

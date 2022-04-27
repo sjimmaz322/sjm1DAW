@@ -25,9 +25,7 @@ public class Ejercicio9 {
     public static void main(String[] args) {
         // Fichero a leer con datos de ejemplo
         String idFichero = "vehicle.txt";
-        String idFichero3 = "turismo.cvs";
-        String idFichero4 = "deportivo.cvs";
-        String idFichero2 = "furgoneta.cvs";
+        String idFichero2 = "furgoneta.csv";
 
         // Variables para guardar los datos que se van leyendo
         String[] tokens;
@@ -45,7 +43,7 @@ public class Ejercicio9 {
                 linea = datosFichero.nextLine();//Guardamos el espacio de memoria para la información
                 // Se guarda en el array de String cada elemento de la
                 // línea en función del carácter separador dos puntos
-                tokens = linea.split(":");
+                tokens = linea.split(";");
 
                 switch (Integer.parseInt(tokens[0])) {
 

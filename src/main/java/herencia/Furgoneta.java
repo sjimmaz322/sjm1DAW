@@ -51,7 +51,7 @@ public class Furgoneta extends Vehicles{
 
     @Override
     public String toString() {
-        return "2:" + super.toString() + ":" + carga + ":" + volumen;
+        return super.toString() + ";" + carga + ";" + volumen;
     }
 
 }

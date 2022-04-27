@@ -99,7 +99,7 @@ public class Vehicles {
 
     @Override
     public String toString() {
-        return  bastidor + ":" + matricula + ":" + marca + ":" + modelo + ":" + color + ":" + tarifa + ":" + disponible;
+        return  bastidor + ";" + matricula + ";" + marca + ";" + modelo + ";" + color + ";" + tarifa + ";" + disponible;
     }
     
 
