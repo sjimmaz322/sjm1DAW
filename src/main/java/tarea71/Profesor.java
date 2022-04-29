@@ -1,4 +1,4 @@
-package practica71;
+package tarea71;
 
 import java.time.LocalDate;
 
