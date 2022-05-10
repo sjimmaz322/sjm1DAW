@@ -29,12 +29,13 @@ public class Tarea7C {
                 
                 Registro r = new Registro();
                 
-                r.setCurso (descomillar(tokens[1].trim()));
-                r.setIniciales(descomillar(tokens[2].trim()));
-                r.setAsignatura(descomillar(tokens[3].trim()));
-                r.setAula(descomillar(tokens[4].trim()));
-                r.setDia(Integer.valueOf(tokens[5]));
-                r.setHora(Integer.valueOf(tokens[6]));
+
+                r.setCurso(tokens[1].replaceAll("\"", "").replaceAll(" ", ""));
+                r.setIniciales(tokens[2].replaceAll("\"", "").replaceAll(" ", ""));
+                r.setAsignatura(tokens[3].replaceAll("\"", "").replaceAll(" ", ""));
+                r.setAula(tokens[4].replaceAll("\"", "").replaceAll(" ", ""));
+                r.setDia(Integer.parseInt(tokens[5]));
+                r.setHora(Integer.parseInt(tokens[6]));
                 
 
                 listaRegistros.add(r);
@@ -43,11 +44,6 @@ public class Tarea7C {
             System.out.println(e.getMessage());
         }
 
-        System.out.println(listaRegistros.get(0));
-    }
-
-    private static String descomillar(String s) {//Método para quitar comillas, equivalente a trim (?)
-        String quitar = s.substring(1, s.length() - 1);
-        return quitar;
+        System.out.println(listaRegistros.get(1));
     }
 }

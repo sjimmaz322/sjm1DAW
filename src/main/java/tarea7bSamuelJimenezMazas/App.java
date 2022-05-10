@@ -19,9 +19,9 @@ public class App {
         this.codigo = contador++;
         this.nombre = "app" + String.valueOf(codigo) + letra[rd.nextInt(26)];
         this.descripcion = descripciones[rd.nextInt(10)];
-        DoubleStream doubles = rd.doubles(1, 100.0, 1024.0);
+        DoubleStream doubles = rd.doubles(1, 100.0, 1024.1);
         this.tamanio = doubles.max().getAsDouble();
-        IntStream ints = rd.ints(1, 0, 50000);
+        IntStream ints = rd.ints(1, 0, 50001);
         this.numDescargas = ints.max().getAsInt();
 
     }
@@ -68,10 +68,6 @@ public class App {
 
     public int getContador() {
         return contador;
-    }
-
-    public void setContador(int contador) {
-        this.contador = contador;
     }
 
     public String[] getLetra() {
