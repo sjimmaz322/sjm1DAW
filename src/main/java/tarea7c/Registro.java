@@ -25,7 +25,6 @@ public class Registro implements Serializable{
         this.dia = 0;
         this.hora = 0;
     }
-    
 
     public String getCurso() {
         return curso;
@@ -77,7 +76,7 @@ public class Registro implements Serializable{
 
     @Override
     public String toString() {
-        return "curso=" + curso + ", iniciales=" + iniciales + ", asignatura=" + asignatura + ", aula=" + aula + ", dia=" + dia + ", hora=" + hora;
+        return "Registro{" + "curso=" + curso + ", iniciales=" + iniciales + ", asignatura=" + asignatura + ", aula=" + aula + ", dia=" + dia + ", hora=" + hora + '}';
     }
-    
+
 }
