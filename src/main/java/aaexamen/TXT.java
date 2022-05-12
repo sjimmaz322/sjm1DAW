@@ -20,8 +20,8 @@ public class TXT {
 
         try (BufferedWriter flujo = new BufferedWriter(new FileWriter(idFichero))) {
 
-            for (Object app : lista) {
-                flujo.write(app.toString());
+            for (Object obj : lista) {
+                flujo.write(obj.toString());
                 flujo.newLine();
             }
             //Llamada -explicita- para que se guarde lo que se llama en el disco

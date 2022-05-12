@@ -16,10 +16,10 @@ import java.util.ArrayList;
  * @author Mapacherben
  */
 public class XML {
-    public static void generarFicheroXML(ArrayList<Object> listaApp, String idFichero) throws JAXBException {
+    public static void generarFicheroXML(ArrayList<Object> listaObj, String idFichero) throws JAXBException {
 
         CatalogoAplicaciones catalogo = new CatalogoAplicaciones();
-        catalogo.setLista(listaApp);
+        catalogo.setLista(listaObj);
 
         // Crea el contexto JAXB. Se encarga de definir los objetos
         // que vamos a guardar, que será el objeto catalogo de la
