@@ -114,14 +114,14 @@ private Connection con = null;
         int numFilas = 0;
 
         for (UsuarioVO tmp : lista) {
-            numFilas += insertPersona(tmp);
+            numFilas += insertUsuario(tmp);
         }
 
         return numFilas;
     }
 
     @Override
-    public int deletePersona() throws SQLException {
+    public int deleteUsuario() throws SQLException {
 
         String sql = "delete from persona";
 
@@ -140,7 +140,7 @@ private Connection con = null;
     }
 
     @Override
-    public int deletePersona(UsuarioVO persona) throws SQLException {
+    public int deleteUsuario(UsuarioVO user) throws SQLException {
         int numFilas = 0;
 
         String sql = "delete from persona where pk = ?";
@@ -149,7 +149,7 @@ private Connection con = null;
         try (PreparedStatement prest = con.prepareStatement(sql)) {
 
             // Establecemos los parámetros de la sentencia
-            prest.setInt(1, persona.getPk());
+            prest.setString(1, user.getEmail());
             // Ejecutamos la sentencia
             numFilas = prest.executeUpdate();
         }
@@ -157,10 +157,10 @@ private Connection con = null;
     }
 
     @Override
-    public int updatePersona(int pk, UsuarioVO nuevosDatos) throws SQLException {
+    public int updateUsuario(String pk, UsuarioVO nuevosDatos) throws SQLException {
 
         int numFilas = 0;
-        String sql = "update persona set nombre = ?, fecha_nac = ? where pk=?";
+        String sql = "update persona set email = ?, nombre = ?, contrasenia = ?, edad = ? where pk=?";
 
         if (findByPk(pk) == null) {
             // La persona a actualizar no existe
@@ -171,9 +171,10 @@ private Connection con = null;
             try (PreparedStatement prest = con.prepareStatement(sql)) {
 
                 // Establecemos los parámetros de la sentencia
-                prest.setString(1, nuevosDatos.getNombre());
-                prest.setDate(2, Date.valueOf(nuevosDatos.getFechaNacimiento()));
-                prest.setInt(3, pk);
+                prest.setString(1, nuevosDatos.getEmail());
+                prest.setString(2, nuevosDatos.getNombre());
+                prest.setString(3, nuevosDatos.getContrasenia());
+                prest.setInt(4, nuevosDatos.getEdad());
 
                 numFilas = prest.executeUpdate();
             }
