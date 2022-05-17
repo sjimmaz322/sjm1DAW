@@ -52,7 +52,7 @@ private Connection con = null;
     }
 
     @Override
-    public UsuarioVO findByPk(int pk) throws SQLException {
+    public UsuarioVO findByPk(String pk) throws SQLException {
 
         ResultSet res = null;
         UsuarioVO user = new UsuarioVO();
