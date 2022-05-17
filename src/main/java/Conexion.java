@@ -10,9 +10,9 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-    private static final String SERVIDOR = "jdbc:mysql://192.168.56.9/";
+    private static final String SERVIDOR = "jdbc:mysql://localhost/";
     private static final String NOMBRE_BASE_DATOS = "BDprogSamuelJimenez";
-    private static final String USER = "samuel";
+    private static final String USER = "root";
     private static final String PASS = "admin";
 
     private static Connection instancia = null;

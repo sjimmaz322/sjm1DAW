@@ -1,7 +1,6 @@
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -33,7 +32,7 @@ private Connection con = null;
         // ya que no necesitamos parametrizar la sentencia SQL
         try (Statement st = con.createStatement()) {
             // Ejecutamos la sentencia y obtenemos las filas en el objeto ResultSet
-            ResultSet res = st.executeQuery("select * from persona");
+            ResultSet res = st.executeQuery("select * from usuarios");
             // Ahora construimos la lista, recorriendo el ResultSet y mapeando los datos
             while (res.next()) {
                 UsuarioVO u = new UsuarioVO();
@@ -57,7 +56,7 @@ private Connection con = null;
         ResultSet res = null;
         UsuarioVO user = new UsuarioVO();
 
-        String sql = "select * from persona where pk=?";
+        String sql = "select * from usuarios where email=?";
 
         try (PreparedStatement prest = con.prepareStatement(sql)) {
             // Preparamos la sentencia parametrizada
@@ -85,7 +84,7 @@ private Connection con = null;
     public int insertUsuario(UsuarioVO user) throws SQLException {
 
         int numFilas = 0;
-        String sql = "insert into persona values (?,?,?,?)";
+        String sql = "insert into usuarios values (?,?,?,?)";
 
         if (findByPk(user.getEmail()) != null) {
             // Existe un registro con esa pk
@@ -123,7 +122,7 @@ private Connection con = null;
     @Override
     public int deleteUsuario() throws SQLException {
 
-        String sql = "delete from persona";
+        String sql = "delete from usuarios";
 
         int nfilas = 0;
 
@@ -143,7 +142,7 @@ private Connection con = null;
     public int deleteUsuario(UsuarioVO user) throws SQLException {
         int numFilas = 0;
 
-        String sql = "delete from persona where pk = ?";
+        String sql = "delete from usuarios where email = ?";
 
         // Sentencia parametrizada
         try (PreparedStatement prest = con.prepareStatement(sql)) {
@@ -160,7 +159,7 @@ private Connection con = null;
     public int updateUsuario(String pk, UsuarioVO nuevosDatos) throws SQLException {
 
         int numFilas = 0;
-        String sql = "update persona set email = ?, nombre = ?, contrasenia = ?, edad = ? where pk=?";
+        String sql = "update usuario set email = ?, nombre = ?, contrasenia = ?, edad = ? where email=?";
 
         if (findByPk(pk) == null) {
             // La persona a actualizar no existe
@@ -187,7 +186,7 @@ private Connection con = null;
         int res = 0;
         // Dos ?, uno para newName y otro para oldName
 
-        String sql = "{call cambiar_nombres (?,?)}";
+        String sql = "{call cambiarNombres (?,?)}";
 
         // Preparamos la llamada al procedimiento almacenado
         try (CallableStatement call = con.prepareCall(sql)) {

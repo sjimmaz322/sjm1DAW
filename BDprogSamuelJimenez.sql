@@ -2,10 +2,12 @@ drop database if exists BDprogSamuelJimenez;
 
 create database if not exists BDprogSamuelJimenez;
 
+use BDprogSamuelJimenez;
+
 create table if not exists usuarios
 (
 nombre varchar(50),
-contraseña varchar(12),
+contrasenia varchar(12) unique,
 email varchar(50) unique,
 edad int unsigned,
 
@@ -38,4 +40,12 @@ constraint pk_partida primary key (titulo),
 constraint fk_partida_jugador foreign key (apodo)
 	references jugador(apodo)
     on delete no action on update cascade
+    
 );
+    
+DELIMITER $$
+CREATE PROCEDURE cambiarNombres (in newname varchar(45), in oldname varchar(45))
+BEGIN
+update usuarios set nombre=newname where nombre=oldname;
+END $$
+DELIMITER ;
