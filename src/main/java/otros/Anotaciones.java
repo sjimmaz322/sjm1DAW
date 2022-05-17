@@ -50,6 +50,8 @@ public class Anotaciones {
         Para errores de introducción de datos cread bucle do-while
         
         */
+        
+        // (RandomStringUtils.randomNumeric(20).toUpperCase());
     }
 
 }
