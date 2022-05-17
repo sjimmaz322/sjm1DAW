@@ -61,7 +61,7 @@ private Connection con = null;
 
         try (PreparedStatement prest = con.prepareStatement(sql)) {
             // Preparamos la sentencia parametrizada
-            prest.setInt(1, pk);
+            prest.setString(1, pk);
 
             // Ejecutamos la sentencia y obtenemos las filas en el objeto ResultSet
             res = prest.executeQuery();
@@ -110,7 +110,7 @@ private Connection con = null;
     }
 
     @Override
-    public int insertPersona(List<UsuarioVO> lista) throws SQLException {
+    public int insertUsuario(List<UsuarioVO> lista) throws SQLException {
         int numFilas = 0;
 
         for (UsuarioVO tmp : lista) {
